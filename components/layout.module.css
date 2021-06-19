@@ -1,0 +1,21 @@
+.wrapperBorder {
+  border: 30px solid rgba(30, 30, 30, 0.9);
+  height: 100vh;
+  overflow: scroll;
+}
+
+.container {
+  max-width: 42rem;
+  padding: 0 1rem;
+  margin: 3rem auto 6rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.backToHome {
+  margin: 3rem 0 0;
+}
