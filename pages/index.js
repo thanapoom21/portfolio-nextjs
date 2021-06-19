@@ -15,12 +15,24 @@ export default function Home({ allPostsData }) {
       <section className={utilStyles.headingMd}>
         <p>
           Hi, I'm Thanapoom and I go by Music. I'm a web developer and a
-          translator (English/Thai). You can contact me on Twitter.
+          translator (English/Thai). You can contact me on Twitter. 🍻 Cheers, I
+          am Fabian, an award winning frontend developer from rural Italy,
+          currently living in ~~Sydney~~ on the road. I've worked with and for
+          startups like Canva and Spreadshirt, helped companies like DDB
+          Worldwide and Munich Airport deliver kick-ass campaigns and cutting
+          edge web experiences, judged the best websites around the globe as a
+          jury member at awwwards, fucked up my own startup Momate, worked as a
+          wedding photographer, created fancy architecture visualisations as a
+          3d artist, played the shit out of Dota 2, backpacked 3 months through
+          Vietnam with my lovely X100F and hiked 220km through freezing Swedish
+          Lapland making friends with reindeers. I guess I like to stay active.
+          🤷🏻‍♂️
         </p>
         <p>
-          (This is a sample website - you’ll be building a site like this on{" "}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
+          I have 9 years of experience as a developer and love working with
+          React and other hip frameworks.
         </p>
+        <p>If you fancy a chat feel free to drop me a line.</p>
       </section>
 
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
