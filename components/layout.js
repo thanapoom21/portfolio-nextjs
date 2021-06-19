@@ -11,13 +11,11 @@ export const siteTitle = "Next.js Portfolio Website";
 export default function Layout({ children, home }) {
   return (
     <div className={styles.wrapperBorder}>
+      <Navbar />
       <div className={styles.container}>
         <Head>
           <link rel="icon" href="/favicon.ico" />
-          <meta
-            name="description"
-            content="A personal website using Next.js"
-          />
+          <meta name="description" content="A personal website using Next.js" />
           <meta
             property="og:image"
             content={`https://og-image.vercel.app/${encodeURI(
@@ -27,7 +25,6 @@ export default function Layout({ children, home }) {
           <meta name="og:title" content={siteTitle} />
           <meta name="twitter:card" content="summary_large_image" />
         </Head>
-        <Navbar />
         <header className={styles.header}>
           {home ? (
             <>
@@ -35,11 +32,11 @@ export default function Layout({ children, home }) {
                 priority
                 src="/images/profile.jpg"
                 className={utilStyles.borderCircle}
-                height={144}
-                width={144}
+                height={300}
+                width={300}
                 alt={name}
               />
-              <h1 className={utilStyles.heading2Xl}>{name}</h1>
+              {/* <h1 className={utilStyles.heading2Xl}>{name}</h1> */}
             </>
           ) : (
             <>
