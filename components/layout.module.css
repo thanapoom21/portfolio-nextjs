@@ -1,11 +1,14 @@
 .wrapperBorder {
-  border: 30px solid rgba(30, 30, 30, 0.9);
+  border-top: 20px solid rgba(30, 30, 30, 1);
+  border-left: 20px solid rgba(30, 30, 30, 1);
+  border-bottom: 20px solid rgba(30, 30, 30, 1);
+  border-right: 20px solid rgba(30, 30, 30, 1);
   height: 100vh;
   overflow: scroll;
 }
 
 .container {
-  max-width: 42rem;
+  max-width: 70rem;
   padding: 0 1rem;
   margin: 3rem auto 6rem;
 }

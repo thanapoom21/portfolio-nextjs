@@ -2,11 +2,16 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "./navbar";
+import Footer from "./footer";
 import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 
 const name = "Thanapoom Phithakjarukorn";
 export const siteTitle = "Next.js Portfolio Website";
+
+function reversedLetters(str) {
+  return str.split("").reverse().join("").toLocaleUpperCase();
+}
 
 export default function Layout({ children, home }) {
   return (
@@ -27,36 +32,42 @@ export default function Layout({ children, home }) {
         </Head>
         <header className={styles.header}>
           {home ? (
+            <Image
+              priority
+              src="/images/logo_no_border2.svg"
+              className={utilStyles.borderCircle}
+              height={300}
+              width={300}
+              alt={name}
+            />
+          ) : (
             <>
-              <Image
-                priority
-                src="/images/profile.jpg"
-                className={utilStyles.borderCircle}
-                height={300}
+              <img
+                src="/images/logo_border.png"
                 width={300}
                 alt={name}
               />
-              {/* <h1 className={utilStyles.heading2Xl}>{name}</h1> */}
-            </>
-          ) : (
-            <>
-              <Link href="/">
-                <a>
-                  <Image
-                    priority
-                    src="/images/profile.jpg"
-                    className={utilStyles.borderCircle}
-                    height={108}
-                    width={108}
-                    alt={name}
-                  />
-                </a>
-              </Link>
-              <h2 className={utilStyles.headingLg}>
+              {/* <h1 className={utilStyles.superBoldText}>
                 <Link href="/">
-                  <a className={utilStyles.colorInherit}>{name}</a>
+                  <a className={utilStyles.colorInherit}>
+                    {reversedLetters(name)}
+                  </a>
+                </Link>
+              </h1>
+              <h2 className={utilStyles.superBoldTextMd}>
+                <Link href="/">
+                  <a className={utilStyles.colorInherit}>
+                    {reversedLetters(name)}
+                  </a>
                 </Link>
               </h2>
+              <h3 className={utilStyles.superBoldTextSm}>
+                <Link href="/">
+                  <a className={utilStyles.colorInherit}>
+                    {reversedLetters(name)}
+                  </a>
+                </Link>
+              </h3> */}
             </>
           )}
         </header>
@@ -69,6 +80,7 @@ export default function Layout({ children, home }) {
           </div>
         )}
       </div>
+      <Footer />
     </div>
   );
 }
