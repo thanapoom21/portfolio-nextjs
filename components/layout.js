@@ -9,11 +9,11 @@ import utilStyles from "../styles/utils.module.css";
 const name = "Thanapoom Phithakjarukorn";
 export const siteTitle = "Next.js Portfolio Website";
 
-function reversedLetters(str) {
-  return str.split("").reverse().join("").toLocaleUpperCase();
-}
+// function reversedLetters(str) {
+//   return str.split("").reverse().join("").toLocaleUpperCase();
+// }
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, home, blog }) {
   return (
     <div className={styles.wrapperBorder}>
       <Navbar />
@@ -40,13 +40,9 @@ export default function Layout({ children, home }) {
               width={300}
               alt={name}
             />
-          ) : (
+          ) : blog ? (
             <>
-              <img
-                src="/images/logo_border.png"
-                width={300}
-                alt={name}
-              />
+              <img src="/images/logo_border.png" width={200} alt={name} />
               {/* <h1 className={utilStyles.superBoldText}>
                 <Link href="/">
                   <a className={utilStyles.colorInherit}>
@@ -69,7 +65,7 @@ export default function Layout({ children, home }) {
                 </Link>
               </h3> */}
             </>
-          )}
+          ) : null}
         </header>
         <main>{children}</main>
         {!home && (
