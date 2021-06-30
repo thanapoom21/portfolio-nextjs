@@ -9,7 +9,7 @@ export default function Works() {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>Works Page</p>
+      <h1 className={utilStyles.superBoldText4rem}>Works</h1>
       </section>
     </Layout>
   );

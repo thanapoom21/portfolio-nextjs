@@ -9,7 +9,7 @@ export default function Contact() {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>Contact Page</p>
+        <h1 className={utilStyles.superBoldText4rem}>Contact</h1>
       </section>
     </Layout>
   );
