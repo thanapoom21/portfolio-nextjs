@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Image from "next/image";
-import Link from "next/link";
 import Navbar from "./navbar";
 import Footer from "./footer";
 import styles from "./layout.module.css";
@@ -8,10 +7,6 @@ import utilStyles from "../styles/utils.module.css";
 
 const name = "Thanapoom Phithakjarukorn";
 export const siteTitle = "Next.js Portfolio Website";
-
-// function reversedLetters(str) {
-//   return str.split("").reverse().join("").toLocaleUpperCase();
-// }
 
 export default function Layout({ children, home, blog }) {
   return (
@@ -41,40 +36,10 @@ export default function Layout({ children, home, blog }) {
               alt={name}
             />
           ) : blog ? (
-            <>
-              <img src="/images/logo_border.png" width={200} alt={name} />
-              {/* <h1 className={utilStyles.superBoldText}>
-                <Link href="/">
-                  <a className={utilStyles.colorInherit}>
-                    {reversedLetters(name)}
-                  </a>
-                </Link>
-              </h1>
-              <h2 className={utilStyles.superBoldTextMd}>
-                <Link href="/">
-                  <a className={utilStyles.colorInherit}>
-                    {reversedLetters(name)}
-                  </a>
-                </Link>
-              </h2>
-              <h3 className={utilStyles.superBoldTextSm}>
-                <Link href="/">
-                  <a className={utilStyles.colorInherit}>
-                    {reversedLetters(name)}
-                  </a>
-                </Link>
-              </h3> */}
-            </>
+            <img src="/images/logo_border.png" width={200} alt={name} />
           ) : null}
         </header>
         <main>{children}</main>
-        {!home && (
-          <div className={styles.backToHome}>
-            <Link href="/">
-              <a>← Back to home</a>
-            </Link>
-          </div>
-        )}
       </div>
       <Footer />
     </div>
