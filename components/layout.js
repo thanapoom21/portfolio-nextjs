@@ -35,8 +35,6 @@ export default function Layout({ children, home, blog }) {
               width={300}
               alt={name}
             />
-          ) : blog ? (
-            <img src="/images/logo_border.png" width={200} alt={name} />
           ) : null}
         </header>
         <main>{children}</main>
