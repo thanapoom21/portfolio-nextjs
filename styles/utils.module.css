@@ -1,18 +1,18 @@
-.superBoldText {
+.superBoldText5rem {
+  font-size: 5rem;
+  font-weight: 900;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+.superBoldText4rem {
   font-size: 4rem;
   font-weight: 900;
   font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
 }
 
-.superBoldTextMd {
-  font-size: 3.4rem;
-  font-weight: 900;
-  font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-    sans-serif;
-}
-
-.superBoldTextSm {
+.superBoldText3rem {
   font-size: 3rem;
   font-weight: 900;
   font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
