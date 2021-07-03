@@ -1,12 +1,11 @@
 import Head from "next/head";
 import Layout, { siteTitle } from "../components/layout";
 import utilStyles from "../styles/utils.module.css";
-import { Box, Badge, Container, Image, Stack } from "@chakra-ui/react";
-import { StarIcon } from "@chakra-ui/icons";
+import { Image, Wrap, WrapItem } from "@chakra-ui/react";
 
 const photos = [
   {
-    imageUrl: "https://bit.ly/2Z4KKcF",
+    imageUrl: "https://source.unsplash.com/user/earl_plannerzone/640x480",
     imageAlt: "Rear view of modern home with pool",
     beds: 3,
     baths: 2,
@@ -16,7 +15,7 @@ const photos = [
     rating: 4,
   },
   {
-    imageUrl: "https://bit.ly/2Z4KKcF",
+    imageUrl: "https://source.unsplash.com/user/erondu/640x480",
     imageAlt: "Rear view of modern home with pool",
     beds: 3,
     baths: 2,
@@ -26,7 +25,67 @@ const photos = [
     rating: 4,
   },
   {
-    imageUrl: "https://bit.ly/2Z4KKcF",
+    imageUrl: "https://source.unsplash.com/user/acharki95/640x480",
+    imageAlt: "Rear view of modern home with pool",
+    beds: 3,
+    baths: 2,
+    title: "Modern home in city center in the heart of historic Los Angeles",
+    formattedPrice: "$1,900.00",
+    reviewCount: 34,
+    rating: 4,
+  },
+  {
+    imageUrl: "https://source.unsplash.com/user/sigmund/640x480",
+    imageAlt: "Rear view of modern home with pool",
+    beds: 3,
+    baths: 2,
+    title: "Modern home in city center in the heart of historic Los Angeles",
+    formattedPrice: "$1,900.00",
+    reviewCount: 34,
+    rating: 4,
+  },
+  {
+    imageUrl: "https://source.unsplash.com/user/miteneva/640x480",
+    imageAlt: "Rear view of modern home with pool",
+    beds: 3,
+    baths: 2,
+    title: "Modern home in city center in the heart of historic Los Angeles",
+    formattedPrice: "$1,900.00",
+    reviewCount: 34,
+    rating: 4,
+  },
+  {
+    imageUrl: "https://source.unsplash.com/user/tranmautritam/640x480",
+    imageAlt: "Rear view of modern home with pool",
+    beds: 3,
+    baths: 2,
+    title: "Modern home in city center in the heart of historic Los Angeles",
+    formattedPrice: "$1,900.00",
+    reviewCount: 34,
+    rating: 4,
+  },
+  {
+    imageUrl: "https://source.unsplash.com/user/thenewmalcolm/640x480",
+    imageAlt: "Rear view of modern home with pool",
+    beds: 3,
+    baths: 2,
+    title: "Modern home in city center in the heart of historic Los Angeles",
+    formattedPrice: "$1,900.00",
+    reviewCount: 34,
+    rating: 4,
+  },
+  {
+    imageUrl: "https://source.unsplash.com/user/louishansel/640x480",
+    imageAlt: "Rear view of modern home with pool",
+    beds: 3,
+    baths: 2,
+    title: "Modern home in city center in the heart of historic Los Angeles",
+    formattedPrice: "$1,900.00",
+    reviewCount: 34,
+    rating: 4,
+  },
+  {
+    imageUrl: "https://source.unsplash.com/user/andrazlazic/640x480",
     imageAlt: "Rear view of modern home with pool",
     beds: 3,
     baths: 2,
@@ -46,69 +105,23 @@ export default function Photons() {
 
       <h1 className={utilStyles.superBoldText4rem}>Collected Photons</h1>
       <section className={utilStyles.headingMd}>
-        <Stack direction="row" display={{ md: "flex", lg: "flex" }}>
+        <Wrap justify="center" align="center">
           {photos.map((photo, idx) => {
             return (
-              <Box
+              <WrapItem
                 key={idx}
-                borderWidth="1px"
-                borderRadius="lg"
-                overflow="hidden"
+                w={{
+                  base: "100%",
+                  md: "48.55555%",
+                  lg: "32.33333%",
+                }}
+                justify="space-evenly"
               >
                 <Image src={photo.imageUrl} alt={photo.imageAlt} />
-
-                <Box p="6">
-                  <Box d="flex" alignItems="baseline">
-                    <Badge borderRadius="full" px="2" colorScheme="gray">
-                      New
-                    </Badge>
-                    <Box
-                      color="gray.500"
-                      fontWeight="semibold"
-                      letterSpacing="wide"
-                      fontSize="xs"
-                      textTransform="uppercase"
-                      ml="2"
-                    >
-                      {photo.beds} beds &bull; {photo.baths} baths
-                    </Box>
-                  </Box>
-
-                  <Box
-                    mt="1"
-                    fontWeight="semibold"
-                    as="h4"
-                    lineHeight="tight"
-                    isTruncated
-                  >
-                    {photo.title}
-                  </Box>
-
-                  <Box>
-                    {photo.formattedPrice}
-                    <Box as="span" color="gray.600" fontSize="sm">
-                      / wk
-                    </Box>
-                  </Box>
-
-                  <Box d="flex" mt="2" alignItems="center">
-                    {Array(5)
-                      .fill("")
-                      .map((_, i) => (
-                        <StarIcon
-                          key={i}
-                          color={i < photo.rating ? "black.500" : "gray.300"}
-                        />
-                      ))}
-                    <Box as="span" ml="2" color="gray.600" fontSize="sm">
-                      {photo.reviewCount} reviews
-                    </Box>
-                  </Box>
-                </Box>
-              </Box>
+              </WrapItem>
             );
           })}
-        </Stack>
+        </Wrap>
       </section>
     </Layout>
   );
