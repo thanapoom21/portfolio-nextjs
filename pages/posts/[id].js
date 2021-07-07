@@ -5,6 +5,7 @@ import Date from "../../components/date";
 import Link from "next/link";
 import styles from "../../components/layout.module.css";
 import utilStyles from "../../styles/utils.module.css";
+import { Box, Container, Heading } from "@chakra-ui/react";
 
 export default function Post({ postData, blog }) {
   return (
@@ -12,27 +13,31 @@ export default function Post({ postData, blog }) {
       <Head>
         <title>{postData.title}</title>
       </Head>
-      <article>
-        <h1 className={utilStyles.heading2Xl}>{postData.title}</h1>
-        <div className={utilStyles.lightText}>
-          <div className={utilStyles.flexSpaceBetween}>
-            <span>{postData.author}</span>
-            <span>
-              <Date dateString={postData.date} />
-            </span>
-          </div>
-          <p className={utilStyles.marginTop0}>{postData.position}</p>
-        </div>
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-      </article>
+      <Box as="article" mt={10}>
+        <Container maxW="container.md">
+          <Heading as="h1" size="2xl">
+            {postData.title}
+          </Heading>
 
-      {!blog && (
-        <div className={styles.backToHome}>
-          <Link href="/blog">
-            <a>← Back to home</a>
-          </Link>
-        </div>
-      )}
+          <Box as="section" mt={10} className={utilStyles.lightText}>
+            <div className={utilStyles.flexSpaceBetween}>
+              <span>{postData.author}</span>
+              <span>
+                <Date dateString={postData.date} />
+              </span>
+            </div>
+            <p className={utilStyles.marginTop0}>{postData.position}</p>
+          </Box>
+          <Box as="section" mt={10} dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+          {!blog && (
+            <div className={styles.backToHome}>
+              <Link href="/blog">
+                <a>← Go Back</a>
+              </Link>
+            </div>
+          )}
+        </Container>
+      </Box>
     </Layout>
   );
 }
