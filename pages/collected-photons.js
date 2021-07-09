@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Layout, { siteTitle } from "../components/layout";
 import utilStyles from "../styles/utils.module.css";
-import { Image, Wrap, WrapItem } from "@chakra-ui/react";
+import { Box, Image, Wrap, WrapItem } from "@chakra-ui/react";
 
 const photos = [
   {
@@ -103,25 +103,27 @@ export default function Photons() {
         <title>{siteTitle}</title>
       </Head>
 
-      <h1 className={utilStyles.superBoldText4rem}>Collected Photons</h1>
-      <section className={utilStyles.headingMd}>
-        <Wrap justify="center" align="center">
-          {photos.map((photo, idx) => {
-            return (
-              <WrapItem
-                key={idx}
-                w={{
-                  base: "100%",
-                  md: "48.55555%",
-                  lg: "32.33333%",
-                }}
-                justify="space-evenly"
-              >
-                <Image src={photo.imageUrl} alt={photo.imageAlt} />
-              </WrapItem>
-            );
-          })}
-        </Wrap>
+      <section className={`${utilStyles.headingMd}`}>
+        <h1 className={utilStyles.superBoldText4rem}>Collected Photons</h1>
+        <Box mt={10}>
+          <Wrap justify="center" align="center">
+            {photos.map((photo, idx) => {
+              return (
+                <WrapItem
+                  key={idx}
+                  w={{
+                    base: "100%",
+                    md: "48.55555%",
+                    lg: "32.33333%",
+                  }}
+                  justify="space-evenly"
+                >
+                  <Image src={photo.imageUrl} alt={photo.imageAlt} />
+                </WrapItem>
+              );
+            })}
+          </Wrap>
+        </Box>
       </section>
     </Layout>
   );
