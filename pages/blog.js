@@ -1,45 +1,53 @@
 import Head from "next/head";
-import Link from "next/link";
-import Date from "../components/date";
-import Layout, { siteTitle } from "../components/layout";
-import utilStyles from "../styles/utils.module.css";
-import { Box } from "@chakra-ui/react";
+import Layout from "../components/layout";
+import Container from "../components/container";
+import MoreStories from "../components/more-stories";
+import HeroPost from "../components/hero-post";
+import Intro from "../components/intro";
+import { getAllPosts } from "../lib/api";
+import { CMS_NAME } from "../lib/constants";
 
-import { getSortedPostsData } from "../lib/posts";
-
-export default function Blog({ allPostsData }) {
+export default function Blog({ allPosts }) {
+  const heroPost = allPosts[0];
+  const morePosts = allPosts.slice(1);
   return (
-    <Layout blog>
-      <Head>
-        <title>{siteTitle}</title>
-      </Head>
-      <section className={`${utilStyles.headingMd}`}>
-        <h1 className={utilStyles.superBoldText4rem}>Blog</h1>
-        <Box mt={10}>
-          <ul className={utilStyles.list}>
-            {allPostsData.map(({ id, date, title }) => (
-              <li className={utilStyles.listItem} key={id}>
-                <Link href={`/posts/${id}`}>
-                  <a>{title}</a>
-                </Link>
-                <br />
-                <small className={utilStyles.lightText}>
-                  <Date dateString={date} />
-                </small>
-              </li>
-            ))}
-          </ul>
-        </Box>
-      </section>
-    </Layout>
+    <>
+      <Layout>
+        <Head>
+          <title>Next.js Blog Example with {CMS_NAME}</title>
+        </Head>
+        <Container>
+          <Intro />
+          {heroPost && (
+            <HeroPost
+              title={heroPost.title}
+              coverImage={heroPost.coverImage}
+              date={heroPost.date}
+              author={heroPost.author}
+              slug={heroPost.slug}
+              excerpt={heroPost.excerpt}
+            />
+          )}
+          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+        </Container>
+      </Layout>
+    </>
   );
 }
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
+  const allPosts = getAllPosts([
+    "title",
+    "date",
+    "slug",
+    "author",
+    "coverImage",
+    "excerpt",
+  ]);
+
   return {
     props: {
-      allPostsData,
+      allPosts,
     },
   };
 }
