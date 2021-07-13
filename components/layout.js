@@ -25,8 +25,8 @@ export default function Layout({ children, home, blog }) {
           <meta name="og:title" content={siteTitle} />
           <meta name="twitter:card" content="summary_large_image" />
         </Head>
-        <header className={styles.header}>
-          {home ? (
+        {home ? (
+          <header className={styles.header}>
             <Image
               priority
               src="/images/logo_no_border2.svg"
@@ -35,8 +35,8 @@ export default function Layout({ children, home, blog }) {
               width={300}
               alt={name}
             />
-          ) : null}
-        </header>
+          </header>
+        ) : null}
         <main>{children}</main>
       </div>
       <Footer />
