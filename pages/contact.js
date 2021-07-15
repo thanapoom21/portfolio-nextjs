@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Layout, { siteTitle } from "../components/layout";
+import HeadingOne from "../components/headingOne";
 import { Box, Button } from "@chakra-ui/react";
 import { EmailIcon } from "@chakra-ui/icons";
 import { SplitText } from "../components/SplitText";
@@ -14,49 +15,25 @@ export default function Contact() {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <h1 className={utilStyles.superBoldText4rem}>Contact</h1>
+        <HeadingOne>Contact</HeadingOne>
         <Box mt={10}>
           <AnimatedText>{textToAnimate}</AnimatedText>
           <Button
-            my={10}
+            mt={10}
             leftIcon={<EmailIcon />}
             colorScheme="blackAlpha"
             variant="outline"
+            borderRadius="1px"
           >
             <a href="mailto:thanapoom.p.music@gmail.com?Subject=Web Development">
               Email me
             </a>
           </Button>
-          {/* <Repeat numberOfTimes={5}>
-            <div>&#9660;</div>
-          </Repeat> */}
         </Box>
       </section>
     </Layout>
   );
 }
-
-// /**
-//  *
-//  * @param {Number} numberOfTimes
-//  * @param {JSX} thingsToRepeat
-//  * @returns the number of array of element to be repeated. For experiment purposes.
-//  */
-// const repeatIt = (numberOfTimes, thingsToRepeat) => {
-//   let element = [];
-//   for (let index = 0; index < numberOfTimes; index++) {
-//     element.push(thingsToRepeat);
-//   }
-//   return element;
-// };
-
-// const Repeat = ({ numberOfTimes, children }) => {
-//   let element = [];
-//   for (let index = 0; index < numberOfTimes; index++) {
-//     element.push(children);
-//   }
-//   return <>{element}</>;
-// };
 
 function AnimatedText({ children }) {
   return (
@@ -73,9 +50,9 @@ function AnimatedText({ children }) {
             animate="visible"
             variants={{
               visible: (i) => ({
-                y: 0,
+                y: -6,
                 transition: {
-                  delay: i * 0.02,
+                  delay: i * 0.05,
                 },
               }),
             }}

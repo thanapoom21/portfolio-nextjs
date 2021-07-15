@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Layout, { siteTitle } from "../components/layout";
+import HeadingOne from "../components/headingOne";
 import utilStyles from "../styles/utils.module.css";
 import { Box, Image, Wrap, WrapItem } from "@chakra-ui/react";
 
@@ -104,7 +105,7 @@ export default function Photons() {
       </Head>
 
       <section className={`${utilStyles.headingMd}`}>
-        <h1 className={utilStyles.superBoldText4rem}>Collected Photons</h1>
+        <HeadingOne>Collected Photons</HeadingOne>
         <Box mt={10}>
           <Wrap justify="center" align="center">
             {photos.map((photo, idx) => {

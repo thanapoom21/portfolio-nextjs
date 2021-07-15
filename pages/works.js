@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Layout, { siteTitle } from "../components/layout";
+import HeadingOne from "../components/headingOne";
 import utilStyles from "../styles/utils.module.css";
 
 export default function Works() {
@@ -9,7 +10,7 @@ export default function Works() {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-      <h1 className={utilStyles.superBoldText4rem}>Works</h1>
+        <HeadingOne>Works</HeadingOne>
       </section>
     </Layout>
   );
