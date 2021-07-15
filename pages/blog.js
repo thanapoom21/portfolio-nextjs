@@ -1,9 +1,9 @@
 import Head from "next/head";
 import Layout from "../components/layout";
-import Container from "../components/container";
 import MoreStories from "../components/more-stories";
 import HeroPost from "../components/hero-post";
-import Intro from "../components/intro";
+import HeadingOne from "../components/headingOne";
+import { Box } from "@chakra-ui/react";
 import { getAllPosts } from "../lib/api";
 import { CMS_NAME } from "../lib/constants";
 
@@ -11,13 +11,13 @@ export default function Blog({ allPosts }) {
   const heroPost = allPosts[0];
   const morePosts = allPosts.slice(1);
   return (
-    <>
-      <Layout>
-        <Head>
-          <title>Next.js Blog Example with {CMS_NAME}</title>
-        </Head>
-        <Container>
-          <Intro />
+    <Layout>
+      <Head>
+        <title>Next.js Blog Example with {CMS_NAME}</title>
+      </Head>
+      <section>
+        <HeadingOne>Blog</HeadingOne>
+        <Box mt={10}>
           {heroPost && (
             <HeroPost
               title={heroPost.title}
@@ -29,9 +29,9 @@ export default function Blog({ allPosts }) {
             />
           )}
           {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-        </Container>
-      </Layout>
-    </>
+        </Box>
+      </section>
+    </Layout>
   );
 }
 
