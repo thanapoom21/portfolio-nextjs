@@ -17,7 +17,7 @@ export default function Blog({ allPosts }) {
       </Head>
       <section>
         <HeadingOne>Blog</HeadingOne>
-        <Box mt={10}>
+        <Box mt={4}>
           {heroPost && (
             <HeroPost
               title={heroPost.title}
