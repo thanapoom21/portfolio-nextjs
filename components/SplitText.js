@@ -6,7 +6,7 @@ export function SplitText({ children, splitBy, ...rest }) {
   return words.map((word, i) => {
     return (
       <div
-        className="text-3xl sm:text-5 md:text-6xl"
+        className="text-4xl md:text-6xl font-bold md:leading-snug"
         key={children + i}
         style={{ display: "inline-block", overflow: "hidden" }}
       >

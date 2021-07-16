@@ -16,7 +16,7 @@ export default function Contact() {
       </Head>
       <section className={utilStyles.headingMd}>
         <HeadingOne>Contact</HeadingOne>
-        <Box mt={10}>
+        <Box mt={4}>
           <AnimatedText>{textToAnimate}</AnimatedText>
           <Button
             mt={10}
@@ -50,7 +50,7 @@ function AnimatedText({ children }) {
             animate="visible"
             variants={{
               visible: (i) => ({
-                y: -6,
+                y: 0,
                 transition: {
                   delay: i * 0.05,
                 },

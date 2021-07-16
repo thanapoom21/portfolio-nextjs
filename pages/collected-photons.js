@@ -106,7 +106,7 @@ export default function Photons() {
 
       <section className={`${utilStyles.headingMd}`}>
         <HeadingOne>Collected Photons</HeadingOne>
-        <Box mt={10}>
+        <Box mt={4}>
           <Wrap justify="center" align="center">
             {photos.map((photo, idx) => {
               return (

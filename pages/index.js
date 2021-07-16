@@ -9,7 +9,7 @@ export default function Home() {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p className={utilStyles.superBoldText4rem}>
+        <p className={`${utilStyles.fontRoboto} text-4xl md:text-6xl font-bold md:leading-snug`}>
           Hi, I'm Thanapoom and I go by Music. I'm a web developer and a
           translator (English/Thai). 🍔 Epic cheeseburgers come in all kinds of
           manifestations, but we want them in and around our mouth no matter
@@ -21,12 +21,12 @@ export default function Home() {
           keeping secrets. Whether it’s dressed up or informal, cheeseburgers
           have your back. 🎉
         </p>
-        <p className={utilStyles.superBoldText4rem}>
+        <p className={`${utilStyles.fontRoboto} text-4xl md:text-6xl font-bold md:leading-snug`}>
           Pop quiz: what’s the greatest thing to happen to your mind, body, and
           soul in recent history? A cheeseburger, obviously. Cheeseburgers know
           that what you want can also be what you need.
         </p>
-        <p className={utilStyles.superBoldText4rem}>
+        <p className={`${utilStyles.fontRoboto} text-4xl md:text-6xl font-bold md:leading-snug`}>
           If you feel like having a chat, feel free to drop me a line.
         </p>
       </section>
