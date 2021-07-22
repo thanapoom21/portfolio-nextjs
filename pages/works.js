@@ -16,7 +16,7 @@ export default function Works() {
           <h3 className="text-xl md:text-3xl font-bold">drstile</h3>
         </Box>
         <Box
-          mt={4}
+          my={6}
           className="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-6 gap-y-10 md:gap-y-6"
         >
           <section>
@@ -57,11 +57,11 @@ export default function Works() {
           </section>
         </Box>
 
-        <Box mt={6}>
+        <Box my={6}>
           <h3 className="text-xl md:text-3xl font-bold">double moon</h3>
         </Box>
         <Box
-          mt={4}
+          my={6}
           className="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-6 gap-y-10 md:gap-y-6"
         >
           <section>
@@ -102,13 +102,13 @@ export default function Works() {
           </section>
         </Box>
 
-        <Box mt={10}>
+        <Box my={10}>
           <h2 className="text-right text-3xl md:text-5xl font-bold">
             Graphics
           </h2>
         </Box>
         <Box
-          mt={4}
+          my={4}
           className="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-6 gap-y-10 md:gap-y-32"
         >
           <section>
