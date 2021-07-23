@@ -77,7 +77,7 @@ export default function Works() {
             <div>
               <Image
                 src="/assets/works/double-moon/double-moon-2.webp"
-                fallbackSrc="/assets/works/double-moon/double-moon-1.jpg"
+                fallbackSrc="/assets/works/double-moon/double-moon-2.jpg"
                 alt="drstile-website-2"
               />
             </div>
@@ -86,48 +86,55 @@ export default function Works() {
             <div>
               <Image
                 src="/assets/works/double-moon/double-moon-3.webp"
-                fallbackSrc="/assets/works/double-moon/double-moon-1.jpg"
+                fallbackSrc="/assets/works/double-moon/double-moon-3.jpg"
                 alt="drstile-website-3"
-              />
-            </div>
-          </section>
-          <section>
-            <div>
-              <Image
-                src="/assets/works/double-moon/double-moon-4.webp"
-                fallbackSrc="/assets/works/double-moon/double-moon-1.jpg"
-                alt="drstile-website-4"
               />
             </div>
           </section>
         </Box>
 
-        <Box my={10}>
-          <h2 className="text-right text-3xl md:text-5xl font-bold">
-            Graphics
-          </h2>
+        <Box my={6}>
+          <h3 className="text-xl md:text-3xl font-bold">logos</h3>
         </Box>
         <Box
           my={4}
-          className="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-6 gap-y-10 md:gap-y-32"
+          className="grid grid-cols-1 lg:grid-cols-4 lg:gap-x-6 gap-y-10 md:gap-y-32"
         >
           <section>
             <div className="mb-5">
               <Image
-                src="gibbresh.png"
-                fallbackSrc="https://via.placeholder.com/640x480"
+                src="/assets/works/logos/harmoneyes-3.webp"
+                fallbackSrc="/assets/works/logos/harmoneyes-3.jpg"
+                alt="drstile-website-3"
               />
             </div>
-            <h3>Something</h3>
           </section>
           <section>
             <div className="mb-5">
               <Image
-                src="gibbresh.png"
-                fallbackSrc="https://via.placeholder.com/640x480"
+                src="/assets/works/logos/red-cardinal.webp"
+                fallbackSrc="/assets/works/logos/red-cardinal.png"
+                alt="drstile-website-3"
               />
             </div>
-            <h3>Something</h3>
+          </section>
+          <section>
+            <div className="mb-5">
+              <Image
+                src="/assets/works/logos/scfoundation-1.webp"
+                fallbackSrc="/assets/works/logos/scfoundation-1.jpg"
+                alt="drstile-website-3"
+              />
+            </div>
+          </section>
+          <section>
+            <div className="mb-5">
+              <Image
+                src="/assets/works/logos/scfoundation-2.webp"
+                fallbackSrc="/assets/works/logos/scfoundation-2.jpg"
+                alt="drstile-website-3"
+              />
+            </div>
           </section>
         </Box>
       </section>
