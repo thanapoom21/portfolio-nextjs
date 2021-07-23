@@ -91,15 +91,6 @@ export default function Works() {
               />
             </div>
           </section>
-          <section>
-            <div>
-              <Image
-                src="/assets/works/double-moon/double-moon-4.webp"
-                fallbackSrc="/assets/works/double-moon/double-moon-4.jpg"
-                alt="drstile-website-4"
-              />
-            </div>
-          </section>
         </Box>
 
         <Box my={6}>
