@@ -105,7 +105,7 @@ export default function Works() {
               <Image
                 src="/assets/works/logos/harmoneyes-3.webp"
                 fallbackSrc="/assets/works/logos/harmoneyes-3.jpg"
-                alt="drstile-website-3"
+                alt="harmoneyes-3"
               />
             </div>
           </section>
@@ -113,8 +113,8 @@ export default function Works() {
             <div className="mb-5">
               <Image
                 src="/assets/works/logos/red-cardinal.webp"
-                fallbackSrc="/assets/works/logos/red-cardinal.png"
-                alt="drstile-website-3"
+                fallbackSrc="/assets/works/logos/red-cardinal.jpg"
+                alt="red-cardinal"
               />
             </div>
           </section>
@@ -123,7 +123,7 @@ export default function Works() {
               <Image
                 src="/assets/works/logos/scfoundation-1.webp"
                 fallbackSrc="/assets/works/logos/scfoundation-1.jpg"
-                alt="drstile-website-3"
+                alt="scfoundation-1"
               />
             </div>
           </section>
@@ -132,7 +132,7 @@ export default function Works() {
               <Image
                 src="/assets/works/logos/scfoundation-2.webp"
                 fallbackSrc="/assets/works/logos/scfoundation-2.jpg"
-                alt="drstile-website-3"
+                alt="scfoundation-2"
               />
             </div>
           </section>
