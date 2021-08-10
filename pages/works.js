@@ -168,16 +168,22 @@ export default function Works() {
         <Box my={6}>
           <h3 className="text-xl md:text-3xl font-bold">working with APIs</h3>
         </Box>
-        <Box
-          my={4}
-          className="grid grid-cols-1 lg:grid-cols-1"
-        >
+        <Box my={4} className="grid grid-cols-1 lg:grid-cols-1">
           <section>
             <div className="mb-5">
               <Image
                 src="/assets/works/posters/exordium-main-poster-w990.webp"
                 fallbackSrc="/assets/works/posters/exordium-main-poster-w990.jpg"
                 alt="harmoneyes-3"
+              />
+            </div>
+          </section>
+          <section>
+            <div className="mb-5">
+              <Image
+                src="/assets/works/posters/exordium-poster-w990.webp"
+                fallbackSrc="/assets/works/posters/exordium-poster-w990.jpg"
+                alt="red-cardinal"
               />
             </div>
           </section>
