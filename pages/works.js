@@ -172,7 +172,7 @@ export default function Works() {
         </Box>
         <Box my={4} className="grid grid-cols-1 lg:grid-cols-1">
           <section>
-            <div id="random-quote-machine" className="mb-5">
+            <div id="random-quote-machine" className="mb-5 text-center">
               <RandomMachine />
             </div>
           </section>

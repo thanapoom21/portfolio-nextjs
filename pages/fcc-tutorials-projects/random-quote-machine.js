@@ -109,33 +109,33 @@ const quotes = [
 
 // Random colors;
 const colors = [
-  "#EFC69B",
-  "#D1FFC6",
-  "#50D8D7",
-  "#BBE1C3",
-  "#F2F79E",
-  "#81726A",
-  "#F0BCD4",
-  "#F4A261",
-  "#E9C46A",
-  "#FFC0BE",
-  "#77FF94",
-  "#C4CBCA"
+  "#FFD9CE",
+  "#F7F9F9",
+  "#E0D0C1",
+  "#C6D8FF",
+  "#CABAC8",
+  "#F0E7D8",
+  "#86BBD8",
+  "#DAF7DC",
+  "#F1F7ED",
+  "#FFCCC9",
+  "#8EF9F3",
+  "#E9E3B4"
 ];
 
 const colorsDark = [
-  "#5B9279",
-  "#058ED9",
-  "#586BA4",
-  "#B3679B",
-  "#37718E",
-  "#C33C54",
-  "#66717E",
-  "#3D7068",
-  "#8D8D92",
-  "#AF125A",
-  "#D62828",
-  "#C8963E"
+  "#DB5461",
+  "#2081C3",
+  "#601700",
+  "#4C1036",
+  "#4CB5AE",
+  "#A63A50",
+  "#2F4858",
+  "#336699",
+  "#54494B",
+  "#FF5666",
+  "#171738",
+  "#3E6990"
 ];
 
 const QuoteBox = (props) => {
@@ -225,7 +225,7 @@ class Button extends React.Component {
         onMouseLeave={() => this.toggleHover()}
         target="_blank"
       >
-        Get Quote
+        {this.props.children}
       </button>
     );
   }
@@ -285,19 +285,24 @@ class RandomMachine extends React.Component {
     }
 
     return (
-      <div style={appBorder} id="quote-box">
-        <div id="buttons">
+      <Button
+        style={appBorder}
+        id="quote-box"
+        getQuote={() => this.handleClick()}
+        color={this.state.color}
+      >
+        {/* <div id="buttons">
           <Twitter quote={this.state.text} author={this.state.author} />
           <Button
             getQuote={() => this.handleClick()}
             color={this.state.color}
           />
-        </div>
+        </div> */}
         <div id="quote-author">
           <QuoteBox text={this.state.text} newQuote={this.state.newQuote} colorDark={this.state.colorDark} />
           <Author author={this.state.author} newAuthor={this.state.newAuthor} colorDark={this.state.colorDark} />
         </div>
-      </div>
+      </Button>
     );
   }
 }
