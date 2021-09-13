@@ -3,6 +3,7 @@ import Layout, { siteTitle } from "../components/layout";
 import HeadingOne from "../components/headingOne";
 import { Box, Image } from "@chakra-ui/react";
 import utilStyles from "../styles/utils.module.css";
+import RandomMachine from "./fcc-tutorials-projects/random-quote-machine";
 
 export default function Works() {
   return (
@@ -166,25 +167,13 @@ export default function Works() {
         </Box>
 
         <Box my={6}>
-          <h3 className="text-xl md:text-3xl font-bold">working with APIs</h3>
+          <h3 className="text-xl md:text-3xl font-bold">APIs</h3>
+          <h4>Random Quote Machine — freecodecamp.com</h4>
         </Box>
         <Box my={4} className="grid grid-cols-1 lg:grid-cols-1">
           <section>
-            <div className="mb-5">
-              <Image
-                src="/assets/works/posters/exordium-main-poster-w990.webp"
-                fallbackSrc="/assets/works/posters/exordium-main-poster-w990.jpg"
-                alt="harmoneyes-3"
-              />
-            </div>
-          </section>
-          <section>
-            <div className="mb-5">
-              <Image
-                src="/assets/works/posters/exordium-poster-w990.webp"
-                fallbackSrc="/assets/works/posters/exordium-poster-w990.jpg"
-                alt="red-cardinal"
-              />
+            <div id="random-quote-machine" className="mb-5">
+              <RandomMachine />
             </div>
           </section>
         </Box>
