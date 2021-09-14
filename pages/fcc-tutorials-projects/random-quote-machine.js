@@ -11,7 +11,7 @@ const buttonDefault = {
   alignSelf: "flex-end",
   fontSize: "1em",
   color: "#EAE6E5",
-  backgroundColor: "#12130F",
+  backgroundColor: "#F1F7ED",
   border: "none",
   borderRadius: "5px",
   padding: "10px 20px",
@@ -31,7 +31,7 @@ const authStyle = {
 };
 
 const quoteStyle = {
-  fontSize: "1.8em"
+  fontSize: "inherit"
 };
 
 // Quotes and authors
