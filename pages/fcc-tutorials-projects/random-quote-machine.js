@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import axios from "axios";
 
 const appStyle = {
@@ -12,7 +13,7 @@ const buttonDefault = {
   fontSize: "1em",
   color: "#EAE6E5",
   backgroundColor: "#F1F7ED",
-  border: "none",
+  borderStyle: "none",
   borderRadius: "5px",
   padding: "10px 20px",
   cursor: "pointer"
@@ -189,46 +190,29 @@ const Twitter = (props) => {
   );
 };
 
-class Button extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      hover: false
-    };
-  }
+const Button = ({ color, getQuote, children }) => {
+  const [hover, setHover] = useState(false);
+  let buttonStyle;
 
-  toggleHover() {
-    this.setState((prevState) => {
-      return {
-        hover: !prevState.hover
-      };
-    });
-  }
+  hover
+    ? (buttonStyle = buttonDefault)
+    : (buttonStyle = {
+      ...buttonHover,
+      backgroundColor: color,
+      borderColor: color
+    })
 
-  render() {
-    let buttonStyle;
-
-    this.state.hover
-      ? (buttonStyle = buttonDefault)
-      : (buttonStyle = {
-        ...buttonHover,
-        backgroundColor: this.props.color,
-        borderColor: this.props.color
-      })
-
-    return (
-      <button
-        id="new-quote"
-        style={buttonStyle}
-        onClick={this.props.getQuote}
-        onMouseEnter={() => this.toggleHover()}
-        onMouseLeave={() => this.toggleHover()}
-        target="_blank"
-      >
-        {this.props.children}
-      </button>
-    );
-  }
+  return (
+    <button
+      id="new-quote"
+      style={buttonStyle}
+      onClick={getQuote}
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+    >
+      {children}
+    </button>
+  );
 }
 
 class RandomMachine extends React.Component {
@@ -306,5 +290,20 @@ class RandomMachine extends React.Component {
     );
   }
 }
+
+// export async function getServerSideProps(context) {
+
+//   const res = await axios.get(
+//     "https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json"
+//   )
+
+//   const fetchedQuotes = res.data.quotes
+
+//   return {
+//     props: {
+//       fetchedQuotes
+//     }
+//   };
+// }
 
 export default RandomMachine;
