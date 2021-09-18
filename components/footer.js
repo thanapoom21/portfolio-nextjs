@@ -1,8 +1,6 @@
 import Link from "next/link";
-import Image from "next/image";
-import { Fragment } from "react";
-import { Disclosure, Menu, Transition } from "@headlessui/react";
-import styles from "./footer.module.css";
+import { Disclosure } from "@headlessui/react";
+import styles from "../styles/footer.module.css";
 
 const navigation = [
   { name: "Github", href: "https://www.github.com", current: false },

@@ -1,5 +1,5 @@
 import BackButton from "./backButton";
-import markdownStyles from "./markdown-styles.module.css";
+import markdownStyles from "../styles/markdown-styles.module.css";
 
 export default function PostBody({ content }) {
   return (
