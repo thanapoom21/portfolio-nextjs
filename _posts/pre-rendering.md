@@ -5,7 +5,7 @@ coverImage: '/assets/blog/preview/cover.jpg'
 date: '2020-03-16T05:35:07.322Z'
 author:
   name: T. Phithakjarukorn
-  picture: '/assets/blog/authors/joe.jpeg'
+  picture: '/assets/blog/authors/mu.jpeg'
 ogImage:
   url: '/assets/blog/preview/cover.jpg'
 ---
