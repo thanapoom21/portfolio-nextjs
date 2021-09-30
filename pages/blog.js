@@ -4,7 +4,7 @@ import MoreStories from "../components/more-stories";
 import HeroPost from "../components/hero-post";
 import HeadingOne from "../components/headingOne";
 import { Box } from "@chakra-ui/react";
-import { getAllPosts } from "../lib/api";
+import { getAllPosts } from "../lib/posts";
 import { CMS_NAME } from "../lib/constants";
 
 export default function Blog({ allPosts }) {
