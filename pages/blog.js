@@ -5,7 +5,6 @@ import HeroPost from "../components/hero-post";
 import HeadingOne from "../components/headingOne";
 import { Box } from "@chakra-ui/react";
 import { getAllPosts } from "../lib/posts";
-import { CMS_NAME } from "../lib/constants";
 
 export default function Blog({ allPosts }) {
   const heroPost = allPosts[0];
@@ -13,7 +12,7 @@ export default function Blog({ allPosts }) {
   return (
     <Layout>
       <Head>
-        <title>Next.js Blog Example with {CMS_NAME}</title>
+        <title>Next.js Blog Posts with Markdown</title>
       </Head>
       <section>
         <HeadingOne>Blog</HeadingOne>

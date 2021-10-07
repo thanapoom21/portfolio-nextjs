@@ -1,18 +1,19 @@
 import Head from "next/head";
-import Layout, { siteTitle } from "../components/layout";
+import Layout from "../components/layout";
 import HeadingOne from "../components/headingOne";
 import { Box, Button } from "@chakra-ui/react";
 import { EmailIcon } from "@chakra-ui/icons";
 import { SplitText } from "../components/SplitText";
 import { AnimatePresence, motion } from "framer-motion";
 import utilStyles from "../styles/utils.module.css";
+import { SITE_TITLE } from '../lib/constants'
 
 export default function Contact() {
   const textToAnimate = `I am available for freelance work. Drop me a line if you would like to chat. 😄`;
   return (
     <Layout>
       <Head>
-        <title>{siteTitle}</title>
+        <title>{SITE_TITLE}</title>
       </Head>
       <section className={utilStyles.headingMd}>
         <HeadingOne>Contact</HeadingOne>

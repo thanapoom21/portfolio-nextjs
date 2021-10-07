@@ -1,9 +1,10 @@
 import Head from "next/head";
-import Layout, { siteTitle } from "../components/layout";
+import Layout from "../components/layout";
 import HeadingOne from "../components/headingOne";
 import utilStyles from "../styles/utils.module.css";
 import { Box, Image, Wrap, WrapItem } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
+import { SITE_TITLE } from '../lib/constants'
 
 const Photons = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -37,7 +38,7 @@ const Photons = () => {
   return (
     <Layout>
       <Head>
-        <title>{siteTitle}</title>
+        <title>{SITE_TITLE}</title>
       </Head>
 
       <section className={`${utilStyles.headingMd}`}>

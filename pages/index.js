@@ -1,17 +1,16 @@
 import Head from "next/head";
-import Layout, { siteTitle } from "../components/layout";
+import Layout from "../components/layout";
 import utilStyles from "../styles/utils.module.css";
+import { SITE_TITLE } from '../lib/constants'
 
 export default function Home() {
   return (
     <Layout home>
       <Head>
-        <title>{siteTitle}</title>
+        <title>{SITE_TITLE}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p
-          className={`${utilStyles.fontRoboto} text-4xl md:text-6xl font-bold md:leading-snug`}
-        >
+        <p className="text-4xl md:text-6xl font-bold md:leading-snug">
           Hi, I'm Thanapoom and I go by Music. I'm a web developer and a
           translator (English/Thai). I like to create graphics such as logos,
           business cards, posters, brochures, and websites. However, I consider
@@ -23,16 +22,12 @@ export default function Home() {
           relentlessly optimistic, and gradually & constantly improving my
           ability. 🎉
         </p>
-        <p
-          className={`${utilStyles.fontRoboto} text-4xl md:text-6xl font-bold md:leading-snug`}
-        >
+        <p className="text-4xl md:text-6xl font-bold md:leading-snug">
           Pop quiz: what’s the greatest thing to happen to your mind, body, and
           soul in recent history? A cheeseburger, obviously. Cheeseburgers know
           that what you want can also be what you need.
         </p>
-        <p
-          className={`${utilStyles.fontRoboto} text-4xl md:text-6xl font-bold md:leading-snug`}
-        >
+        <p className="text-4xl md:text-6xl font-bold md:leading-snug">
           If you feel like having a chat, feel free to drop me a line.
         </p>
       </section>
