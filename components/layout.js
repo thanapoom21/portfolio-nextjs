@@ -8,7 +8,7 @@ import utilStyles from "../styles/utils.module.css";
 const name = "Thanapoom Phithakjarukorn";
 export const siteTitle = "Next.js Portfolio Website";
 
-export default function Layout({ children, home, blog }) {
+export default function Layout({ children, home }) {
   return (
     <div className={styles.wrapperBorder}>
       <Navbar />
@@ -24,6 +24,10 @@ export default function Layout({ children, home, blog }) {
           />
           <meta name="og:title" content={siteTitle} />
           <meta name="twitter:card" content="summary_large_image" />
+          <link
+            href="https://unpkg.com/prismjs@0.0.1/themes/prism-okaidia.css"
+            rel="stylesheet"
+          />
         </Head>
         {home ? (
           <header className={styles.header}>
