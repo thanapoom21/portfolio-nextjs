@@ -1,9 +1,10 @@
 import Head from "next/head";
-import Layout, { siteTitle } from "../components/layout";
+import Layout from "../components/layout";
 import HeadingOne from "../components/headingOne";
 import { Box, Image } from "@chakra-ui/react";
 import utilStyles from "../styles/utils.module.css";
 import RandomMachine from "./fcc-tutorials-projects/random-quote-machine";
+import { SITE_TITLE } from '../lib/constants';
 
 const imageSources = {
   drstile: [{
@@ -26,6 +27,7 @@ const imageSources = {
     fallbackSrc: "/assets/works/drstile-website/drstile-website-2.jpg",
     alt: "drstile-website-4"
   }],
+
   doubleMoon: [{
     src: "/assets/works/double-moon/double-moon-1.webp",
     fallbackSrc: "/assets/works/double-moon/double-moon-1.jpg",
@@ -41,6 +43,7 @@ const imageSources = {
     fallbackSrc: "/assets/works/double-moon/double-moon-3.jpg",
     alt: "double-moon-3"
   }],
+
   logos: [{
     src: "/assets/works/logos/harmoneyes-3.webp",
     fallbackSrc: "/assets/works/logos/harmoneyes-3.jpg",
@@ -58,6 +61,7 @@ const imageSources = {
     fallbackSrc: "/assets/works/logos/scfoundation-2.jpg",
     alt: "scfoundation-2"
   }],
+
   posters: [{
     src: "/assets/works/posters/exordium-main-poster-w990.webp",
     fallbackSrc: "/assets/works/posters/exordium-main-poster-w990.jpg",
@@ -67,6 +71,67 @@ const imageSources = {
     src: "/assets/works/posters/exordium-poster-w990.webp",
     fallbackSrc: "/assets/works/posters/exordium-poster-w990.jpg",
     alt: "exordium-poster-w990"
+  }],
+
+  booklets: [{
+    src: "/assets/works/booklets/geometry-artwork-1.webp",
+    fallbackSrc: "/assets/works/booklets/geometry-artwork-1.jpg",
+    alt: "geometry-artwork-1"
+  },
+  {
+    src: "/assets/works/booklets/geometry-artwork-2.webp",
+    fallbackSrc: "/assets/works/booklets/geometry-artwork-2.jpg",
+    alt: "geometry-artwork-2"
+  },
+  {
+    src: "/assets/works/booklets/geometry-artwork-3.webp",
+    fallbackSrc: "/assets/works/booklets/geometry-artwork-3.jpg",
+    alt: "geometry-artwork-3"
+  },
+  {
+    src: "/assets/works/booklets/geometry-artwork-4.webp",
+    fallbackSrc: "/assets/works/booklets/geometry-artwork-4.jpg",
+    alt: "geometry-artwork-4"
+  },
+  {
+    src: "/assets/works/booklets/geometry-artwork-5.webp",
+    fallbackSrc: "/assets/works/booklets/geometry-artwork-5.jpg",
+    alt: "geometry-artwork-5"
+  },
+  {
+    src: "/assets/works/booklets/geometry-artwork-6.webp",
+    fallbackSrc: "/assets/works/booklets/geometry-artwork-6.jpg",
+    alt: "geometry-artwork-6"
+  },
+  {
+    src: "/assets/works/booklets/geometry-artwork-7.webp",
+    fallbackSrc: "/assets/works/booklets/geometry-artwork-7.jpg",
+    alt: "geometry-artwork-7"
+  },
+  {
+    src: "/assets/works/booklets/geometry-artwork-8.webp",
+    fallbackSrc: "/assets/works/booklets/geometry-artwork-8.jpg",
+    alt: "geometry-artwork-8"
+  },
+  {
+    src: "/assets/works/booklets/geometry-artwork-9.webp",
+    fallbackSrc: "/assets/works/booklets/geometry-artwork-9.jpg",
+    alt: "geometry-artwork-9"
+  },
+  {
+    src: "/assets/works/booklets/geometry-artwork-10.webp",
+    fallbackSrc: "/assets/works/booklets/geometry-artwork-10.jpg",
+    alt: "geometry-artwork-10"
+  },
+  {
+    src: "/assets/works/booklets/geometry-artwork-11.webp",
+    fallbackSrc: "/assets/works/booklets/geometry-artwork-11.jpg",
+    alt: "geometry-artwork-11"
+  },
+  {
+    src: "/assets/works/booklets/geometry-artwork-12.webp",
+    fallbackSrc: "/assets/works/booklets/geometry-artwork-12.jpg",
+    alt: "geometry-artwork-12"
   }]
 }
 
@@ -94,7 +159,7 @@ export default function Works() {
   return (
     <Layout>
       <Head>
-        <title>{siteTitle}</title>
+        <title>{SITE_TITLE}</title>
       </Head>
       <section className={utilStyles.headingMd}>
         <HeadingOne>Works</HeadingOne>
@@ -103,7 +168,7 @@ export default function Works() {
         </Box>
         <Box
           my={6}
-          className="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-6 gap-y-10 md:gap-y-6"
+          className="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-6 gap-y-10 md:grid-cols-2 md:gap-x-6 md:gap-y-16"
         >
           <ImageSection project={imageSources.drstile} />
         </Box>
@@ -113,7 +178,7 @@ export default function Works() {
         </Box>
         <Box
           my={6}
-          className="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-6 gap-y-10 md:gap-y-6"
+          className="grid grid-cols-1 lg:grid-cols-3 lg:gap-x-6 gap-y-10 md:grid-cols-3 md:gap-x-6 md:gap-y-16"
         >
           <ImageSection project={imageSources.doubleMoon} />
         </Box>
@@ -123,7 +188,7 @@ export default function Works() {
         </Box>
         <Box
           my={4}
-          className="grid grid-cols-1 lg:grid-cols-4 lg:gap-x-6 gap-y-10 md:gap-y-32"
+          className="grid grid-cols-2 lg:grid-cols-4 lg:gap-x-6 gap-y-10 md:grid-cols-2 md:gap-y-16"
         >
           <ImageSection project={imageSources.logos} />
         </Box>
@@ -133,9 +198,19 @@ export default function Works() {
         </Box>
         <Box
           my={4}
-          className="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-6 gap-y-10 md:gap-y-32"
+          className="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-6 gap-y-10 md:grid-cols-2 md:gap-y-16"
         >
           <ImageSection project={imageSources.posters} />
+        </Box>
+
+        <Box my={6}>
+          <h3 className="text-xl md:text-3xl font-bold">booklets</h3>
+        </Box>
+        <Box
+          my={4}
+          className="grid grid-cols-2 lg:grid-cols-3 lg:gap-x-6 gap-y-10 md:grid-cols-2 md:gap-y-16"
+        >
+          <ImageSection project={imageSources.booklets} />
         </Box>
 
         <Box my={6}>
