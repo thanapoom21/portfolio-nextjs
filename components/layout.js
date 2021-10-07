@@ -4,9 +4,7 @@ import Navbar from "./navbar";
 import Footer from "./footer";
 import styles from "../styles/layout.module.css";
 import utilStyles from "../styles/utils.module.css";
-
-const name = "Thanapoom Phithakjarukorn";
-export const siteTitle = "Next.js Portfolio Website";
+import { AUTHOR_NAME, SITE_TITLE } from '../lib/constants'
 
 export default function Layout({ children, home }) {
   return (
@@ -18,11 +16,9 @@ export default function Layout({ children, home }) {
           <meta name="description" content="A personal website using Next.js" />
           <meta
             property="og:image"
-            content={`https://og-image.vercel.app/${encodeURI(
-              siteTitle
-            )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
+            content="https://portfolio21-images.s3.us-west-1.amazonaws.com/cover.jpg"
           />
-          <meta name="og:title" content={siteTitle} />
+          <meta name="og:title" content={SITE_TITLE} />
           <meta name="twitter:card" content="summary_large_image" />
           <link
             href="https://unpkg.com/prismjs@0.0.1/themes/prism-okaidia.css"
@@ -37,7 +33,7 @@ export default function Layout({ children, home }) {
               className={utilStyles.borderCircle}
               height={300}
               width={300}
-              alt={name}
+              alt={AUTHOR_NAME}
             />
           </header>
         ) : null}

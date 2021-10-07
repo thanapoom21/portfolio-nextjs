@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { Disclosure, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
-import styles from "../styles/navbar.module.css";
 
 const navigation = [
   { name: "Works", href: "/works", current: false },
@@ -17,7 +16,7 @@ function classNames(...classes) {
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className={styles.navigation}>
+    <Disclosure as="nav" className="my-5">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
