@@ -1,45 +1,44 @@
 import Head from "next/head";
-import Image from "next/image";
+import { Image } from "@chakra-ui/react";
 import Navbar from "./navbar";
 import Footer from "./footer";
-import styles from "./layout.module.css";
+import styles from "../styles/layout.module.css";
 import utilStyles from "../styles/utils.module.css";
+import { AUTHOR_NAME, SITE_TITLE } from '../lib/constants'
 
-const name = "Thanapoom Phithakjarukorn";
-export const siteTitle = "Next.js Portfolio Website";
-
-export default function Layout({ children, home, blog }) {
+export default function Layout({ children, home }) {
   return (
-    <div className={styles.wrapperBorder}>
-      <Navbar />
-      <div className={styles.container}>
-        <Head>
-          <link rel="icon" href="/favicon.ico" />
-          <meta name="description" content="A personal website using Next.js" />
-          <meta
-            property="og:image"
-            content={`https://og-image.vercel.app/${encodeURI(
-              siteTitle
-            )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
-          />
-          <meta name="og:title" content={siteTitle} />
-          <meta name="twitter:card" content="summary_large_image" />
-        </Head>
-        {home ? (
-          <header className={styles.header}>
-            <Image
-              priority
-              src="/images/logo_no_border2.svg"
-              className={utilStyles.borderCircle}
-              height={300}
-              width={300}
-              alt={name}
-            />
-          </header>
-        ) : null}
-        <main>{children}</main>
+    <>
+      <Head>
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content="A personal website using Next.js" />
+        <meta
+          property="og:image"
+          content="https://portfolio21-images.s3.us-west-1.amazonaws.com/cover.jpg"
+        />
+        <meta name="og:title" content={SITE_TITLE} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link
+          href="https://unpkg.com/prismjs@0.0.1/themes/prism-okaidia.css"
+          rel="stylesheet"
+        />
+      </Head>
+      <div className={styles.wrapperBorder}>
+        <Navbar />
+        <div className={styles.container}>
+          {home ? (
+            <header className={styles.header}>
+              <Image
+                src="/images/logo_no_border2.svg"
+                className={`${utilStyles.borderCircle}  w-1/2 md:w-2/4 lg:w-1/4`}
+                alt={AUTHOR_NAME}
+              />
+            </header>
+          ) : null}
+          <main>{children}</main>
+        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </>
   );
 }

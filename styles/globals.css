@@ -15,30 +15,3 @@ h6,
 strong {
   color: var(--main-heading-color);
 }
-
-p {
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
-
-
-/* *::-webkit-scrollbar {
-  width: 20px;
-}
-
-*::-webkit-scrollbar-track {
-  background: var(--main-heading-color);
-}
-
-*::-webkit-scrollbar-thumb {
-  background-color: white;
-  border-left: 9px solid var(--main-heading-color);
-  border-right: 9px solid var(--main-heading-color);
-  border-top: 20px solid var(--main-heading-color);
-  border-bottom: 20px solid var(--main-heading-color);
-  border-radius: 20px;
-}
-
-*::-webkit-scrollbar-corner {
-  background: var(--main-heading-color);
-} */
