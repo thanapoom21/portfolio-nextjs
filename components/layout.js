@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
+import { Image } from "@chakra-ui/react";
 import Navbar from "./navbar";
 import Footer from "./footer";
 import styles from "../styles/layout.module.css";
@@ -29,11 +29,8 @@ export default function Layout({ children, home }) {
           {home ? (
             <header className={styles.header}>
               <Image
-                priority
                 src="/images/logo_no_border2.svg"
-                className={utilStyles.borderCircle}
-                height={300}
-                width={300}
+                className={`${utilStyles.borderCircle}  w-1/2 md:w-2/4 lg:w-1/4`}
                 alt={AUTHOR_NAME}
               />
             </header>
