@@ -1,5 +1,5 @@
 ---
-title: 'How do JS developers flatten multi-dimentional arrays?'
+title: 'Array Flattening in JavaScript'
 excerpt: 'An array can contain many things such as String, Number, Boolean, Object. This is how we store an ordered collection, where each item is indexed and starts from 0.'
 coverImage: '/assets/blog/array-flattening/cover.png'
 date: '2020-07-14T05:35:07.322Z'
