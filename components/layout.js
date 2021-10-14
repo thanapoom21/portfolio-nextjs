@@ -18,10 +18,8 @@ export default function Layout({ children, home }) {
         />
         <meta name="og:title" content={SITE_TITLE} />
         <meta name="twitter:card" content="summary_large_image" />
-        <link
-          href="https://unpkg.com/prismjs@0.0.1/themes/prism-okaidia.css"
-          rel="stylesheet"
-        />
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css" />
       </Head>
       <div className={styles.wrapperBorder}>
         <Navbar />
