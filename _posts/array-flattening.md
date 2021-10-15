@@ -9,7 +9,6 @@ author:
 ogImage:
   url: '/assets/blog/array-flattening/cover.png'
 ---
-
 ## Array Flattening
 
 An array can contain many things such as String, Number, Boolean, Object. This is how we store an ordered collection, where each item is indexed and starts from 0. For example, say we want to store a list of tactical terms: Control Possession, Gegenpressing, Tiki-Taka, Wing Play, Route One, Fluid Counter Attack, Direct Counter Attack, False 9.
@@ -50,7 +49,7 @@ let initialArray = [[00, 11], [22, 33], [44, 55]];
 
 ### There are several possible solutions
 
-#### Array.prototype.flat() method
+Array.prototype.flat() method
 
 ```js
 // It is pretty straight forward and simple.
@@ -61,7 +60,7 @@ let flattenedArr = initialArray.flat();
 // result (6) [00, 11, 22, 33, 44, 55]
 ```
 
-##### Array.prototype.forEach() method
+Array.prototype.forEach() method
 
 ```js
 // create an empty array and call forEach on the initial array
@@ -75,7 +74,7 @@ initialArray.forEach(entry => {
 // result (6) [00, 11, 22, 33, 44, 55]
 ```
 
-##### Array.prototype.reduce() method
+Array.prototype.reduce() method
 
 ```js
 // create a reducer constant with 2 parameters: accumulator and currentValue.
@@ -88,7 +87,7 @@ let flattenedArr = initialArray.reduce(reducer);
 // result (6) [00, 11, 22, 33, 44, 55]
 ```
 
-##### Array.prototype.concat() method & Function.prototype.apply()
+Array.prototype.concat() method & Function.prototype.apply()
 
 ```js
 // create a new array and concat each element onto it.
@@ -98,7 +97,7 @@ let flattenedArr = Array.prototype.concat.apply([], initialArray)
 // result (6) [00, 11, 22, 33, 44, 55]
 ```
 
-##### Original for loop
+### Original for loop
 
 ```js
 let flattenedArr = [];
@@ -117,7 +116,7 @@ Ok, I know. There are so many ways to achieve the result we want. However, if yo
 
 ### JS Performance Testing in the Browser
 
-#### console.time() & console.timeEnd()
+console.time() & console.timeEnd()
 
 ```js
 console.time("for loop method");
@@ -134,7 +133,7 @@ console.timeEnd("for loop method");
 // result for loop method: 0.008056640625ms
 ```
 
-#### You can try a performance testing from these sites
+You can try a performance testing from these sites
 
 - [***https://jsbench.me/***](https://jsbench.me/)
 - [***https://jsperf.com/***](https://jsperf.com/)
