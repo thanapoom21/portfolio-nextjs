@@ -1,6 +1,6 @@
 ---
 title: 'Merge Sort in JavaScript'
-excerpt: 'Bresaola pork belly drumstick prosciutto boudin leberkas filet mignon. Salami kielbasa beef filet mignon brisket strip steak. Corned beef kielbasa alcatra pancetta tail t-bone bacon pig landjaeger cow frankfurter brisket burgdoggen leberkas. Buffalo burgdoggen shankle, filet mignon leberkas beef strip steak landjaeger rump boudin porchetta pork belly. Shankle shoulder ribeye, picanha ham hock fatback doner t-bone jowl prosciutto pig.'
+excerpt: 'Similar to binary search, merge sort is a divide and conquer algorithm. The goal is to break down a complicated problem into sub-problems and recursively continue to divide them until we have plenty of simple problems that we can easily solve.'
 coverImage: '/assets/blog/merge-sort-algorithm/cover.png'
 date: '2021-10-16T11:45:01.322Z'
 author:
