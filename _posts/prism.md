@@ -1,6 +1,7 @@
 ---
 title: 'Prism with Next.js'
-excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.'
+excerpt: 'Prism is a popular syntax highlighter commonly used with Markdown. This example shows how to use Prism with Next.js. Use the theme dropdown
+in the header to switch syntax highlighting themes.'
 coverImage: '/assets/blog/prismjs-for-markdown/cover.png'
 date: '2020-03-16T05:35:07.322Z'
 author:
