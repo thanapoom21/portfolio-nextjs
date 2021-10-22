@@ -5,8 +5,9 @@ import HeroPost from "../components/hero-post";
 import HeadingOne from "../components/headingOne";
 import { Box } from "@chakra-ui/react";
 import { getAllPosts } from "../lib/posts";
+import { GetStaticProps } from 'next'
 
-export default function Blog({ allPosts }) {
+const Blog = ({ allPosts }) => {
   const heroPost = allPosts[0];
   const morePosts = allPosts.slice(1);
   return (
@@ -34,7 +35,7 @@ export default function Blog({ allPosts }) {
   );
 }
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const allPosts = getAllPosts([
     "title",
     "date",
@@ -50,3 +51,5 @@ export async function getStaticProps() {
     },
   };
 }
+
+export default Blog;

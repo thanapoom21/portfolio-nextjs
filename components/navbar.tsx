@@ -10,11 +10,11 @@ const navigation = [
   { name: "Contact", href: "/contact", current: false },
 ];
 
-function classNames(...classes) {
+function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Navbar() {
+const Navbar = () => {
   return (
     <Disclosure as="nav" className="my-5">
       {({ open }) => (
@@ -107,3 +107,5 @@ export default function Navbar() {
     </Disclosure>
   );
 }
+
+export default Navbar;

@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export default function BackButton() {
+const BackButton = () => {
   return (
     <h2 className="text-2xl md:text-4xl font-bold tracking-tight md:tracking-tighter leading-tight">
       <Link href="/blog">
@@ -9,3 +9,5 @@ export default function BackButton() {
     </h2>
   )
 }
+
+export default BackButton;

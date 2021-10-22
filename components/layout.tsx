@@ -5,8 +5,15 @@ import Footer from "./footer";
 import styles from "../styles/layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import { AUTHOR_NAME, SITE_TITLE } from '../lib/constants'
+import React from "react";
 
-export default function Layout({ children, home }) {
+const Layout = ({
+  children,
+  home
+}: {
+  children: React.ReactNode,
+  home?: boolean
+}) => {
   return (
     <>
       <Head>
@@ -40,3 +47,5 @@ export default function Layout({ children, home }) {
     </>
   );
 }
+
+export default Layout;
