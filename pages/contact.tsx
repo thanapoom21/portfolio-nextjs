@@ -8,7 +8,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import utilStyles from "../styles/utils.module.css";
 import { SITE_TITLE } from '../lib/constants'
 
-export default function Contact() {
+const Contact = () => {
   const textToAnimate = `I am available for freelance work. Drop me a line if you would like to chat. 😄`;
   return (
     <Layout>
@@ -65,3 +65,5 @@ function AnimatedText({ children }) {
     </div>
   );
 }
+
+export default Contact;

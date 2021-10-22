@@ -136,10 +136,16 @@ const imageSources = {
   }]
 }
 
-function ImageSection({ project }) {
+interface Project {
+  src: string,
+  fallbackSrc: string,
+  alt: string
+}
+
+const ImageSection = ({ project }: { project: Project[] }) => {
   return (
     <>
-      {project.map(obj => {
+      {project.map((obj: { alt: string; src: string; fallbackSrc: string; }) => {
         return (
           <section key={obj.alt}>
             <div className="mb-5">
@@ -156,7 +162,29 @@ function ImageSection({ project }) {
   );
 }
 
-export default function Works() {
+const BoxOfProjects = ({ name, gridCols, lgGridCols, mdGridCols, project }: {
+  name: string,
+  gridCols: number,
+  lgGridCols: number,
+  mdGridCols: number,
+  project: Project[]
+}) => {
+  return (
+    <>
+      <Box my={6}>
+        <h3 className="text-xl md:text-3xl font-bold">{name}</h3>
+      </Box>
+      <Box
+        my={6}
+        className={`grid grid-cols-${gridCols} lg:grid-cols-${lgGridCols} lg:gap-x-6 gap-y-10 md:grid-cols-${mdGridCols} md:gap-x-6 md:gap-y-16`}
+      >
+        <ImageSection project={project} />
+      </Box>
+    </>
+  )
+}
+
+const Works = () => {
   return (
     <Layout>
       <Head>
@@ -164,55 +192,12 @@ export default function Works() {
       </Head>
       <section className={utilStyles.headingMd}>
         <HeadingOne>Works</HeadingOne>
-        <Box my={6}>
-          <h3 className="text-xl md:text-3xl font-bold">drstile</h3>
-        </Box>
-        <Box
-          my={6}
-          className="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-6 gap-y-10 md:grid-cols-2 md:gap-x-6 md:gap-y-16"
-        >
-          <ImageSection project={imageSources.drstile} />
-        </Box>
 
-        <Box my={6}>
-          <h3 className="text-xl md:text-3xl font-bold">double moon</h3>
-        </Box>
-        <Box
-          my={6}
-          className="grid grid-cols-1 lg:grid-cols-3 lg:gap-x-6 gap-y-10 md:grid-cols-3 md:gap-x-6 md:gap-y-16"
-        >
-          <ImageSection project={imageSources.doubleMoon} />
-        </Box>
-
-        <Box my={6}>
-          <h3 className="text-xl md:text-3xl font-bold">logos</h3>
-        </Box>
-        <Box
-          my={4}
-          className="grid grid-cols-2 lg:grid-cols-4 lg:gap-x-6 gap-y-10 md:grid-cols-2 md:gap-y-16"
-        >
-          <ImageSection project={imageSources.logos} />
-        </Box>
-
-        <Box my={6}>
-          <h3 className="text-xl md:text-3xl font-bold">posters</h3>
-        </Box>
-        <Box
-          my={4}
-          className="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-6 gap-y-10 md:grid-cols-2 md:gap-y-16"
-        >
-          <ImageSection project={imageSources.posters} />
-        </Box>
-
-        <Box my={6}>
-          <h3 className="text-xl md:text-3xl font-bold">booklets</h3>
-        </Box>
-        <Box
-          my={4}
-          className="grid grid-cols-2 lg:grid-cols-3 lg:gap-x-6 gap-y-10 md:grid-cols-2 md:gap-y-16"
-        >
-          <ImageSection project={imageSources.booklets} />
-        </Box>
+        <BoxOfProjects name="drstile" gridCols={1} lgGridCols={2} mdGridCols={2} project={imageSources.drstile}/>
+        <BoxOfProjects name="double moon" gridCols={1} lgGridCols={3} mdGridCols={3} project={imageSources.doubleMoon}/>
+        <BoxOfProjects name="logos" gridCols={2} lgGridCols={4} mdGridCols={2} project={imageSources.logos}/>
+        <BoxOfProjects name="posters" gridCols={1} lgGridCols={2} mdGridCols={2} project={imageSources.posters}/>
+        <BoxOfProjects name="booklets" gridCols={2} lgGridCols={3} mdGridCols={2} project={imageSources.booklets}/>
 
 
         <Box>
@@ -252,3 +237,5 @@ export default function Works() {
     </Layout>
   );
 }
+
+export default Works;

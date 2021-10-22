@@ -3,14 +3,14 @@ import DateFormatter from './date-formatter'
 import CoverImage from './cover-image'
 import Link from 'next/link'
 
-export default function PostPreview({
+const PostPreview = ({
   title,
   coverImage,
   date,
   excerpt,
   author,
   slug,
-}) {
+}) => {
   return (
     <div>
       <div className="mb-5">
@@ -35,3 +35,5 @@ export default function PostPreview({
     </div>
   )
 }
+
+export default PostPreview;

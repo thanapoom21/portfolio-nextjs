@@ -3,14 +3,14 @@ import DateFormatter from './date-formatter'
 import CoverImage from './cover-image'
 import Link from 'next/link'
 
-export default function HeroPost({
+const HeroPost = ({
   title,
-  coverImage,
   date,
-  excerpt,
-  author,
   slug,
-}) {
+  author,
+  coverImage,
+  excerpt,
+}) => {
   return (
     <section>
       <div className="mb-8 md:mb-16">
@@ -41,3 +41,5 @@ export default function HeroPost({
     </section>
   )
 }
+
+export default HeroPost;

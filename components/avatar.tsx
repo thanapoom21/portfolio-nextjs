@@ -1,4 +1,10 @@
-export default function Avatar({ name, picture }) {
+const Avatar = ({
+  name,
+  picture
+}: {
+  name: string,
+  picture: string
+}) => {
   return (
     <div className="flex items-center">
       <img src={picture} className="w-12 h-12 rounded-full mr-4" alt={name} />
@@ -6,3 +12,5 @@ export default function Avatar({ name, picture }) {
     </div>
   )
 }
+
+export default Avatar;
