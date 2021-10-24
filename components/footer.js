@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Disclosure } from "@headlessui/react";
-import styles from "../styles/footer.module.css";
 
 const navigation = [
   { name: "Github", href: "https://www.github.com", current: false },
@@ -14,7 +13,7 @@ function classNames(...classes) {
 
 export default function Navbar() {
   return (
-    <Disclosure as="footer" className={styles.container}>
+    <Disclosure as="footer" className="max-w-6xl px-4 mx-auto mt-12 mb-24">
       {() => (
         <>
           {navigation.map((item) => (
