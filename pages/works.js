@@ -214,29 +214,40 @@ export default function Works() {
           <ImageSection project={imageSources.booklets} />
         </Box>
 
-        <Box my={6}>
+
+        <Box>
           <h3 className="text-xl md:text-3xl font-bold">APIs</h3>
-          <h4>Random Quote Machine — freecodecamp.com</h4>
         </Box>
-        <Box my={4} className="grid grid-cols-1 lg:grid-cols-1">
-          <section>
-            <div id="random-quote-machine" className="mb-5 text-center">
-              <RandomMachine />
-            </div>
-          </section>
+        <Box
+          className="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-6 gap-y-10 md:grid-cols-2 md:gap-y-16"
+        >
+
+          <Box my={6}>
+            <Box>
+              <h4>Random Quote Machine — freecodecamp.com</h4>
+            </Box>
+            <Box my={4} className="grid grid-cols-1 lg:grid-cols-1">
+              <section>
+                <div id="random-quote-machine" className="mb-5 text-center">
+                  <RandomMachine />
+                </div>
+              </section>
+            </Box>
+          </Box>
+          <Box my={6}>
+            <Box>
+              <h4>Todo App</h4>
+            </Box>
+            <Box my={4} className="grid grid-cols-1 lg:grid-cols-1">
+              <section>
+                <div id="todo-app" className="mb-5 text-center">
+                  <TodoApp />
+                </div>
+              </section>
+            </Box>
+          </Box>
         </Box>
 
-        <Box my={6}>
-          <h3 className="text-xl md:text-3xl font-bold">React Simple App</h3>
-          <h4>Todo App</h4>
-        </Box>
-        <Box my={4} className="grid grid-cols-1 lg:grid-cols-1">
-          <section>
-            <div id="todo-app" className="mb-5 text-center">
-              <TodoApp />
-            </div>
-          </section>
-        </Box>
       </section>
     </Layout>
   );
