@@ -271,10 +271,6 @@ class RandomMachine extends React.Component {
 
     return (
       <>
-        <div className="flex justify-center">
-          <Twitter text={this.state.text} author={this.state.author} />
-        </div>
-
         <QuoteBoxButton
           style={appBorder}
           id="quote-box"
@@ -286,6 +282,10 @@ class RandomMachine extends React.Component {
             <Author author={this.state.author} colorDark={this.state.colorDark} />
           </div>
         </QuoteBoxButton>
+
+        <div className="flex justify-center">
+          <Twitter text={this.state.text} author={this.state.author} />
+        </div>
       </>
     );
   }
