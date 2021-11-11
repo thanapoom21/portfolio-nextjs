@@ -1,16 +1,7 @@
 .wrapperBorder {
-  border-top: 20px solid rgba(30, 30, 30, 1);
-  border-left: 20px solid rgba(30, 30, 30, 1);
-  border-bottom: 20px solid rgba(30, 30, 30, 1);
-  border-right: 20px solid rgba(30, 30, 30, 1);
+  border: 20px solid rgba(30, 30, 30, 1);
   height: 100vh;
   overflow: scroll;
-}
-
-.container {
-  max-width: 70rem;
-  padding: 0 1rem;
-  margin: 3rem auto 3rem;
 }
 
 .header {
@@ -20,8 +11,4 @@
   margin: 0.5em 0;
   font-size: 3em;
   font-weight: 900;
-}
-
-.backToHome {
-  margin: 3rem 0 0;
 }
