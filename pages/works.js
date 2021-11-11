@@ -4,6 +4,7 @@ import HeadingOne from "../components/headingOne";
 import { Box, Image } from "@chakra-ui/react";
 import utilStyles from "../styles/utils.module.css";
 import RandomMachine from "./fcc-tutorials-projects/random-quote-machine";
+import TodoApp from "./fcc-tutorials-projects/todo-app";
 import { SITE_TITLE } from '../lib/constants';
 
 const imageSources = {
@@ -213,17 +214,40 @@ export default function Works() {
           <ImageSection project={imageSources.booklets} />
         </Box>
 
-        <Box my={6}>
+
+        <Box>
           <h3 className="text-xl md:text-3xl font-bold">APIs</h3>
-          <h4>Random Quote Machine — freecodecamp.com</h4>
         </Box>
-        <Box my={4} className="grid grid-cols-1 lg:grid-cols-1">
-          <section>
-            <div id="random-quote-machine" className="mb-5 text-center">
-              <RandomMachine />
-            </div>
-          </section>
+        <Box
+          className="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-6 md:grid-cols-2 md:gap-y-16"
+        >
+
+          <Box mt={6}>
+            <Box>
+              <h4>Random Quote Machine — freecodecamp.com</h4>
+            </Box>
+            <Box mt={4} className="grid grid-cols-1 lg:grid-cols-1">
+              <section>
+                <div id="random-quote-machine" className="mb-5 text-center">
+                  <RandomMachine />
+                </div>
+              </section>
+            </Box>
+          </Box>
+          <Box mt={6}>
+            <Box>
+              <h4>Todo App</h4>
+            </Box>
+            <Box mt={4} className="grid grid-cols-1 lg:grid-cols-1">
+              <section>
+                <div id="todo-app" className="mb-5 text-center">
+                  <TodoApp />
+                </div>
+              </section>
+            </Box>
+          </Box>
         </Box>
+
       </section>
     </Layout>
   );
