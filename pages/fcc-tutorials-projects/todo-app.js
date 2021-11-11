@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from 'react';
 
 function Todo({ todo, index, completeTodo, removeTodo }) {
   return (
@@ -8,7 +8,7 @@ function Todo({ todo, index, completeTodo, removeTodo }) {
     >
       <p>{todo.text}</p>
       <div>
-        <button onClick={() => completeTodo(index)}>Complete</button>
+        <button onClick={() => completeTodo(index)}>{todo.isCompleted ? "Not Completed" : "Complete"}</button>
         <button onClick={() => removeTodo(index)}>x</button>
       </div>
     </div>
@@ -16,7 +16,7 @@ function Todo({ todo, index, completeTodo, removeTodo }) {
 };
 
 function TodoForm({ addTodo }) {
-  const [value, setValue] = React.useState("");
+  const [value, setValue] = useState("");
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -37,21 +37,23 @@ function TodoForm({ addTodo }) {
   );
 }
 
+let initialObject = [
+  {
+    text: "Learn about React",
+    isCompleted: false
+  },
+  {
+    text: "Meet friend for lunch",
+    isCompleted: false
+  },
+  {
+    text: "Build really cool todo app",
+    isCompleted: false
+  }
+];
+
 function TodoApp() {
-  const [todos, setTodos] = React.useState([
-    {
-      text: "Learn about React",
-      isCompleted: false
-    },
-    {
-      text: "Meet friend for lunch",
-      isCompleted: false
-    },
-    {
-      text: "Build really cool todo app",
-      isCompleted: false
-    }
-  ]);
+  const [todos, setTodos] = useState(initialObject);
 
   const addTodo = text => {
     const newTodos = [...todos, { text }];
@@ -60,7 +62,7 @@ function TodoApp() {
 
   const completeTodo = index => {
     const newTodos = [...todos];
-    newTodos[index].isCompleted = true;
+    newTodos[index].isCompleted = !newTodos[index].isCompleted;
     setTodos(newTodos);
   };
 
