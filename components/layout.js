@@ -4,7 +4,7 @@ import Navbar from "./navbar";
 import Footer from "./footer";
 import styles from "../styles/layout.module.css";
 import utilStyles from "../styles/utils.module.css";
-import { AUTHOR_NAME, SITE_TITLE, SITE_DESCRIPTION, CURRENT_URL, SITE_NAME } from '../lib/constants'
+import { AUTHOR_NAME, CURRENT_URL, HOME_OG_IMAGE_URL, SITE_DESCRIPTION, SITE_NAME, SITE_TITLE } from '../lib/constants'
 
 export default function Layout({ children, home }) {
   return (
@@ -18,7 +18,7 @@ export default function Layout({ children, home }) {
         <meta property="og:url" content={CURRENT_URL} key="ogurl" />
         <meta
           property="og:image"
-          content="https://portfolio21-images.s3.us-west-1.amazonaws.com/cover.jpg"
+          content={HOME_OG_IMAGE_URL}
           key="ogimage"
         />
         <meta property="og:site_name" content={SITE_NAME} key="ogsitename" />
