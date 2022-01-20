@@ -1,7 +1,7 @@
 import BackButton from "./backButton";
 import markdownStyles from "../styles/markdown-styles.module.css";
 
-export default function PostBody({ content }) {
+const PostBody = ({ content }) => {
   return (
     <div className="max-w-2xl mx-auto">
       <div
@@ -12,3 +12,5 @@ export default function PostBody({ content }) {
     </div>
   );
 }
+
+export default PostBody;

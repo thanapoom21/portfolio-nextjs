@@ -8,7 +8,7 @@ export function getPostSlugs() {
   return fs.readdirSync(postsDirectory);
 }
 
-export function getPostBySlug(slug, fields = []) {
+export function getPostBySlug(slug: string, fields: string[]) {
   const realSlug = slug.replace(/\.md$/, "");
   const fullPath = join(postsDirectory, `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
@@ -30,7 +30,17 @@ export function getPostBySlug(slug, fields = []) {
     }
   });
 
-  return items;
+  return items as {
+    title: string,
+    date: number,
+    slug: string,
+    author: string,
+    content: string,
+    ogImage: {
+      url: string
+    },
+    coverImage: string
+  };
 }
 
 export function getAllPosts(fields = []) {

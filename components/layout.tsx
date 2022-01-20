@@ -6,7 +6,13 @@ import styles from "../styles/layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import { AUTHOR_NAME, CURRENT_URL, HOME_OG_IMAGE_URL, SITE_DESCRIPTION, SITE_NAME, SITE_TITLE } from '../lib/constants'
 
-export default function Layout({ children, home }) {
+const Layout = ({
+  children,
+  home
+}: {
+  children: React.ReactNode,
+  home?: boolean
+}) => {
   return (
     <>
       <Head>
@@ -45,3 +51,5 @@ export default function Layout({ children, home }) {
     </>
   );
 }
+
+export default Layout;

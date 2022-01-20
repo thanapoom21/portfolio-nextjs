@@ -7,11 +7,11 @@ const navigation = [
   { name: "Facebook", href: "https://www.facebook.com", current: false },
 ];
 
-function classNames(...classes) {
+function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Navbar() {
+const Navbar = () => {
   return (
     <Disclosure as="footer" className="max-w-6xl px-4 mx-auto mt-12 mb-24">
       {() => (
@@ -36,3 +36,5 @@ export default function Navbar() {
     </Disclosure>
   );
 }
+
+export default Navbar;
