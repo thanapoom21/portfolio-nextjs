@@ -4,20 +4,25 @@ import Navbar from "./navbar";
 import Footer from "./footer";
 import styles from "../styles/layout.module.css";
 import utilStyles from "../styles/utils.module.css";
-import { AUTHOR_NAME, SITE_TITLE } from '../lib/constants'
+import { AUTHOR_NAME, CURRENT_URL, HOME_OG_IMAGE_URL, SITE_DESCRIPTION, SITE_NAME, SITE_TITLE } from '../lib/constants'
 
 export default function Layout({ children, home }) {
   return (
     <>
       <Head>
         <link rel="icon" href="/favicon.ico" />
-        <meta name="description" content="A personal website using Next.js" />
+
+        <meta property="og:title" content={SITE_TITLE} key="ogtitle" />
+        <meta property="og:description" content={SITE_DESCRIPTION} key="ogdesc" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={CURRENT_URL} key="ogurl" />
         <meta
           property="og:image"
-          content="https://portfolio21-images.s3.us-west-1.amazonaws.com/cover.jpg"
+          content={HOME_OG_IMAGE_URL}
+          key="ogimage"
         />
-        <meta name="og:title" content={SITE_TITLE} />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="og:site_name" content={SITE_NAME} key="ogsitename" />
+        <meta name="twitter:card" content="summary_large_image" key="twcard" />
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css" />
       </Head>
