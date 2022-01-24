@@ -1,8 +1,9 @@
 import Head from "next/head";
+import Image from 'next/image';
 import Layout from "../components/layout";
 import HeadingOne from "../components/headingOne";
 import utilStyles from "../styles/utils.module.css";
-import { Box, Image, Wrap, WrapItem } from "@chakra-ui/react";
+import { Box, Wrap, WrapItem } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { SITE_TITLE } from '../lib/constants'
 
@@ -30,7 +31,11 @@ const Photons = () => {
         }}
         justify="space-evenly"
       >
-        <Image src={photo.imageUrl} alt={photo.imageAlt} />
+        <Image
+          src={photo.imageUrl}
+          width={500}
+          height={500}
+          alt={photo.imageAlt} />
       </WrapItem>
     );
   })
