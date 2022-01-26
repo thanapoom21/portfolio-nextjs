@@ -33,8 +33,8 @@ const Photons = () => {
       >
         <Image
           src={photo.imageUrl}
-          width={500}
-          height={500}
+          width={480}
+          height={320}
           alt={photo.imageAlt} />
       </WrapItem>
     );
