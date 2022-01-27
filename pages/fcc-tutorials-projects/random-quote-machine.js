@@ -180,6 +180,7 @@ const Twitter = (props) => {
       <a
         id="tweet-quote"
         target="_blank"
+        rel="noreferrer"
         title="Tweet this quote!"
         href={formatted}
       >

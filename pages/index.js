@@ -11,14 +11,14 @@ export default function Home() {
       </Head>
       <section className={utilStyles.headingMd}>
         <p className={`${utilStyles.landingP} text-3xl leading-snug md:text-6xl font-bold md:leading-snug`}>
-          Hi, I'm Thanapoom and I go by Music. I'm a web developer and a
+          Hi, I&apos;m Thanapoom and I go by Music. I&apos;m a web developer and a
           translator (English/Thai). I like to create graphics such as logos,
           business cards, posters, brochures, and websites. However, I consider
           myself as a new kid on the block in this field because there are many
-          things that I don't fully understand. I am eager to learn new things.
-          I've done freelance work for small businesses, participated in
+          things that I don&apos;t fully understand. I am eager to learn new things.
+          I&apos;ve done freelance work for small businesses, participated in
           startups, and collaborated with talented people to build digital
-          products for both business and consumer use. I'm naturally curious,
+          products for both business and consumer use. I&apos;m naturally curious,
           relentlessly optimistic, and gradually & constantly improving my
           ability. 🎉
         </p>
