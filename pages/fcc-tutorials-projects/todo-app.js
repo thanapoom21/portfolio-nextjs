@@ -27,12 +27,15 @@ function TodoForm({ addTodo }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        className="todo-input"
-        value={value}
-        onChange={e => setValue(e.target.value)}
-      />
+      <label>
+        Type a todo list item down here:
+        <input
+          type="text"
+          className="todo-input"
+          value={value}
+          onChange={e => setValue(e.target.value)}
+          />
+      </label>
     </form>
   );
 }

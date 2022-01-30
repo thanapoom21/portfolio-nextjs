@@ -32,8 +32,8 @@ export default function Navbar() {
                         priority
                         src="/images/logo.svg"
                         className="block lg:block h-8 w-auto"
-                        height={50}
-                        width={50}
+                        height="50"
+                        width="50"
                         alt="logo"
                       />
                     </a>
