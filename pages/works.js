@@ -249,7 +249,7 @@ export default function Works() {
           </Box>
           <Box mt={6}>
             <Box>
-              <h4>20 Movies from A Movies Collection</h4>
+              <h4>Top 20 Movies of All Time from A Sample Movies Collection</h4>
             </Box>
             <Box mt={4} className="grid grid-cols-1 lg:grid-cols-1">
               <section>
