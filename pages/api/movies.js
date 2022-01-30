@@ -1,6 +1,6 @@
 import { connectToDatabase } from '../../lib/mongodb';
 
-export default async (req, res) => {
+export default async function moviesAPI (req, res) {
   const { db } = await connectToDatabase();
 
   const movies = await db
