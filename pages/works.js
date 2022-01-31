@@ -5,6 +5,7 @@ import { Box, Image } from "@chakra-ui/react";
 import utilStyles from "../styles/utils.module.css";
 import RandomMachine from "./fcc-tutorials-projects/random-quote-machine";
 import TodoApp from "./fcc-tutorials-projects/todo-app";
+import Link from 'next/link'
 import { SITE_TITLE } from '../lib/constants';
 
 const imageSources = {
@@ -242,6 +243,22 @@ export default function Works() {
               <section>
                 <div id="todo-app" className="mb-5 text-center">
                   <TodoApp />
+                </div>
+              </section>
+            </Box>
+          </Box>
+          <Box mt={6}>
+            <Box>
+              <h4>Top 20 Movies of All Time from A Sample Movies Collection</h4>
+            </Box>
+            <Box mt={4} className="grid grid-cols-1 lg:grid-cols-1">
+              <section>
+                <div id="movies-of-all-time" className="mb-5 text-center" >
+                  <div className="todo-app">
+                    <Link href="/movies">
+                      <a className="hover:underline text-white">20 Movies</a>
+                    </Link>
+                  </div>
                 </div>
               </section>
             </Box>
