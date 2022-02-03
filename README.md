@@ -23,3 +23,10 @@ yarn build
 # Run production build
 yarn start
 ```
+
+ESlint and Prettier are installed for easy configuration and code format. We can change the configuration later as we see fit.
+
+```sh
+# Run lint to see if it complies with code rules or convention.
+yarn lint
+```
