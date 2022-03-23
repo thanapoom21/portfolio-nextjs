@@ -280,7 +280,7 @@ export default function Works() {
 						<Box mt={4} className='grid grid-cols-1 lg:grid-cols-1'>
 							<section>
 								<div id='scrimba-tutorial' className='mb-5'>
-										<InfoSite />
+									<InfoSite />
 								</div>
 							</section>
 						</Box>
