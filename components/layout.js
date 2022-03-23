@@ -24,7 +24,6 @@ export default function Layout({ children, home }) {
         <meta property="og:site_name" content={SITE_NAME} key="ogsitename" />
         <meta name="twitter:card" content="summary_large_image" key="twcard" />
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css" />
       </Head>
       <div className={styles.wrapperBorder}>
         <Navbar />
