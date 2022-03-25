@@ -6,6 +6,7 @@ import utilStyles from '../styles/utils.module.css'
 import RandomMachine from './fcc-tutorials-projects/random-quote-machine'
 import TodoApp from './fcc-tutorials-projects/todo-app'
 import InfoSite from './scrimba-tutorial/InfoSite'
+import Unicafe from './fullstackopen-tutorial/Unicafe'
 import Link from 'next/link'
 import { SITE_TITLE } from '../lib/constants'
 
@@ -281,6 +282,8 @@ export default function Works() {
               <section>
                 <div id='scrimba-tutorial' className='mb-5'>
                   <InfoSite />
+
+                  <Unicafe />
                 </div>
               </section>
             </Box>
