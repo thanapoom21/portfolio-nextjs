@@ -4,20 +4,23 @@ import { Button } from '@chakra-ui/react'
 const StatisticLine = ({ text, value }) => {
   return (
     <table>
-      <tr>
-        <th className='pr-5'>{text}</th>
-        <td>{value}</td>
-      </tr>
+      <tbody>
+        <tr>
+          <th className='pr-5'>{text}</th>
+          <td>{value}</td>
+        </tr>
+      </tbody>
     </table>
   )
 }
 
-const Statistics = ({ good, neutral, bad }) => {
+const Statistics = ({ good, neutral, bad, allFeedback }) => {
   return (
     <div>
       <StatisticLine text='good' value={good} />
       <StatisticLine text='neutral' value={neutral} />
       <StatisticLine text='bad' value={bad} />
+      <StatisticLine text='all' value={allFeedback} />
     </div>
   )
 }
@@ -27,6 +30,7 @@ const Unicafe = () => {
   const [good, setGood] = useState(0)
   const [neutral, setNeutral] = useState(0)
   const [bad, setBad] = useState(0)
+  const allFeedback = good + neutral + bad
 
   const handleGood = () => {
     setGood(good + 1)
@@ -89,7 +93,12 @@ const Unicafe = () => {
         Statistics
       </h1>
       {good || neutral || bad ? (
-        <Statistics good={good} neutral={neutral} bad={bad} />
+        <Statistics
+          good={good}
+          neutral={neutral}
+          bad={bad}
+          allFeedback={allFeedback}
+        />
       ) : (
         `No feedback given`
       )}
