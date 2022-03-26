@@ -6,6 +6,7 @@ import { Box } from '@chakra-ui/react'
 import utilStyles from '../styles/utils.module.css'
 import RandomMachine from './fcc-tutorials-projects/random-quote-machine'
 import TodoApp from './fcc-tutorials-projects/todo-app'
+import InfoSite from './scrimba-tutorial/InfoSite'
 import Link from 'next/link'
 import { SITE_TITLE } from '../lib/constants'
 
@@ -247,7 +248,7 @@ export default function Works() {
             </Box>
             <Box mt={4} className='grid grid-cols-1 lg:grid-cols-1'>
               <section>
-                <div id='random-quote-machine' className='mb-5 text-center'>
+                <div id='random-quote-machine' className='mb-5'>
                   <RandomMachine />
                 </div>
               </section>
@@ -259,7 +260,7 @@ export default function Works() {
             </Box>
             <Box mt={4} className='grid grid-cols-1 lg:grid-cols-1'>
               <section>
-                <div id='todo-app' className='mb-5 text-center'>
+                <div id='todo-app' className='mb-5'>
                   <TodoApp />
                 </div>
               </section>
@@ -277,6 +278,18 @@ export default function Works() {
                       <a className='hover:underline text-white'>20 Movies</a>
                     </Link>
                   </div>
+                </div>
+              </section>
+            </Box>
+          </Box>
+          <Box mt={6}>
+            <Box>
+              <h4>Scrimba - Tutorial 1</h4>
+            </Box>
+            <Box mt={4} className='grid grid-cols-1 lg:grid-cols-1'>
+              <section>
+                <div id='scrimba-tutorial' className='mb-5'>
+                  <InfoSite />
                 </div>
               </section>
             </Box>

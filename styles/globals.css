@@ -36,7 +36,7 @@
 
 .todo button:last-child {
   border-radius: 3px;
-  background:tomato;
+  background: tomato;
   color: white;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
   padding: 1px 6px;
@@ -47,3 +47,69 @@
   border-radius: 3px;
   width: 100%;
 }
+
+/*** Start Scrimba Turorial ***/
+.scrimba-tutorial {
+  border-radius: 5px;
+}
+
+#info-site-container {
+  margin: 0;
+  /* font-family: 'Inter', sans-serif; */
+  background-color: #282d35;
+}
+
+#info-site-container .scrimba--nav {
+  display: flex;
+  align-items: center;
+  background-color: #21222a;
+  height: 90px;
+  padding: 30px 25px;
+}
+
+#info-site-container .nav--logo_text,
+.nav--title {
+  margin: 0;
+}
+
+#info-site-container .nav--logo_text {
+  margin-right: auto;
+  color: #61dafb;
+  font-weight: bolder;
+  font-size: 22px;
+}
+
+#info-site-container .nav--title {
+  color: #deebf8;
+  font-weight: bolder;
+}
+
+#info-site-container .nav--icon {
+  height: 30px;
+  margin-right: 7px;
+}
+
+#info-site-container .main--container {
+  padding: 57px 27px;
+  color: white;
+  background-image: url(/images/react-icon-large.png);
+  background-repeat: no-repeat;
+  background-position: right 75%;
+}
+
+#info-site-container .main--title {
+  font-size: 1.4em;
+  font-weight: bolder;
+}
+
+#info-site-container .main--facts {
+  margin-top: 16px;
+  list-style: disc;
+  padding-inline-start: 40px;
+}
+
+#info-site-container .main--facts > li::marker {
+  font-size: 1.2rem;
+  color: #61dafb;
+}
+/*** End Scrimba Turorial ***/
