@@ -1,12 +1,12 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import Layout from '../components/layout'
 import HeadingOne from '../components/headingOne'
-import { Box } from '@chakra-ui/react'
+import { Box, Image } from '@chakra-ui/react'
 import utilStyles from '../styles/utils.module.css'
 import RandomMachine from './fcc-tutorials-projects/random-quote-machine'
 import TodoApp from './fcc-tutorials-projects/todo-app'
 import InfoSite from './scrimba-tutorial/InfoSite'
+import Unicafe from './fullstackopen-tutorial/Unicafe'
 import Link from 'next/link'
 import { SITE_TITLE } from '../lib/constants'
 
@@ -152,14 +152,18 @@ const imageSources = {
   ],
 }
 
-function ImageSection({ project, imgW, imgH }) {
+function ImageSection({ project }) {
   return (
     <>
       {project.map((obj) => {
         return (
           <section key={obj.alt}>
             <div className='mb-5'>
-              <Image width={imgW} height={imgH} src={obj.src} alt={obj.alt} />
+              <Image
+                src={obj.src}
+                fallbackSrc={obj.fallbackSrc}
+                alt={obj.alt}
+              />
             </div>
           </section>
         )
@@ -177,65 +181,53 @@ export default function Works() {
       <section className={utilStyles.headingMd}>
         <HeadingOne>Works</HeadingOne>
         <Box my={6}>
-          <h2 className='text-xl md:text-3xl font-bold'>drstile</h2>
+          <h3 className='text-xl md:text-3xl font-bold'>drstile</h3>
         </Box>
         <Box
           my={6}
           className='grid grid-cols-1 lg:grid-cols-2 lg:gap-x-6 gap-y-10 md:grid-cols-2 md:gap-x-6 md:gap-y-16'
         >
-          <ImageSection project={imageSources.drstile} imgW='1094' imgH='820' />
+          <ImageSection project={imageSources.drstile} />
         </Box>
 
         <Box my={6}>
-          <h2 className='text-xl md:text-3xl font-bold'>double moon</h2>
+          <h3 className='text-xl md:text-3xl font-bold'>double moon</h3>
         </Box>
         <Box
           my={6}
           className='grid grid-cols-1 lg:grid-cols-3 lg:gap-x-6 gap-y-10 md:grid-cols-3 md:gap-x-6 md:gap-y-16'
         >
-          <ImageSection
-            project={imageSources.doubleMoon}
-            imgW='752'
-            imgH='486'
-          />
+          <ImageSection project={imageSources.doubleMoon} />
         </Box>
 
         <Box my={6}>
-          <h2 className='text-xl md:text-3xl font-bold'>logos</h2>
+          <h3 className='text-xl md:text-3xl font-bold'>logos</h3>
         </Box>
         <Box
           my={4}
           className='grid grid-cols-2 lg:grid-cols-4 lg:gap-x-6 gap-y-10 md:grid-cols-2 md:gap-y-16'
         >
-          <ImageSection project={imageSources.logos} imgW='1080' imgH='800' />
+          <ImageSection project={imageSources.logos} />
         </Box>
 
         <Box my={6}>
-          <h2 className='text-xl md:text-3xl font-bold'>posters</h2>
+          <h3 className='text-xl md:text-3xl font-bold'>posters</h3>
         </Box>
         <Box
           my={4}
           className='grid grid-cols-1 lg:grid-cols-2 lg:gap-x-6 gap-y-10 md:grid-cols-2 md:gap-y-16'
         >
-          <ImageSection
-            project={imageSources.posters}
-            imgW='1600'
-            imgH='2000'
-          />
+          <ImageSection project={imageSources.posters} />
         </Box>
 
         <Box my={6}>
-          <h2 className='text-xl md:text-3xl font-bold'>booklets</h2>
+          <h3 className='text-xl md:text-3xl font-bold'>booklets</h3>
         </Box>
         <Box
           my={4}
           className='grid grid-cols-2 lg:grid-cols-3 lg:gap-x-6 gap-y-10 md:grid-cols-2 md:gap-y-16'
         >
-          <ImageSection
-            project={imageSources.booklets}
-            imgW='825'
-            imgH='1275'
-          />
+          <ImageSection project={imageSources.booklets} />
         </Box>
 
         <Box>
@@ -290,6 +282,8 @@ export default function Works() {
               <section>
                 <div id='scrimba-tutorial' className='mb-5'>
                   <InfoSite />
+
+                  <Unicafe />
                 </div>
               </section>
             </Box>
