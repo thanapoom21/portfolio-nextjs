@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { Image } from '@chakra-ui/react'
+import Image from 'next/image'
 import Navbar from './navbar'
 import Footer from './footer'
 import styles from '../styles/layout.module.css'
@@ -18,6 +18,10 @@ export default function Layout({ children, home }) {
     <>
       <Head>
         <link rel='icon' href='/favicon.ico' />
+        <meta
+          name='description'
+          content="An online portfolio for showcasing what I am capable of. There are several things I can do with web development and graphics. If you don't know how, maybe I can help."
+        />
 
         <meta property='og:title' content={SITE_TITLE} key='ogtitle' />
         <meta
