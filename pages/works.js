@@ -9,6 +9,7 @@ import InfoSite from './scrimba-tutorial/InfoSite'
 import Unicafe from './fullstackopen-tutorial/Unicafe'
 import Link from 'next/link'
 import { SITE_TITLE } from '../lib/constants'
+import Anecdotes from './fullstackopen-tutorial/Anecdotes'
 
 const imageSources = {
   drstile: [
@@ -282,8 +283,12 @@ export default function Works() {
               <section>
                 <div id='scrimba-tutorial' className='mb-5'>
                   <InfoSite />
-
+                </div>
+                <div id='scrimba-tutorial' className='mb-5'>
                   <Unicafe />
+                </div>
+                <div id='scrimba-tutorial' className='mb-5'>
+                  <Anecdotes />
                 </div>
               </section>
             </Box>
