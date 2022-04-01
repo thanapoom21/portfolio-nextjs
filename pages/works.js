@@ -11,6 +11,7 @@ import Link from 'next/link'
 import { SITE_TITLE } from '../lib/constants'
 import Anecdotes from './fullstackopen-tutorial/Anecdotes'
 import CourseInfo from './fullstackopen-tutorial/CourseInfo'
+import Phonebook from './fullstackopen-tutorial/Phonebook'
 
 const imageSources = {
   drstile: [
@@ -293,6 +294,9 @@ export default function Works() {
                 </div>
                 <div id='scrimba-tutorial' className='mb-5'>
                   <CourseInfo />
+                </div>
+                <div id='scrimba-tutorial' className='mb-5'>
+                  <Phonebook />
                 </div>
               </section>
             </Box>
