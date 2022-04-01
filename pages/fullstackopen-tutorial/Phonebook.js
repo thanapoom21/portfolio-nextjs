@@ -9,7 +9,7 @@ const Phonebook = () => {
     { name: 'Mary Poppendieck', number: '39-23-6423122', id: 4 }
   ])
 
-  const [filteredPeople, setFilteredPeople] = useState([])
+  const [, setFilteredPeople] = useState([])
 
   const [name, setName] = useState('')
   const [phoneNumber, setPhoneNumber] = useState('')
