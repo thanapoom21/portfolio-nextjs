@@ -7,6 +7,14 @@ const initialPropsValues = {
   number: ""
 }
 
+const Filter = ({ value, onChange }) => {
+  return (
+    <div className="my-2">
+      Search: <input value={value} onChange={onChange} placeholder='type a word' />
+    </div>
+  )
+}
+
 const Phonebook = () => {
   const [people, setPeople] = useState([
     { name: 'Arto Hellas', number: '040-123456', id: 1 },
@@ -48,11 +56,9 @@ const Phonebook = () => {
 
   return (
     <div>
-      <p className='text-2xl md:text-4xl font-bold tracking-tight my-2'>Phonebook Exercise</p>
-      <p className='text-xl md:text-2xl font-bold tracking-tight my-2'>Phonebook</p>
-      <div className="my-2">
-        Search: <input value={searchedWord} onChange={handleSearch} placeholder='type a word' />
-      </div>
+      <h1 className='text-2xl md:text-4xl font-bold tracking-tight my-2'>Phonebook Exercise</h1>
+      <h2 className='text-xl md:text-2xl font-bold tracking-tight my-2'>Phonebook</h2>
+      <Filter value={searchedWord} onChange={handleSearch} />
 
       <form onSubmit={handleSubmit}>
         <div className="my-2">
@@ -72,7 +78,7 @@ const Phonebook = () => {
           Add
         </Button>
       </form>
-      <p className='text-xl md:text-2xl font-bold tracking-tight my-2'>Numbers</p>
+      <h2 className='text-xl md:text-2xl font-bold tracking-tight my-2'>Numbers</h2>
       {
         !searchedWord
           ?
