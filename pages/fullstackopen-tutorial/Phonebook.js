@@ -1,5 +1,11 @@
+/* eslint-disable no-unused-vars */
 import { useState } from "react"
 import { Button } from '@chakra-ui/react'
+
+const initialPropsValues = {
+  name: "",
+  number: ""
+}
 
 const Phonebook = () => {
   const [people, setPeople] = useState([
@@ -9,33 +15,30 @@ const Phonebook = () => {
     { name: 'Mary Poppendieck', number: '39-23-6423122', id: 4 }
   ])
 
-  const [, setFilteredPeople] = useState([])
-
-  const [name, setName] = useState('')
-  const [phoneNumber, setPhoneNumber] = useState('')
+  const [inputValues, setInputValues] = useState(initialPropsValues)
+  const [filteredPeople, setFilteredPeople] = useState([])
   const [searchedWord, setSearchedWord] = useState('')
   const filteredWord = !searchedWord ? people : people.filter(person => person.name.toLowerCase().includes(searchedWord.toLowerCase()))
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    alert(`${name} and ${phoneNumber} are already added to phonebook`)
+    alert(`${inputValues.name} and ${inputValues.number} are already added to phonebook`)
     const personObject = {
-      name: name,
-      number: phoneNumber,
+      name: inputValues.name,
+      number: inputValues.number,
       id: people.length + 1
     }
 
     setPeople(people.concat(personObject))
-    setName('')
-    setPhoneNumber('')
+    setInputValues(initialPropsValues)
   }
 
-  const handleChangeName = (event) => {
-    setName(event.target.value)
-  }
-
-  const handleChangeNumber = (event) => {
-    setPhoneNumber(event.target.value)
+  const handleInputChange = (event) => {
+    const { name, value } = event.target
+    setInputValues({
+      ...inputValues,
+      [name]: value
+    })
   }
 
   const handleSearch = (event) => {
@@ -53,11 +56,11 @@ const Phonebook = () => {
 
       <form onSubmit={handleSubmit}>
         <div className="my-2">
-          Name: <input value={name} onChange={handleChangeName} placeholder='your name' />
+          Name: <input value={inputValues.name} onChange={handleInputChange} name="name" label="Name" placeholder='your name' />
         </div>
 
         <div className="my-2">
-          Number: <input value={phoneNumber} onChange={handleChangeNumber} placeholder='your phone number' />
+          Number: <input value={inputValues.number} onChange={handleInputChange} name="number" label="Number" placeholder='your phone number' />
         </div>
         <Button
           mr={2}
