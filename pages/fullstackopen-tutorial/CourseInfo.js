@@ -1,4 +1,4 @@
-import Course from "./course-info-modules/Course"
+import Course from "../../components/course-info-modules/Course"
 
 const CourseInfo = () => {
   const courses = [
