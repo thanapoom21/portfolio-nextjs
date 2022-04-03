@@ -17,10 +17,10 @@ const Filter = ({ value, onChange }) => {
 
 const Phonebook = () => {
   const [people, setPeople] = useState([
-    { name: 'Arto Hellas', number: '040-123456', id: 1 },
-    { name: 'Ada Lovelace', number: '39-44-5323523', id: 2 },
-    { name: 'Dan Abramov', number: '12-43-234345', id: 3 },
-    { name: 'Mary Poppendieck', number: '39-23-6423122', id: 4 }
+    { name: 'Arsene Wenger', number: '702-465-1115', id: 1 },
+    { name: 'Jose Mourinho', number: '702-465-2224', id: 2 },
+    { name: 'Alex Ferguson', number: '215-225-1189', id: 3 },
+    { name: 'Antonio Conte', number: '618-981-1646', id: 4 }
   ])
 
   const [inputValues, setInputValues] = useState(initialPropsValues)
