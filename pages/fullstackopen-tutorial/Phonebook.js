@@ -15,6 +15,16 @@ const Filter = ({ value, onChange }) => {
   )
 }
 
+const People = ({ searchedWord, people, filteredWord }) => {
+  const initPeople = people.map(person => <p key={person.id}>{`${person.name} - ${person.number}`}</p>)
+  const filteredPeople = filteredWord.map(person => <p key={person.id}>{`${person.name} - ${person.number}`}</p>)
+  return (
+    <div>
+      {!searchedWord ? initPeople : filteredPeople}
+    </div>
+  )
+}
+
 const Phonebook = () => {
   const [people, setPeople] = useState([
     { name: 'Arsene Wenger', number: '702-465-1115', id: 1 },
@@ -79,13 +89,7 @@ const Phonebook = () => {
         </Button>
       </form>
       <h2 className='text-xl md:text-2xl font-bold tracking-tight my-2'>Numbers</h2>
-      {
-        !searchedWord
-          ?
-          people.map(person => <p key={person.id}>{`${person.name} - ${person.number}`}</p>)
-          :
-          filteredWord.map(person => <p key={person.id}>{`${person.name} - ${person.number}`}</p>)
-      }
+      <People searchedWord={searchedWord} people={people} filteredWord={filteredWord} />
     </div>
   )
 }
