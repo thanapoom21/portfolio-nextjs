@@ -2,9 +2,9 @@ import Link from "next/link";
 import { Disclosure } from "@headlessui/react";
 
 const navigation = [
-  { name: "Github", href: "https://www.github.com", current: false },
-  { name: "Twitter", href: "https://www.twitter.com", current: false },
-  { name: "Facebook", href: "https://www.facebook.com", current: false },
+  { name: "Github", href: "https://github.com/thanapoom21", current: false },
+  { name: "Twitter", href: "https://twitter.com/music_ptjrk", current: false },
+  // { name: "Instagram", href: "https://www.instagram.com/musictp/", current: false },
 ];
 
 function classNames(...classes) {
