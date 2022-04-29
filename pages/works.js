@@ -6,13 +6,8 @@ import utilStyles from '../styles/utils.module.css'
 import RandomMachine from './fcc-tutorials-projects/random-quote-machine'
 import TodoApp from './fcc-tutorials-projects/todo-app'
 import InfoSite from './scrimba-tutorial/InfoSite'
-import Unicafe from './fullstackopen-tutorial/Unicafe'
 import Link from 'next/link'
 import { SITE_TITLE } from '../lib/constants'
-import Anecdotes from './fullstackopen-tutorial/Anecdotes'
-import CourseInfo from './fullstackopen-tutorial/CourseInfo'
-import Phonebook from './fullstackopen-tutorial/Phonebook'
-import CountryList from './fullstackopen-tutorial/CountryList'
 
 const imageSources = {
   drstile: [
@@ -286,21 +281,6 @@ export default function Works() {
               <section>
                 <div id='scrimba-tutorial' className='mb-5'>
                   <InfoSite />
-                </div>
-                <div id='scrimba-tutorial' className='mb-5'>
-                  <Unicafe />
-                </div>
-                <div id='scrimba-tutorial' className='mb-5'>
-                  <Anecdotes />
-                </div>
-                <div id='scrimba-tutorial' className='mb-5'>
-                  <CourseInfo />
-                </div>
-                <div id='scrimba-tutorial' className='mb-5'>
-                  <Phonebook />
-                </div>
-                <div id='scrimba-tutorial' className='mb-5'>
-                  <CountryList />
                 </div>
               </section>
             </Box>

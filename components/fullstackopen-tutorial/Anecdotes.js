@@ -35,9 +35,9 @@ const Quote = () => {
 
   return (
     <div>
-      <p className='text-xl md:text-2xl font-bold tracking-tight my-2'>
+      <h1 className='text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-tight md:mb-6 md:text-left'>
         Quote of The Day
-      </p>
+      </h1>
       <p>{quotes[selected]}</p>
       <p>has {points[selected]} vote</p>
       <Button
@@ -59,9 +59,9 @@ const Quote = () => {
         Next Quote
       </Button>
 
-      <p className='text-xl md:text-2xl font-bold tracking-tight my-2'>
+      <h1 className='text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-tight md:mb-6 md:text-left'>
         Quote with The Most Votes
-      </p>
+      </h1>
       {quotes[points.indexOf(mostVotes)]}
       <p>has {mostVotes} vote</p>
     </div>

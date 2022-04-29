@@ -76,8 +76,9 @@ const Phonebook = () => {
 
   return (
     <div>
-      <h1 className='text-2xl md:text-4xl font-bold tracking-tight my-2'>Phonebook Exercise</h1>
-      <h2 className='text-xl md:text-2xl font-bold tracking-tight my-2'>Phonebook</h2>
+      <h1 className='text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-tight md:mb-6 md:text-left'>
+        Phonebook
+      </h1>
       <Filter value={searchedWord} onChange={handleSearch} />
 
       <form onSubmit={handleSubmit}>

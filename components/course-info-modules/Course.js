@@ -4,7 +4,9 @@ import TotalOfExercises from "./TotalOfExercises"
 const Course = ({ courses }) => {
   return (
     <div>
-      <h1 className='text-2xl md:text-4xl font-bold tracking-tight my-2'>Web Development Curriculum</h1>
+      <h1 className='text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-tight md:mb-6 md:text-left'>
+        Web Development Curriculum
+      </h1>
       {courses.map(({ name, parts }, idx) => {
         const totalOfExercises = parts.map(part => part.exercises).reduce((a, c) => a + c)
 
