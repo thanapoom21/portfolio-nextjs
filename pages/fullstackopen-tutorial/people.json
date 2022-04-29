@@ -1,0 +1,24 @@
+{
+  "persons": [
+    {
+      "name": "Arsene Wenger",
+      "number": "702-465-1115",
+      "id": 1
+    },
+    {
+      "name": "Jose Mourinho",
+      "number": "702-465-2224",
+      "id": 2
+    },
+    {
+      "name": "Alex Ferguson",
+      "number": "215-225-1189",
+      "id": 3
+    },
+    {
+      "name": "Antonio Conte",
+      "number": "618-981-1646",
+      "id": 4
+    }
+  ]
+}

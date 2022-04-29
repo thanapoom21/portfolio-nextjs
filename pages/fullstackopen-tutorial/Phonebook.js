@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Button } from '@chakra-ui/react'
 
 const initialPropsValues = {
@@ -32,6 +32,16 @@ const Phonebook = () => {
     { name: 'Alex Ferguson', number: '215-225-1189', id: 3 },
     { name: 'Antonio Conte', number: '618-981-1646', id: 4 }
   ])
+
+  // const [people, setPeople] = useState([])
+
+  // people.json has to be run before fetching data from server.
+  // useEffect(() => {
+  //   axios.get('http://localhost:3001/persons').then(response => {
+  //     setPeople(response.data)
+  //     console.log(response.data)
+  //   })
+  // }, [])
 
   const [inputValues, setInputValues] = useState(initialPropsValues)
   const [filteredPeople, setFilteredPeople] = useState([])
