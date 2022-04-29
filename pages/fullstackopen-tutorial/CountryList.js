@@ -22,8 +22,8 @@ const CountryList = () => {
 
   return (
     <>
-      <p className='text-2xl md:text-4xl font-bold tracking-tight my-2'>Country Data Exercise</p>
-      <p className='text-xl md:text-2xl font-bold tracking-tight my-2'>Country Data</p>
+      <h1 className='text-2xl md:text-4xl font-bold tracking-tight my-2'>Country Data Exercise</h1>
+      <h2 className='text-xl md:text-2xl font-bold tracking-tight my-2'>Country Data</h2>
       <div className="my-2">
         Find countries: <input value={searchedWord} onChange={handleSearch} placeholder='type a word' />
       </div>
