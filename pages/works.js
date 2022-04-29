@@ -12,6 +12,7 @@ import { SITE_TITLE } from '../lib/constants'
 import Anecdotes from './fullstackopen-tutorial/Anecdotes'
 import CourseInfo from './fullstackopen-tutorial/CourseInfo'
 import Phonebook from './fullstackopen-tutorial/Phonebook'
+import CountryList from './fullstackopen-tutorial/CountryList'
 
 const imageSources = {
   drstile: [
@@ -297,6 +298,9 @@ export default function Works() {
                 </div>
                 <div id='scrimba-tutorial' className='mb-5'>
                   <Phonebook />
+                </div>
+                <div id='scrimba-tutorial' className='mb-5'>
+                  <CountryList />
                 </div>
               </section>
             </Box>
