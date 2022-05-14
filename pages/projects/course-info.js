@@ -3,7 +3,6 @@ import Layout from "../../components/layout";
 import Container from "../../components/container";
 import CourseInfo from "../../components/fullstackopen-tutorial/CourseInfo";
 
-
 const CourseInfoPage = () => {
   return (
     <Layout>
@@ -14,7 +13,7 @@ const CourseInfoPage = () => {
         <CourseInfo />
       </Container>
     </Layout>
-  )
-}
+  );
+};
 
 export default CourseInfoPage;

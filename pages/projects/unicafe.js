@@ -13,7 +13,7 @@ const UnicafePage = () => {
         <Unicafe />
       </Container>
     </Layout>
-  )
-}
+  );
+};
 
 export default UnicafePage;

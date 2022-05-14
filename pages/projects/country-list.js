@@ -13,7 +13,7 @@ const CountryListPage = () => {
         <CountryList />
       </Container>
     </Layout>
-  )
-}
+  );
+};
 
 export default CountryListPage;

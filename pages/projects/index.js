@@ -39,7 +39,7 @@ const ProjectsLandingPage = () => {
         </ul>
       </Container>
     </Layout>
-  )
-}
+  );
+};
 
 export default ProjectsLandingPage;

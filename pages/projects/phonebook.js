@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Layout from "../../components/layout";
 import Container from "../../components/container";
-import Phonebook from "../../components/fullstackopen-tutorial/Phonebook"
+import Phonebook from "../../components/fullstackopen-tutorial/Phonebook";
 
 const PhonebookPage = () => {
   return (
@@ -13,7 +13,7 @@ const PhonebookPage = () => {
         <Phonebook />
       </Container>
     </Layout>
-  )
-}
+  );
+};
 
 export default PhonebookPage;

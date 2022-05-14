@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from "next/link";
 
 export default function BackButton() {
   return (
@@ -7,5 +7,5 @@ export default function BackButton() {
         <a className="hover:underline">← Go Back</a>
       </Link>
     </h2>
-  )
+  );
 }
