@@ -30,3 +30,7 @@ ESlint and Prettier are installed for easy configuration and code format. We can
 # Run lint to see if it complies with code rules or convention.
 yarn lint
 ```
+
+## Note
+
+> I plan to add more works and side projects to this repo. If possible, I'd like to redesign the whole site and probably have to update some dependencies. New releases would be better and simpler. Plan to add tags and releases to the repo.

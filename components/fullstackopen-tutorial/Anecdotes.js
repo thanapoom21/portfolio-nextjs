@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import { Button } from '@chakra-ui/react'
+import { useState } from "react";
+import { Button } from "@chakra-ui/react";
 
 const quotes = [
   `"Any fool can write code that a computer can understand. Good programmers write code that humans can understand." - Martin Fowler`,
@@ -11,61 +11,61 @@ const quotes = [
   `"Don't write better error messages, write code that doesn't need them." - Jason C. McDonald`,
   `"Make it work, make it right, make it fast." - Kent Beck`,
   `"Programming isn't about what you know; it's about what you can figure out." - Chris Pine`,
-]
+];
 
-const randomize = (array) => {
-  return Math.round(Math.random() * (array.length - 1))
-}
+const randomize = array => {
+  return Math.round(Math.random() * (array.length - 1));
+};
 
 const Quote = () => {
-  const [selected, setSelected] = useState(0)
-  const [points, setPoints] = useState(Array(quotes.length).fill(0))
-  const mostVotes = Math.max(...points)
+  const [selected, setSelected] = useState(0);
+  const [points, setPoints] = useState(Array(quotes.length).fill(0));
+  const mostVotes = Math.max(...points);
 
   const handleClick = () => {
-    const selectedQuote = randomize(quotes)
-    setSelected(selectedQuote)
-  }
+    const selectedQuote = randomize(quotes);
+    setSelected(selectedQuote);
+  };
 
   const handleVote = () => {
-    const copiedPoints = [...points]
-    copiedPoints[selected] += 1
-    setPoints(copiedPoints)
-  }
+    const copiedPoints = [...points];
+    copiedPoints[selected] += 1;
+    setPoints(copiedPoints);
+  };
 
   return (
     <div>
-      <p className='text-xl md:text-2xl font-bold tracking-tight my-2'>
+      <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-tight md:mb-6 md:text-left">
         Quote of The Day
-      </p>
+      </h1>
       <p>{quotes[selected]}</p>
       <p>has {points[selected]} vote</p>
       <Button
         mr={2}
-        colorScheme='blackAlpha'
-        variant='outline'
-        borderRadius='1px'
+        colorScheme="blackAlpha"
+        variant="outline"
+        borderRadius="1px"
         onClick={handleVote}
       >
         Vote
       </Button>
       <Button
         mr={2}
-        colorScheme='blackAlpha'
-        variant='outline'
-        borderRadius='1px'
+        colorScheme="blackAlpha"
+        variant="outline"
+        borderRadius="1px"
         onClick={handleClick}
       >
         Next Quote
       </Button>
 
-      <p className='text-xl md:text-2xl font-bold tracking-tight my-2'>
+      <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-tight md:mb-6 md:text-left">
         Quote with The Most Votes
-      </p>
+      </h1>
       {quotes[points.indexOf(mostVotes)]}
       <p>has {mostVotes} vote</p>
     </div>
-  )
-}
+  );
+};
 
-export default Quote
+export default Quote;

@@ -1,6 +1,6 @@
-import { connectToDatabase } from '../../lib/mongodb';
+import { connectToDatabase } from "../../lib/mongodb";
 
-export default async function moviesAPI (req, res) {
+export default async function moviesAPI(req, res) {
   const { db } = await connectToDatabase();
 
   const movies = await db
@@ -8,7 +8,7 @@ export default async function moviesAPI (req, res) {
     .find({})
     .sort({ metacritic: -1 })
     .limit(20)
-    .toArray()
+    .toArray();
 
   res.json(movies);
-};
+}

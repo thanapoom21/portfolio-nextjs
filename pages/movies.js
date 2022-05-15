@@ -1,7 +1,15 @@
 import Head from "next/head";
 import Layout from "../components/layout";
 import HeadingOne from "../components/headingOne";
-import { Box, Container, Flex, Image, Badge, ListItem, UnorderedList } from "@chakra-ui/react";
+import {
+  Box,
+  Container,
+  Flex,
+  Image,
+  Badge,
+  ListItem,
+  UnorderedList,
+} from "@chakra-ui/react";
 import utilStyles from "../styles/utils.module.css";
 import { SITE_TITLE } from "../lib/constants";
 
@@ -15,18 +23,22 @@ export default function Movies({ movies }) {
       </Head>
       <section className={utilStyles.headingMd}>
         <HeadingOne>Top 20 Movies of All Time</HeadingOne>
-        <Container maxW='6xl'>
+        <Container maxW="6xl">
           {movies.map((movie, idx) => (
             <Box key={idx} overflow="hidden" m={10}>
-              <Box display={{ md: 'flex' }} justifyContent="space-around">
-                <Box maxW='sm'>
+              <Box display={{ md: "flex" }} justifyContent="space-around">
+                <Box maxW="sm">
                   <Image
                     src={movie.poster}
                     alt={movie.title}
                     objectFit="cover"
                   />
                 </Box>
-                <Flex maxW='sm' fontSize={['sm', 'md', 'lg', 'xl']} direction="column">
+                <Flex
+                  maxW="sm"
+                  fontSize={["sm", "md", "lg", "xl"]}
+                  direction="column"
+                >
                   <Box>
                     <strong>Title:</strong> {movie.title}
                   </Box>

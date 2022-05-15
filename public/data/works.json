@@ -1,0 +1,137 @@
+{
+  "drstile": [
+    {
+      "src": "/assets/works/drstile-website/drstile-website-1.webp",
+      "fallbackSrc": "/assets/works/drstile-website/drstile-website-1.jpg",
+      "alt": "drstile-website-1"
+    },
+    {
+      "src": "/assets/works/drstile-website/drstile-website-2.webp",
+      "fallbackSrc": "/assets/works/drstile-website/drstile-website-2.jpg",
+      "alt": "drstile-website-2"
+    },
+    {
+      "src": "/assets/works/drstile-website/drstile-website-3.webp",
+      "fallbackSrc": "/assets/works/drstile-website/drstile-website-3.jpg",
+      "alt": "drstile-website-3"
+    },
+    {
+      "src": "/assets/works/drstile-website/drstile-website-2.webp",
+      "fallbackSrc": "/assets/works/drstile-website/drstile-website-2.jpg",
+      "alt": "drstile-website-4"
+    }
+  ],
+  "doubleMoon": [
+    {
+      "src": "/assets/works/double-moon/double-moon-1.webp",
+      "fallbackSrc": "/assets/works/double-moon/double-moon-1.jpg",
+      "alt": "double-moon-1"
+    },
+    {
+      "src": "/assets/works/double-moon/double-moon-2.webp",
+      "fallbackSrc": "/assets/works/double-moon/double-moon-2.jpg",
+      "alt": "double-moon-2"
+    },
+    {
+      "src": "/assets/works/double-moon/double-moon-3.webp",
+      "fallbackSrc": "/assets/works/double-moon/double-moon-3.jpg",
+      "alt": "double-moon-3"
+    }
+  ],
+  "logos": [
+    {
+      "src": "/assets/works/logos/harmoneyes-3.webp",
+      "fallbackSrc": "/assets/works/logos/harmoneyes-3.jpg",
+      "alt": "harmoneyes-3"
+    },
+    {
+      "src": "/assets/works/logos/red-cardinal.webp",
+      "fallbackSrc": "/assets/works/logos/red-cardinal.jpg",
+      "alt": "red-cardinal"
+    },
+    {
+      "src": "/assets/works/logos/scfoundation-1.webp",
+      "fallbackSrc": "/assets/works/logos/scfoundation-1.jpg",
+      "alt": "scfoundation-1"
+    },
+    {
+      "src": "/assets/works/logos/scfoundation-2.webp",
+      "fallbackSrc": "/assets/works/logos/scfoundation-2.jpg",
+      "alt": "scfoundation-2"
+    }
+  ],
+  "posters": [
+    {
+      "src": "/assets/works/posters/exordium-main-poster-w990.webp",
+      "fallbackSrc": "/assets/works/posters/exordium-main-poster-w990.jpg",
+      "alt": "exordium-main-poster-w990"
+    },
+    {
+      "src": "/assets/works/posters/exordium-poster-w990.webp",
+      "fallbackSrc": "/assets/works/posters/exordium-poster-w990.jpg",
+      "alt": "exordium-poster-w990"
+    }
+  ],
+  "booklets": [
+    {
+      "src": "/assets/works/booklets/geometry-artwork-1.webp",
+      "fallbackSrc": "/assets/works/booklets/geometry-artwork-1.jpg",
+      "alt": "geometry-artwork-1"
+    },
+    {
+      "src": "/assets/works/booklets/geometry-artwork-2.webp",
+      "fallbackSrc": "/assets/works/booklets/geometry-artwork-2.jpg",
+      "alt": "geometry-artwork-2"
+    },
+    {
+      "src": "/assets/works/booklets/geometry-artwork-3.webp",
+      "fallbackSrc": "/assets/works/booklets/geometry-artwork-3.jpg",
+      "alt": "geometry-artwork-3"
+    },
+    {
+      "src": "/assets/works/booklets/geometry-artwork-4.webp",
+      "fallbackSrc": "/assets/works/booklets/geometry-artwork-4.jpg",
+      "alt": "geometry-artwork-4"
+    },
+    {
+      "src": "/assets/works/booklets/geometry-artwork-5.webp",
+      "fallbackSrc": "/assets/works/booklets/geometry-artwork-5.jpg",
+      "alt": "geometry-artwork-5"
+    },
+    {
+      "src": "/assets/works/booklets/geometry-artwork-6.webp",
+      "fallbackSrc": "/assets/works/booklets/geometry-artwork-6.jpg",
+      "alt": "geometry-artwork-6"
+    },
+    {
+      "src": "/assets/works/booklets/geometry-artwork-7.webp",
+      "fallbackSrc": "/assets/works/booklets/geometry-artwork-7.jpg",
+      "alt": "geometry-artwork-7"
+    },
+    {
+      "src": "/assets/works/booklets/geometry-artwork-8.webp",
+      "fallbackSrc": "/assets/works/booklets/geometry-artwork-8.jpg",
+      "alt": "geometry-artwork-8"
+    },
+    {
+      "src": "/assets/works/booklets/geometry-artwork-9.webp",
+      "fallbackSrc": "/assets/works/booklets/geometry-artwork-9.jpg",
+      "alt": "geometry-artwork-9"
+    },
+    {
+      "src": "/assets/works/booklets/geometry-artwork-10.webp",
+      "fallbackSrc": "/assets/works/booklets/geometry-artwork-10.jpg",
+      "alt": "geometry-artwork-10"
+    },
+    {
+      "src": "/assets/works/booklets/geometry-artwork-11.webp",
+      "fallbackSrc": "/assets/works/booklets/geometry-artwork-11.jpg",
+      "alt": "geometry-artwork-11"
+    },
+    {
+      "src": "/assets/works/booklets/geometry-artwork-12.webp",
+      "fallbackSrc": "/assets/works/booklets/geometry-artwork-12.jpg",
+      "alt": "geometry-artwork-12"
+    }
+  ]
+}

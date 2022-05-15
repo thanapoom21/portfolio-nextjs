@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const appStyle = {
   border: "solid 1px #777",
   borderRadius: "10px",
-  padding: "2em"
+  padding: "2em",
 };
 
 const buttonDefault = {
@@ -17,23 +17,23 @@ const buttonDefault = {
   borderStyle: "none",
   borderRadius: "5px",
   padding: "10px 20px",
-  cursor: "pointer"
+  cursor: "pointer",
 };
 
 const buttonHover = {
   ...buttonDefault,
-  color: "#12130F"
+  color: "#12130F",
 };
 
 const authStyle = {
   alignSelf: "flex-end",
   color: "#777",
   fontSize: "1.2em",
-  fontWeight: "800"
+  fontWeight: "800",
 };
 
 const quoteStyle = {
-  fontSize: "inherit"
+  fontSize: "inherit",
 };
 
 // Quotes and authors
@@ -122,7 +122,7 @@ const colors = [
   "#F1F7ED",
   "#FFCCC9",
   "#8EF9F3",
-  "#E9E3B4"
+  "#E9E3B4",
 ];
 
 const colorsDark = [
@@ -137,13 +137,13 @@ const colorsDark = [
   "#54494B",
   "#FF5666",
   "#171738",
-  "#3E6990"
+  "#3E6990",
 ];
 
-const QuoteBox = (props) => {
+const QuoteBox = props => {
   let quoteColor = {
     ...quoteStyle,
-    color: props.colorDark
+    color: props.colorDark,
   };
 
   return (
@@ -155,10 +155,10 @@ const QuoteBox = (props) => {
   );
 };
 
-const Author = (props) => {
+const Author = props => {
   let authColor = {
     ...authStyle,
-    color: props.colorDark
+    color: props.colorDark,
   };
 
   return (
@@ -168,12 +168,15 @@ const Author = (props) => {
   );
 };
 
-const randomNumber = (arr) => {
+const randomNumber = arr => {
   return Math.floor(Math.random() * arr.length);
 };
 
-const Twitter = (props) => {
-  const formatted = `https://www.twitter.com/intent/tweet?hashtags=quotes&text=%22${props.text.replace(" ", "%20")}%22%20-${props.author.replace(" ", "%20")}`;
+const Twitter = props => {
+  const formatted = `https://www.twitter.com/intent/tweet?hashtags=quotes&text=%22${props.text.replace(
+    " ",
+    "%20"
+  )}%22%20-${props.author.replace(" ", "%20")}`;
 
   return (
     <div className="w-12 text-blue-400">
@@ -184,7 +187,7 @@ const Twitter = (props) => {
         title="Tweet this quote!"
         href={formatted}
       >
-        <FontAwesomeIcon icon={['fab', 'twitter']} />
+        <FontAwesomeIcon icon={["fab", "twitter"]} />
       </a>
     </div>
   );
@@ -197,10 +200,10 @@ const QuoteBoxButton = ({ color, getQuote, children }) => {
   hover
     ? (buttonStyle = buttonDefault)
     : (buttonStyle = {
-      ...buttonHover,
-      backgroundColor: color,
-      borderColor: color
-    })
+        ...buttonHover,
+        backgroundColor: color,
+        borderColor: color,
+      });
 
   return (
     <div
@@ -213,7 +216,7 @@ const QuoteBoxButton = ({ color, getQuote, children }) => {
       {children}
     </div>
   );
-}
+};
 
 class RandomMachine extends React.Component {
   constructor(props) {
@@ -224,16 +227,17 @@ class RandomMachine extends React.Component {
       author: "",
       color: "",
       colorDark: "",
-      isFetching: false
+      isFetching: false,
     };
   }
 
   componentDidMount = () => {
-    axios.get(
-      "https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json"
-    )
-      .then((res) => {
-        const fetchedQuotes = res.data.quotes
+    axios
+      .get(
+        "https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json"
+      )
+      .then(res => {
+        const fetchedQuotes = res.data.quotes;
 
         // Random number for initial states
         let initQuote = randomNumber(fetchedQuotes);
@@ -245,9 +249,9 @@ class RandomMachine extends React.Component {
           author: fetchedQuotes[initQuote].author,
           color: colors[initColor],
           colorDark: colorsDark[initDarkColor],
-          fetchedQuotes
-        })
-      })
+          fetchedQuotes,
+        });
+      });
   };
 
   handleClick() {
@@ -267,8 +271,8 @@ class RandomMachine extends React.Component {
   render() {
     let appBorder = {
       ...appStyle,
-      borderColor: this.state.colorDark
-    }
+      borderColor: this.state.colorDark,
+    };
 
     return (
       <>
@@ -280,7 +284,10 @@ class RandomMachine extends React.Component {
         >
           <div id="quote-author">
             <QuoteBox text={this.state.text} colorDark={this.state.colorDark} />
-            <Author author={this.state.author} colorDark={this.state.colorDark} />
+            <Author
+              author={this.state.author}
+              colorDark={this.state.colorDark}
+            />
           </div>
         </QuoteBoxButton>
 

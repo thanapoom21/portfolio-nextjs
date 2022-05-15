@@ -6,7 +6,7 @@ import { EmailIcon } from "@chakra-ui/icons";
 import { SplitText } from "../components/SplitText";
 import { AnimatePresence, motion } from "framer-motion";
 import utilStyles from "../styles/utils.module.css";
-import { SITE_TITLE } from '../lib/constants'
+import { SITE_TITLE } from "../lib/constants";
 
 export default function Contact() {
   const textToAnimate = `I am available for freelance work. Drop me a line if you would like to chat. 😄`;
@@ -50,7 +50,7 @@ function AnimatedText({ children }) {
             initial={{ y: "100%" }}
             animate="visible"
             variants={{
-              visible: (i) => ({
+              visible: i => ({
                 y: 0,
                 transition: {
                   delay: i * 0.05,
