@@ -50,9 +50,9 @@ const Unicafe = () => {
 
   return (
     <div>
-      <h1 className="text-2xl md:text-4xl font-bold tracking-tight my-2">
+      <p className="text-xl md:text-2xl font-bold tracking-tight my-2">
         Give your feedback here
-      </h1>
+      </p>
       <Button
         mr={2}
         colorScheme="blackAlpha"
@@ -89,9 +89,9 @@ const Unicafe = () => {
       >
         Reset
       </Button>
-      <h1 className="text-2xl md:text-4xl font-bold tracking-tight my-2">
+      <p className="text-xl md:text-2xl font-bold tracking-tight my-2">
         Statistics
-      </h1>
+      </p>
       {good || neutral || bad ? (
         <Statistics
           good={good}
