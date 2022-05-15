@@ -2,3 +2,4 @@
 _posts
 package.json
 yarn.lock
+.eslintrc.json
