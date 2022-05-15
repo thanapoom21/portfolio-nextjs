@@ -131,6 +131,22 @@ export default function Works() {
               </section>
             </Box>
           </Box>
+          <Box mt={6}>
+            <Box>
+              <h4>Side Projects for Practicing React</h4>
+            </Box>
+            <Box mt={4} className="grid grid-cols-1 lg:grid-cols-1">
+              <section>
+                <div id="practicing-react" className="mb-5 text-center">
+                  <div className="todo-app">
+                    <Link href="/projects">
+                      <a className="hover:underline text-white">Projects</a>
+                    </Link>
+                  </div>
+                </div>
+              </section>
+            </Box>
+          </Box>
         </Box>
       </section>
     </Layout>
