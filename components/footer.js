@@ -11,7 +11,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Navbar() {
+export default function Footer() {
   return (
     <Disclosure as="footer" className="max-w-6xl px-4 mx-auto mt-12 mb-24">
       {() => (
