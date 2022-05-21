@@ -10,7 +10,8 @@
 		"ins": "yarn && yarn dev",
 		"prepare": "husky install",
 		"pre-commit": "next lint",
-		"format": "prettier --write ."
+		"format": "prettier --write .",
+		"prettier-check-all": "prettier --check ."
 	},
 	"dependencies": {
 		"@chakra-ui/icons": "^2.0.0",
