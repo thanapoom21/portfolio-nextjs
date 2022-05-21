@@ -16,10 +16,10 @@ function classNames(...classes) {
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="my-5">
-      {({ open }) => (
-        <>
-          <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+    <div className="max-w-6xl px-4 mx-auto">
+      <Disclosure as="nav" className="my-5">
+        {({ open }) => (
+          <>
             <div className="relative flex items-center justify-between h-16">
               <div className="absolute inset-y-0 left-0 flex items-center">
                 {/** This div was on the right displaying a bell icon for notification and the avatar */}
@@ -71,39 +71,39 @@ export default function Navbar() {
                 </Disclosure.Button>
               </div>
             </div>
-          </div>
 
-          <Transition
-            show={open}
-            enter="transition-opacity duration-75"
-            enterFrom="opacity-0"
-            enterTo="opacity-100"
-            leave="transition-opacity duration-150"
-            leaveFrom="opacity-100"
-            leaveTo="opacity-0"
-          >
-            <Disclosure.Panel className="sm:hidden">
-              <div className="px-2 pt-2 pb-3 space-y-1">
-                {navigation.map(item => (
-                  <Link href={item.href} key={item.name}>
-                    <a
-                      className={classNames(
-                        item.current
-                          ? "bg-gray-900 text-white"
-                          : "text-gray-500 hover:text-gray-800",
-                        "block px-3 py-2 rounded-md text-base font-medium"
-                      )}
-                      aria-current={item.current ? "page" : undefined}
-                    >
-                      {item.name}
-                    </a>
-                  </Link>
-                ))}
-              </div>
-            </Disclosure.Panel>
-          </Transition>
-        </>
-      )}
-    </Disclosure>
+            <Transition
+              show={open}
+              enter="transition-opacity duration-75"
+              enterFrom="opacity-0"
+              enterTo="opacity-100"
+              leave="transition-opacity duration-150"
+              leaveFrom="opacity-100"
+              leaveTo="opacity-0"
+            >
+              <Disclosure.Panel className="sm:hidden">
+                <div className="px-2 pt-2 pb-3 space-y-1">
+                  {navigation.map(item => (
+                    <Link href={item.href} key={item.name}>
+                      <a
+                        className={classNames(
+                          item.current
+                            ? "bg-gray-900 text-white"
+                            : "text-gray-500 hover:text-gray-800",
+                          "block px-3 py-2 rounded-md text-base font-medium"
+                        )}
+                        aria-current={item.current ? "page" : undefined}
+                      >
+                        {item.name}
+                      </a>
+                    </Link>
+                  ))}
+                </div>
+              </Disclosure.Panel>
+            </Transition>
+          </>
+        )}
+      </Disclosure>
+    </div>
   );
 }
