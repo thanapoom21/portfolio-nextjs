@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button } from "@chakra-ui/react";
+import { Box, Button, Divider } from "@chakra-ui/react";
 
 const quotes = [
   `"Any fool can write code that a computer can understand. Good programmers write code that humans can understand." - Martin Fowler`,
@@ -34,13 +34,14 @@ const Quote = () => {
   };
 
   return (
-    <div>
-      <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-tight md:mb-6 md:text-left">
-        Quote of The Day
-      </h1>
-      <p>{quotes[selected]}</p>
-      <p>has {points[selected]} vote</p>
+    <>
+      <Box my={2}>
+        <h1 className="text-2xl md:text-4xl font-bold tracking-tighter">
+          Vote the quote you like the most.
+        </h1>
+      </Box>
       <Button
+        mb={2}
         mr={2}
         colorScheme="blackAlpha"
         variant="outline"
@@ -50,6 +51,7 @@ const Quote = () => {
         Vote
       </Button>
       <Button
+        mb={2}
         mr={2}
         colorScheme="blackAlpha"
         variant="outline"
@@ -58,13 +60,24 @@ const Quote = () => {
       >
         Next Quote
       </Button>
+      <Box my={2}>
+        <p className="text-xl md:text-2xl font-bold tracking-tighter">
+          Quote of The Day
+        </p>
+        <p>{quotes[selected]}</p>
+        <p>has {points[selected]} vote</p>
+      </Box>
 
-      <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-tight md:mb-6 md:text-left">
-        Quote with The Most Votes
-      </h1>
-      {quotes[points.indexOf(mostVotes)]}
-      <p>has {mostVotes} vote</p>
-    </div>
+      <Divider />
+
+      <Box my={2}>
+        <p className="text-xl md:text-2xl font-bold tracking-tighter">
+          Quote with The Most Votes
+        </p>
+        {quotes[points.indexOf(mostVotes)]}
+        <p>has {mostVotes} vote</p>
+      </Box>
+    </>
   );
 };
 

@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { Button } from "@chakra-ui/react";
+import { Box, Button } from "@chakra-ui/react";
 
-const ComplexState = () => {
+const ClickButtons = () => {
   const [clicks, setClicks] = useState({
     left: 0,
     right: 0,
@@ -33,10 +33,15 @@ const ComplexState = () => {
   };
 
   return (
-    <div>
+    <>
+      <Box my={2}>
+        <h1 className="text-2xl md:text-4xl font-bold tracking-tighter">
+          Click the button you like the most.
+        </h1>
+      </Box>
       {`Left button was clicked ${clicks.left} times.`}
       <Button
-        m={10}
+        m={2}
         colorScheme="blackAlpha"
         variant="outline"
         borderRadius="1px"
@@ -53,7 +58,7 @@ const ComplexState = () => {
         Reset
       </Button>
       <Button
-        m={10}
+        m={2}
         colorScheme="blackAlpha"
         variant="outline"
         borderRadius="1px"
@@ -62,8 +67,8 @@ const ComplexState = () => {
         Right
       </Button>
       {`Right button was clicked ${clicks.right} times.`}
-    </div>
+    </>
   );
 };
 
-export default ComplexState;
+export default ClickButtons;

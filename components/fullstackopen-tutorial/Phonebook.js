@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { useState, useEffect } from "react";
-import { Button } from "@chakra-ui/react";
+import { Box, Button } from "@chakra-ui/react";
 
 const initialPropsValues = {
   name: "",
@@ -82,10 +82,12 @@ const Phonebook = () => {
   };
 
   return (
-    <div>
-      <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-tight md:mb-6 md:text-left">
-        Phonebook
-      </h1>
+    <>
+      <Box my={2}>
+        <h1 className="text-2xl md:text-4xl font-bold tracking-tighter">
+          Create a contact & search for it in Phonebook
+        </h1>
+      </Box>
       <Filter value={searchedWord} onChange={handleSearch} />
 
       <form onSubmit={handleSubmit}>
@@ -128,7 +130,7 @@ const Phonebook = () => {
         people={people}
         filteredWord={filteredWord}
       />
-    </div>
+    </>
   );
 };
 

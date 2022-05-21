@@ -1,7 +1,19 @@
 import Head from "next/head";
-import Link from "next/link";
 import Layout from "../../components/layout";
-import Container from "../../components/container";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionPanel,
+  AccordionIcon,
+  Box,
+} from "@chakra-ui/react";
+import GreatQuote from "../../components/fullstackopen-tutorial/GreatQuote";
+import SimpleButtons from "../../components/fullstackopen-tutorial/SimpleButtons";
+import CountryList from "../../components/fullstackopen-tutorial/CountryList";
+import CourseInfo from "../../components/fullstackopen-tutorial/CourseInfo";
+import Phonebook from "../../components/fullstackopen-tutorial/Phonebook";
+import Cacaocafe from "../../components/fullstackopen-tutorial/Cacaocafe";
 
 const ProjectsLandingPage = () => {
   return (
@@ -9,35 +21,93 @@ const ProjectsLandingPage = () => {
       <Head>
         <title>Tutorials From FullstackOpen</title>
       </Head>
-      <Container>
-        <ul>
-          <li>
-            <Link href="/projects/anecdote">
-              <a>Anecdote</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/projects/country-list">
-              <a>Country List</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/projects/course-info">
-              <a>Courses Infomation</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/projects/phonebook">
-              <a>Phonebook</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/projects/unicafe">
-              <a>Unicafe</a>
-            </Link>
-          </li>
-        </ul>
-      </Container>
+      <>
+        <Accordion allowToggle>
+          <AccordionItem>
+            <h2>
+              <AccordionButton>
+                <Box flex="1" textAlign="left" fontSize="24px">
+                  Great Quote
+                </Box>
+                <AccordionIcon />
+              </AccordionButton>
+            </h2>
+            <AccordionPanel pb={4}>
+              <GreatQuote />
+            </AccordionPanel>
+          </AccordionItem>
+
+          <AccordionItem>
+            <h2>
+              <AccordionButton>
+                <Box flex="1" textAlign="left" fontSize="24px">
+                  Simple Buttons
+                </Box>
+                <AccordionIcon />
+              </AccordionButton>
+            </h2>
+            <AccordionPanel pb={4}>
+              <SimpleButtons />
+            </AccordionPanel>
+          </AccordionItem>
+
+          <AccordionItem>
+            <h2>
+              <AccordionButton>
+                <Box flex="1" textAlign="left" fontSize="24px">
+                  Country List
+                </Box>
+                <AccordionIcon />
+              </AccordionButton>
+            </h2>
+            <AccordionPanel pb={4}>
+              <CountryList />
+            </AccordionPanel>
+          </AccordionItem>
+
+          <AccordionItem>
+            <h2>
+              <AccordionButton>
+                <Box flex="1" textAlign="left" fontSize="24px">
+                  Course Info
+                </Box>
+                <AccordionIcon />
+              </AccordionButton>
+            </h2>
+            <AccordionPanel pb={4}>
+              <CourseInfo />
+            </AccordionPanel>
+          </AccordionItem>
+
+          <AccordionItem>
+            <h2>
+              <AccordionButton>
+                <Box flex="1" textAlign="left" fontSize="24px">
+                  Phonebook
+                </Box>
+                <AccordionIcon />
+              </AccordionButton>
+            </h2>
+            <AccordionPanel pb={4}>
+              <Phonebook />
+            </AccordionPanel>
+          </AccordionItem>
+
+          <AccordionItem>
+            <h2>
+              <AccordionButton>
+                <Box flex="1" textAlign="left" fontSize="24px">
+                  Cacao Cafe
+                </Box>
+                <AccordionIcon />
+              </AccordionButton>
+            </h2>
+            <AccordionPanel pb={4}>
+              <Cacaocafe />
+            </AccordionPanel>
+          </AccordionItem>
+        </Accordion>
+      </>
     </Layout>
   );
 };
