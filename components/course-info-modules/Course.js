@@ -1,12 +1,15 @@
 import Topic from "./Topic";
 import TotalOfExercises from "./TotalOfExercises";
+import { Box, OrderedList } from "@chakra-ui/react";
 
 const Course = ({ courses }) => {
   return (
-    <div>
-      <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-tight md:mb-6 md:text-left">
-        Web Development Curriculum
-      </h1>
+    <>
+      <Box my={2}>
+        <h1 className="text-2xl md:text-4xl font-bold tracking-tighter">
+          Web Development Curriculum
+        </h1>
+      </Box>
       {courses.map(({ name, parts }, idx) => {
         const totalOfExercises = parts
           .map(part => part.exercises)
@@ -14,19 +17,19 @@ const Course = ({ courses }) => {
 
         return (
           <div key={idx}>
-            <p className="text-xl md:text-2xl font-bold tracking-tight my-2">
+            <p className="text-lg md:text-lg font-bold tracking-tight">
               {name}
             </p>
-            <ul>
+            <OrderedList>
               {parts.map((part, idx) => (
                 <Topic key={idx} parts={part} />
               ))}
-            </ul>
+            </OrderedList>
             <TotalOfExercises totalOfExercises={totalOfExercises} />
           </div>
         );
       })}
-    </div>
+    </>
   );
 };
 

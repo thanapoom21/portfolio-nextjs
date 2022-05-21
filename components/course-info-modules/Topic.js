@@ -1,3 +1,7 @@
-const Topic = ({ parts }) => <li>{`${parts.name} ${parts.exercises}`}</li>;
+import { ListItem } from "@chakra-ui/react";
+
+const Topic = ({ parts }) => (
+  <ListItem>{`${parts.name} ${parts.exercises}`}</ListItem>
+);
 
 export default Topic;
