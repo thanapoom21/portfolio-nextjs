@@ -1,19 +1,19 @@
 import Head from "next/head";
 import Layout from "../../components/layout";
 import Container from "../../components/container";
-import Unicafe from "../../components/fullstackopen-tutorial/Unicafe";
+import Cacaocafe from "../../components/fullstackopen-tutorial/Cacaocafe";
 
-const UnicafePage = () => {
+const CacaocafePage = () => {
   return (
     <Layout>
       <Head>
-        <title>Unicafe Tutorial</title>
+        <title>Cacao Cafe</title>
       </Head>
       <Container>
-        <Unicafe />
+        <Cacaocafe />
       </Container>
     </Layout>
   );
 };
 
-export default UnicafePage;
+export default CacaocafePage;

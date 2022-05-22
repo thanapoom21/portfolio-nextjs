@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button } from "@chakra-ui/react";
+import { Box, Button } from "@chakra-ui/react";
 
 const StatisticLine = ({ text, value }) => {
   return (
@@ -25,7 +25,7 @@ const Statistics = ({ good, neutral, bad, allFeedback }) => {
   );
 };
 
-const Unicafe = () => {
+const Cacaocafe = () => {
   // save clicks of each button to its own state
   const [good, setGood] = useState(0);
   const [neutral, setNeutral] = useState(0);
@@ -49,10 +49,12 @@ const Unicafe = () => {
   };
 
   return (
-    <div>
-      <p className="text-xl md:text-2xl font-bold tracking-tight my-2">
-        Give your feedback here
-      </p>
+    <>
+      <Box my={2}>
+        <h1 className="text-2xl md:text-4xl font-bold tracking-tighter">
+          Give your feedback.
+        </h1>
+      </Box>
       <Button
         mr={2}
         colorScheme="blackAlpha"
@@ -102,8 +104,8 @@ const Unicafe = () => {
       ) : (
         `No feedback given`
       )}
-    </div>
+    </>
   );
 };
 
-export default Unicafe;
+export default Cacaocafe;

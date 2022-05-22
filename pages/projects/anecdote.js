@@ -1,19 +1,19 @@
 import Head from "next/head";
 import Layout from "../../components/layout";
 import Container from "../../components/container";
-import Anecdote from "../../components/fullstackopen-tutorial/Anecdotes";
+import GreatQuote from "../../components/fullstackopen-tutorial/GreatQuote";
 
-const AnecdotePage = () => {
+const GreatQuotePage = () => {
   return (
     <Layout>
       <Head>
-        <title>Anecdotes Tutorial</title>
+        <title>Great Quotes</title>
       </Head>
       <Container>
-        <Anecdote />
+        <GreatQuote />
       </Container>
     </Layout>
   );
 };
 
-export default AnecdotePage;
+export default GreatQuotePage;

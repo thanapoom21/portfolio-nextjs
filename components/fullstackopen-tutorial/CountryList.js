@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Box } from "@chakra-ui/react";
 
 const CountryList = () => {
   const [list, setList] = useState([]);
@@ -26,9 +27,9 @@ const CountryList = () => {
 
   return (
     <>
-      <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-tight md:mb-6 md:text-left">
-        Country List Data
-      </h1>
+      <Box my={2}>
+        <h1 className="text-2xl md:text-4xl font-bold tracking-tighter">{`Type a character to find countrie(s).`}</h1>
+      </Box>
       <div className="my-2">
         Find countries:{" "}
         <input
@@ -38,7 +39,7 @@ const CountryList = () => {
         />
       </div>
       <p className="text-xl md:text-2xl font-bold tracking-tight my-2">
-        Found it:
+        {searchedWord ? `Found it:` : null}
       </p>
       <ul>
         {!searchedWord

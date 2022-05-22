@@ -1,10 +1,10 @@
 import Head from "next/head";
-import Layout from "../components/layout";
-import MoreStories from "../components/more-stories";
-import HeroPost from "../components/hero-post";
-import HeadingOne from "../components/headingOne";
+import Layout from "../../components/layout";
+import MoreStories from "../../components/more-stories";
+import HeroPost from "../../components/hero-post";
+import HeadingOne from "../../components/headingOne";
 import { Box } from "@chakra-ui/react";
-import { getAllPosts } from "../lib/posts";
+import { getAllPosts } from "../../lib/posts";
 
 export default function Blog({ allPosts }) {
   const heroPost = allPosts[0];
