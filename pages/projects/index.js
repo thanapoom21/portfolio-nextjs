@@ -14,6 +14,10 @@ import CountryList from "../../components/fullstackopen-tutorial/CountryList";
 import CourseInfo from "../../components/fullstackopen-tutorial/CourseInfo";
 import Phonebook from "../../components/fullstackopen-tutorial/Phonebook";
 import Cacaocafe from "../../components/fullstackopen-tutorial/Cacaocafe";
+import WordSearch from "../../components/fullstackopen-tutorial/WordSearch";
+
+// const url =
+//   "https://www.dictionaryapi.com/api/v3/references/collegiate/json/voluminous?key=5baefa86-4adc-4bb6-a109-4b6cb3905876";
 
 const ProjectsLandingPage = () => {
   return (
@@ -104,6 +108,20 @@ const ProjectsLandingPage = () => {
             </h2>
             <AccordionPanel pb={4}>
               <Cacaocafe />
+            </AccordionPanel>
+          </AccordionItem>
+
+          <AccordionItem>
+            <h2>
+              <AccordionButton>
+                <Box flex="1" textAlign="left" fontSize="24px">
+                  Word Search
+                </Box>
+                <AccordionIcon />
+              </AccordionButton>
+            </h2>
+            <AccordionPanel pb={4}>
+              <WordSearch />
             </AccordionPanel>
           </AccordionItem>
         </Accordion>
