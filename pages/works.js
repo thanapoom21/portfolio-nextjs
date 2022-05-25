@@ -77,7 +77,8 @@ export default function Works() {
           <ImageSection
             project={imageSources.logos}
             width={5334}
-            height={4001} />
+            height={4001}
+          />
         </Box>
 
         <Box my={6}>
