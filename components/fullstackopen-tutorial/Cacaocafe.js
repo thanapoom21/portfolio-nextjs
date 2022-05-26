@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Box, Button } from "@chakra-ui/react";
+import { Box, Button, HStack } from "@chakra-ui/react";
 
 const StatisticLine = ({ text, value }) => {
   return (
@@ -55,42 +55,12 @@ const Cacaocafe = () => {
           Give your feedback.
         </h1>
       </Box>
-      <Button
-        mr={2}
-        colorScheme="blackAlpha"
-        variant="outline"
-        borderRadius="1px"
-        onClick={handleGood}
-      >
-        Good
-      </Button>
-      <Button
-        mr={2}
-        colorScheme="blackAlpha"
-        variant="outline"
-        borderRadius="1px"
-        onClick={handleNeutral}
-      >
-        Neutral
-      </Button>
-      <Button
-        mr={2}
-        colorScheme="blackAlpha"
-        variant="outline"
-        borderRadius="1px"
-        onClick={handleBad}
-      >
-        Bad
-      </Button>
-      <Button
-        mr={2}
-        colorScheme="blackAlpha"
-        variant="outline"
-        borderRadius="1px"
-        onClick={handleReset}
-      >
-        Reset
-      </Button>
+      <HStack spacing="24px">
+        <Button onClick={handleGood}>Good</Button>
+        <Button onClick={handleNeutral}>Neutral</Button>
+        <Button onClick={handleBad}>Bad</Button>
+        <Button onClick={handleReset}>Reset</Button>
+      </HStack>
       <p className="text-xl md:text-2xl font-bold tracking-tight my-2">
         Statistics
       </p>

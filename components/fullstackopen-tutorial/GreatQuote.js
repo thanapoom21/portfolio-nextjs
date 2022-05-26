@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Box, Button, Divider } from "@chakra-ui/react";
+import { Box, Button, Divider, HStack } from "@chakra-ui/react";
 
 const quotes = [
   `"Any fool can write code that a computer can understand. Good programmers write code that humans can understand." - Martin Fowler`,
@@ -40,26 +40,10 @@ const Quote = () => {
           Vote the quote you like the most.
         </h1>
       </Box>
-      <Button
-        mb={2}
-        mr={2}
-        colorScheme="blackAlpha"
-        variant="outline"
-        borderRadius="1px"
-        onClick={handleVote}
-      >
-        Vote
-      </Button>
-      <Button
-        mb={2}
-        mr={2}
-        colorScheme="blackAlpha"
-        variant="outline"
-        borderRadius="1px"
-        onClick={handleClick}
-      >
-        Next Quote
-      </Button>
+      <HStack spacing="24px">
+        <Button onClick={handleVote}>Vote</Button>
+        <Button onClick={handleClick}>Next Quote</Button>
+      </HStack>
       <Box my={2}>
         <p className="text-xl md:text-2xl font-bold tracking-tighter">
           Quote of The Day

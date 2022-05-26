@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Box } from "@chakra-ui/react";
+import { Box, Input } from "@chakra-ui/react";
 
 const CountryList = () => {
   const [list, setList] = useState([]);
@@ -32,7 +32,7 @@ const CountryList = () => {
       </Box>
       <div className="my-2">
         Find countries:{" "}
-        <input
+        <Input
           value={searchedWord}
           onChange={handleSearch}
           placeholder="type a word"

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Box, Button } from "@chakra-ui/react";
+import { Box, Button, HStack } from "@chakra-ui/react";
 
 const ClickButtons = () => {
   const [clicks, setClicks] = useState({
@@ -40,32 +40,11 @@ const ClickButtons = () => {
         </h1>
       </Box>
       {`Left button was clicked ${clicks.left} times.`}
-      <Button
-        m={2}
-        colorScheme="blackAlpha"
-        variant="outline"
-        borderRadius="1px"
-        onClick={handleLeftClick}
-      >
-        Left
-      </Button>
-      <Button
-        colorScheme="blackAlpha"
-        variant="outline"
-        borderRadius="1px"
-        onClick={handleReset}
-      >
-        Reset
-      </Button>
-      <Button
-        m={2}
-        colorScheme="blackAlpha"
-        variant="outline"
-        borderRadius="1px"
-        onClick={handleRightClick}
-      >
-        Right
-      </Button>
+      <HStack my={2} spacing="24px">
+        <Button onClick={handleLeftClick}>Left</Button>
+        <Button onClick={handleReset}>Reset</Button>
+        <Button onClick={handleRightClick}>Right</Button>
+      </HStack>
       {`Right button was clicked ${clicks.right} times.`}
     </>
   );
