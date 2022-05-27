@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { useState, useEffect } from "react";
-import { Box, Button } from "@chakra-ui/react";
+import { Box, Button, HStack, Input } from "@chakra-ui/react";
 
 const initialPropsValues = {
   name: "",
@@ -11,7 +11,7 @@ const Filter = ({ value, onChange }) => {
   return (
     <div className="my-2">
       Search:{" "}
-      <input value={value} onChange={onChange} placeholder="type a word" />
+      <Input value={value} onChange={onChange} placeholder="type a word" />
     </div>
   );
 };
@@ -88,39 +88,33 @@ const Phonebook = () => {
           Create a contact & search for it in Phonebook
         </h1>
       </Box>
-      <Filter value={searchedWord} onChange={handleSearch} />
 
       <form onSubmit={handleSubmit}>
-        <div className="my-2">
-          Name:{" "}
-          <input
-            value={inputValues.name}
-            onChange={handleInputChange}
-            name="name"
-            label="Name"
-            placeholder="your name"
-          />
-        </div>
+        <HStack spacing="24px">
+          <Filter value={searchedWord} onChange={handleSearch} />
+          <Box className="my-2">
+            Name:{" "}
+            <Input
+              value={inputValues.name}
+              onChange={handleInputChange}
+              name="name"
+              label="Name"
+              placeholder="type a name"
+            />
+          </Box>
 
-        <div className="my-2">
-          Number:{" "}
-          <input
-            value={inputValues.number}
-            onChange={handleInputChange}
-            name="number"
-            label="Number"
-            placeholder="your phone number"
-          />
-        </div>
-        <Button
-          mr={2}
-          colorScheme="blackAlpha"
-          variant="outline"
-          borderRadius="1px"
-          type="submit"
-        >
-          Add
-        </Button>
+          <Box className="my-2">
+            Number:{" "}
+            <Input
+              value={inputValues.number}
+              onChange={handleInputChange}
+              name="number"
+              label="Number"
+              placeholder="type phone numbers"
+            />
+          </Box>
+        </HStack>
+        <Button type="submit">Add</Button>
       </form>
       <h2 className="text-xl md:text-2xl font-bold tracking-tight my-2">
         Numbers
