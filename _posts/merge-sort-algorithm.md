@@ -10,6 +10,8 @@ ogImage:
   url: '/assets/blog/merge-sort-algorithm/cover.png'
 ---
 
+## Merge Sort in JavaScript
+
 Given a random array of numbers, we first have to divide into 2 chunks. We can use **`left`** and **`right`** to identify 2 chunks of numbers.
 
 Merge sort is very useful in solving these problems by applying a divide and conquer concept.

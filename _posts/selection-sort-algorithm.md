@@ -10,18 +10,7 @@ ogImage:
   url: '/assets/blog/selection-sort-algorithm/cover.png'
 ---
 
-### Computing summations from 1 to n
-
-Add the largest and smallest values and then the next largest and smallest values and so on.
-
-For example, 6 + 5 + 4 + 3 + 2 + 1. We do 6 + 1 = 7, 5 + 2 = 7, 4 + 3 = 7. So 7 + 7 + 7 = 21.
-
-1. Add the smallest and the largest number.
-2. Multiply by the number of pairs.
-
-If the number of integers in the sequence is odd, you can multiply by a half.
-For example, 5 + 4 + 3 + 2 + 1. We do 5 + 1 = 6, 4 + 2 = 6, 3 is a half of 6 so 6 + 6 + 3 or 6 * 2.5 = 15
-You can use a formula (n + 1)(n / 2) or (n squared / 2) + (n / 2) to find the sum of 1 to n.
+## Selection Sort in JavaScript
 
 ### steps of instructions
 
@@ -72,3 +61,16 @@ selectionSort(randomNumbers);
 ```
 
 The time complexity of this algorithm is ***`O(n^2)`***.
+
+### Tips: computing summations from 1 to n
+
+Add the largest and smallest values and then the next largest and smallest values and so on.
+
+For example, 6 + 5 + 4 + 3 + 2 + 1. We do 6 + 1 = 7, 5 + 2 = 7, 4 + 3 = 7. So 7 + 7 + 7 = 21.
+
+1. Add the smallest and the largest number.
+2. Multiply by the number of pairs.
+
+If the number of integers in the sequence is odd, you can multiply by a half.
+For example, 5 + 4 + 3 + 2 + 1. We do 5 + 1 = 6, 4 + 2 = 6, 3 is a half of 6 so 6 + 6 + 3 or 6 * 2.5 = 15
+You can use a formula (n + 1)(n / 2) or (n squared / 2) + (n / 2) to find the sum of 1 to n.
