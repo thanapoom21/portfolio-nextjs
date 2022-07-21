@@ -34,3 +34,10 @@ yarn lint
 ## Note
 
 > I plan to add more works and side projects to this repo. If possible, I'd like to redesign the whole site and probably have to update some dependencies. New releases would be better and simpler. Plan to add tags and releases to the repo.
+
+## Movies APIs from MongoDB sample JSON
+
+```bash
+MONGODB_URI=mongodb+srv://<username>:<password>@<project>.2cspo.mongodb.net/?retryWrites=true&w=majority
+MONGODB_DB=sample_mflix
+```
