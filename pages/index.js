@@ -10,27 +10,40 @@ export default function Home() {
       <Head>
         <title>{SITE_TITLE}</title>
       </Head>
-      <section className={utilStyles.headingMd}>
+      <section>
         <VStack spacing={12}>
-          <Box>
+          <Box width="100%">
             <p
-              className={`${utilStyles.landingP} text-2xl leading-snug md:text-6xl font-bold md:leading-snug`}
+              className={`${utilStyles.monoText} text-lg leading-snug md:text-xl md:leading-snug`}
             >
-              Hi, my name is Thanapoom and I am Thai. It might be difficult to
-              say my name but you can call me by Music. I&apos;m a web designer
-              & developer. I am specializing in logos, business cards, posters,
-              brochures, and websites. I&apos;ve done freelance works for small
-              businesses, participated in a startup, and collaborated with
-              talented people to build digital products for both business and
-              consumer use. I&apos;m naturally curious, relentlessly optimistic,
-              and gradually & constantly improving my abilities. 🎉
+              Hello, my name is
             </p>
-          </Box>
 
-          <Box>
             <p
-              className={`${utilStyles.landingP} text-2xl leading-snug md:text-6xl font-bold md:leading-snug`}
+              className={`${utilStyles.quicksandTitle} text-4xl leading-snug md:text-6xl font-bold md:leading-snug`}
             >
+              Thanapoom Phithakjarukorn.
+            </p>
+
+            <p
+              className={`${utilStyles.quicksandSubtitle} text-2xl leading-snug md:text-4xl font-bold md:leading-snug`}
+            >
+              I develop things for the web.
+            </p>
+
+            <p
+              className={`${utilStyles.monoText} text-lg leading-snug md:text-xl md:leading-snug my-6`}
+            >
+              I&apos;m a web designer & developer. I am specializing in logos,
+              business cards, posters, brochures, and websites. I&apos;ve done
+              freelance works for small businesses, participated in a startup,
+              and collaborated with talented people to build digital products
+              for both business and consumer use. I&apos;m naturally curious,
+              relentlessly optimistic, and gradually & constantly improving my
+              abilities. 🎉
+            </p>
+
+            <p className={`text-lg md:text-xl`}>
               If you feel like having a chat, feel free to drop me a line.
             </p>
           </Box>
