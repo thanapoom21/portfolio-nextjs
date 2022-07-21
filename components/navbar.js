@@ -5,7 +5,7 @@ import { MenuIcon, XIcon } from "@heroicons/react/outline";
 
 const navigation = [
   { name: "Works", href: "/works", current: false },
-  { name: "Practice", href: "/projects", current: false },
+  { name: "Projects", href: "/projects", current: false },
   { name: "Collected Photons", href: "/collected-photons", current: false },
   { name: "Blog", href: "/blog", current: false },
   { name: "Contact", href: "/contact", current: false },
@@ -75,10 +75,10 @@ export default function Navbar() {
 
             <Transition
               show={open}
-              enter="transition-opacity duration-75"
+              enter="transition-opacity ease-linear duration-300"
               enterFrom="opacity-0"
               enterTo="opacity-100"
-              leave="transition-opacity duration-150"
+              leave="transition-opacity ease-linear duration-300"
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
