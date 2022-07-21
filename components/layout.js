@@ -33,12 +33,12 @@ export default function Layout({ children, home }) {
       </Head>
       <div className={styles.wrapperBorder}>
         <Navbar />
-        <div className="max-w-6xl px-4 mx-auto mt-12 mb-24">
+        <div className="max-w-6xl px-4 mx-auto mt-12 mb-10">
           {home ? (
             <header className={styles.header}>
               <Image
                 src="/images/logo_no_border2.svg"
-                className={`${utilStyles.borderCircle}  w-1/2 md:w-2/4 lg:w-1/4`}
+                className={`${utilStyles.borderCircle} w-1/4`}
                 alt={AUTHOR_NAME}
               />
             </header>

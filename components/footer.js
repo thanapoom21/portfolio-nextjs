@@ -13,7 +13,7 @@ function classNames(...classes) {
 
 export default function Footer() {
   return (
-    <Disclosure as="footer" className="max-w-6xl px-4 mx-auto mt-12 mb-24">
+    <Disclosure as="footer" className="max-w-6xl px-4 mx-auto">
       {() => (
         <>
           {navigation.map(item => (
