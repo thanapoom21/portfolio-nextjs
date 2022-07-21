@@ -1,12 +1,12 @@
-.landingP {
-  font-family: Roboto, sans-serif;
+.monoText {
+  font-family: monospace;
 }
 
-.headingMd {
-  font-size: 1.2rem;
-  line-height: 1.5;
+.quicksandTitle {
+  font-family: "Quicksand", sans-serif;
 }
 
-.borderCircle {
-  border-radius: 0;
+.quicksandSubtitle {
+  font-family: "Quicksand", sans-serif;
+  color: rgba(0, 0, 0, 0.6);
 }
