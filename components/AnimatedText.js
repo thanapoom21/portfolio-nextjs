@@ -31,6 +31,6 @@ const AnimatedText = ({ children, animateScale }) => {
       </AnimatePresence>
     </div>
   );
-}
+};
 
 export default AnimatedText;

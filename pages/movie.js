@@ -88,7 +88,7 @@ const Movie = ({ movies }) => {
       </section>
     </Layout>
   );
-}
+};
 
 export async function getServerSideProps() {
   const { db } = await connectToDatabase();

@@ -34,6 +34,6 @@ const Custom404 = () => {
       </section>
     </Layout>
   );
-}
+};
 
-export default Custom404
+export default Custom404;

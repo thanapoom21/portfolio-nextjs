@@ -13,7 +13,7 @@ const navigation = [
 
 const classNames = (...classes) => {
   return classes.filter(Boolean).join(" ");
-}
+};
 
 const Navbar = () => {
   return (
