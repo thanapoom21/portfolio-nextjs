@@ -4,13 +4,13 @@ import Layout from "../components/layout";
 import HeadingOne from "../components/headingOne";
 import { Box } from "@chakra-ui/react";
 import utilStyles from "../styles/utils.module.css";
-import RandomMachine from "./fcc-tutorials-projects/random-quote-machine";
-import TodoApp from "./fcc-tutorials-projects/todo-app";
+import RandomMachine from "../components/fcc-tutorial/random-quote-machine";
+import TodoApp from "../components/fcc-tutorial/todo-app";
 import Link from "next/link";
 import { SITE_TITLE } from "../lib/constants";
 import imageSources from "../public/data/works.json";
 
-function ImageSection({ project, width, height }) {
+const ImageSection = ({ project, width, height }) => {
   return (
     <>
       {project.map(obj => {
@@ -29,16 +29,16 @@ function ImageSection({ project, width, height }) {
       })}
     </>
   );
-}
+};
 
-export default function Works() {
+const Work = () => {
   return (
     <Layout>
       <Head>
         <title>{SITE_TITLE}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <HeadingOne>Works</HeadingOne>
+        <HeadingOne>Work</HeadingOne>
         <Box my={6}>
           <h3 className="text-xl md:text-3xl font-bold">drstile</h3>
         </Box>
@@ -173,4 +173,6 @@ export default function Works() {
       </section>
     </Layout>
   );
-}
+};
+
+export default Work;

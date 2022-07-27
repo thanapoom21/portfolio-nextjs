@@ -4,7 +4,7 @@ import utilStyles from "../styles/utils.module.css";
 import { SITE_TITLE } from "../lib/constants";
 import { Box, VStack } from "@chakra-ui/react";
 
-export default function Home() {
+const Home = () => {
   return (
     <Layout home>
       <Head>
@@ -51,4 +51,6 @@ export default function Home() {
       </section>
     </Layout>
   );
-}
+};
+
+export default Home;
