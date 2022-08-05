@@ -1,6 +1,6 @@
 ---
-title: 'Selection Sort in JavaScript'
-excerpt: 'Selection sort'
+title: 'Selection Sort'
+excerpt: 'An algorithm that selects the smallest value or element from an unsorted list in each iteration and moves it to the beginning of an unsorted list.'
 coverImage: '/assets/blog/selection-sort-algorithm/cover.png'
 date: '2022-05-29T14:54:01.322Z'
 author:
@@ -10,9 +10,10 @@ ogImage:
   url: '/assets/blog/selection-sort-algorithm/cover.png'
 ---
 
-## Selection Sort in JavaScript
+## Selection Sort
+It is a sorting algorithm that, according to its name, selects the smallest value or element from an <mark>unsorted</mark> list in each iteration and moves it to the beginning of an unsorted list. Then you'll start to see the pattern because the given values are now divided into 2 sets; <mark>sorted</mark> group and <mark>unsorted</mark> group. Finally, every item will be sorted.
 
-### steps of instructions
+### Steps of instructions
 
 - duplicate the original list in a local scope since we do not want to mutate it.
 - store the array length in a variable.
@@ -71,6 +72,6 @@ For example, 6 + 5 + 4 + 3 + 2 + 1. We do 6 + 1 = 7, 5 + 2 = 7, 4 + 3 = 7. So 7 
 1. Add the smallest and the largest number.
 2. Multiply by the number of pairs.
 
-If the number of integers in the sequence is odd, you can multiply by a half.
-For example, 5 + 4 + 3 + 2 + 1. We do 5 + 1 = 6, 4 + 2 = 6, 3 is a half of 6 so 6 + 6 + 3 or 6 * 2.5 = 15
+If the number of integers in the sequence is odd, you can multiply by a half.  
+For example, 5 + 4 + 3 + 2 + 1. We do 5 + 1 = 6, 4 + 2 = 6, 3 is a half of 6 so 6 + 6 + 3 or 6 * 2.5 = 15.  
 You can use a formula (n + 1)(n / 2) or (n squared / 2) + (n / 2) to find the sum of 1 to n.
