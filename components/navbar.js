@@ -4,18 +4,18 @@ import { Disclosure, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 
 const navigation = [
-  { name: "Works", href: "/works", current: false },
-  { name: "Projects", href: "/projects", current: false },
-  { name: "Collected Photons", href: "/collected-photons", current: false },
+  { name: "Work", href: "/work", current: false },
+  { name: "Project", href: "/project", current: false },
+  { name: "Photon", href: "/photon", current: false },
   { name: "Blog", href: "/blog", current: false },
   { name: "Contact", href: "/contact", current: false },
 ];
 
-function classNames(...classes) {
+const classNames = (...classes) => {
   return classes.filter(Boolean).join(" ");
-}
+};
 
-export default function Navbar() {
+const Navbar = () => {
   return (
     <div className="max-w-6xl px-4 mx-auto">
       <Disclosure as="nav" className="my-5">
@@ -107,4 +107,6 @@ export default function Navbar() {
       </Disclosure>
     </div>
   );
-}
+};
+
+export default Navbar;

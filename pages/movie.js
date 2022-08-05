@@ -15,7 +15,7 @@ import { SITE_TITLE } from "../lib/constants";
 
 import { connectToDatabase } from "../lib/mongodb";
 
-export default function Movies({ movies }) {
+const Movie = ({ movies }) => {
   return (
     <Layout>
       <Head>
@@ -88,7 +88,7 @@ export default function Movies({ movies }) {
       </section>
     </Layout>
   );
-}
+};
 
 export async function getServerSideProps() {
   const { db } = await connectToDatabase();
@@ -106,3 +106,5 @@ export async function getServerSideProps() {
     },
   };
 }
+
+export default Movie;

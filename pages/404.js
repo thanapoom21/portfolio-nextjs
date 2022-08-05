@@ -1,12 +1,13 @@
 import Head from "next/head";
 import Layout from "../components/layout";
 import { Box } from "@chakra-ui/react";
-import { SplitText } from "../components/SplitText";
-import { AnimatePresence, motion } from "framer-motion";
+
+import AnimatedText from "../components/AnimatedText";
+
 import utilStyles from "../styles/utils.module.css";
 import { SITE_TITLE } from "../lib/constants";
 
-export default function Custom404() {
+const Custom404 = () => {
   const thePageIsNotHere = `The page you're looking for is not here.😞`;
   const code404 = "404";
 
@@ -33,34 +34,6 @@ export default function Custom404() {
       </section>
     </Layout>
   );
-}
+};
 
-function AnimatedText({ children, animateScale }) {
-  return (
-    <div className={utilStyles.superBoldText3rem}>
-      <AnimatePresence>
-        <motion.div
-          initial={{ opacity: 1 }}
-          animate={animateScale}
-          exit={{ opacity: 0 }}
-        >
-          <SplitText
-            splitBy=" "
-            initial={{ y: "100%" }}
-            animate="visible"
-            variants={{
-              visible: i => ({
-                y: 0,
-                transition: {
-                  delay: i * 0.05,
-                },
-              }),
-            }}
-          >
-            {children}
-          </SplitText>
-        </motion.div>
-      </AnimatePresence>
-    </div>
-  );
-}
+export default Custom404;
