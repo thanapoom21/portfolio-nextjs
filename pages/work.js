@@ -145,7 +145,7 @@ const Work = () => {
               <section>
                 <div id="movies-of-all-time" className="mb-5 text-center">
                   <div className="todo-app">
-                    <Link href="/movies">
+                    <Link href="/movie">
                       <a className="hover:underline text-white">20 Movies</a>
                     </Link>
                   </div>
@@ -161,7 +161,7 @@ const Work = () => {
               <section>
                 <div id="practicing-react" className="mb-5 text-center">
                   <div className="todo-app">
-                    <Link href="/projects">
+                    <Link href="/project">
                       <a className="hover:underline text-white">Projects</a>
                     </Link>
                   </div>
