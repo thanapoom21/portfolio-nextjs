@@ -3,7 +3,6 @@ import { Image } from "@chakra-ui/react";
 import Navbar from "./navbar";
 import Footer from "./footer";
 import styles from "../styles/layout.module.css";
-import utilStyles from "../styles/utils.module.css";
 import {
   AUTHOR_NAME,
   CURRENT_URL,
@@ -38,7 +37,7 @@ export default function Layout({ children, home }) {
             <header className={styles.header}>
               <Image
                 src="/images/logo_no_border2.svg"
-                className={`${utilStyles.borderCircle} w-1/4`}
+                className={`w-1/4`}
                 alt={AUTHOR_NAME}
               />
             </header>

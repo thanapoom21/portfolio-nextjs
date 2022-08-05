@@ -3,7 +3,6 @@ import Image from "next/image";
 import Layout from "../components/layout";
 import HeadingOne from "../components/headingOne";
 import { Box } from "@chakra-ui/react";
-import utilStyles from "../styles/utils.module.css";
 import RandomMachine from "../components/fcc-tutorial/random-quote-machine";
 import TodoApp from "../components/fcc-tutorial/todo-app";
 import Link from "next/link";
@@ -37,7 +36,7 @@ const Work = () => {
       <Head>
         <title>{SITE_TITLE}</title>
       </Head>
-      <section className={utilStyles.headingMd}>
+      <section>
         <HeadingOne>Work</HeadingOne>
         <Box my={6}>
           <h3 className="text-xl md:text-3xl font-bold">drstile</h3>

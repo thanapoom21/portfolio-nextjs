@@ -2,7 +2,6 @@ import Head from "next/head";
 import Image from "next/image";
 import Layout from "../components/layout";
 import HeadingOne from "../components/headingOne";
-import utilStyles from "../styles/utils.module.css";
 import { Box, Wrap, WrapItem } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { SITE_TITLE } from "../lib/constants";
@@ -47,7 +46,7 @@ const Photons = () => {
         <title>{SITE_TITLE}</title>
       </Head>
 
-      <section className={`${utilStyles.headingMd}`}>
+      <section>
         <HeadingOne>Collected Photons</HeadingOne>
         <Box mt={4}>
           {isLoaded ? (

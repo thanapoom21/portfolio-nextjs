@@ -4,7 +4,6 @@ import HeadingOne from "../components/headingOne";
 import { Box, Button } from "@chakra-ui/react";
 import { EmailIcon } from "@chakra-ui/icons";
 import AnimatedText from "../components/AnimatedText";
-import utilStyles from "../styles/utils.module.css";
 import { SITE_TITLE } from "../lib/constants";
 
 const Contact = () => {
@@ -14,7 +13,7 @@ const Contact = () => {
       <Head>
         <title>{SITE_TITLE}</title>
       </Head>
-      <section className={utilStyles.headingMd}>
+      <section>
         <HeadingOne>Contact</HeadingOne>
         <Box mt={4}>
           <AnimatedText>{textToAnimate}</AnimatedText>
