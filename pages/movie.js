@@ -10,7 +10,6 @@ import {
   ListItem,
   UnorderedList,
 } from "@chakra-ui/react";
-import utilStyles from "../styles/utils.module.css";
 import { SITE_TITLE } from "../lib/constants";
 
 import { connectToDatabase } from "../lib/mongodb";
@@ -21,7 +20,7 @@ const Movie = ({ movies }) => {
       <Head>
         <title>{SITE_TITLE}</title>
       </Head>
-      <section className={utilStyles.headingMd}>
+      <section>
         <HeadingOne>Top 20 Movies of All Time</HeadingOne>
         <Container maxW="6xl">
           {movies.map((movie, idx) => (

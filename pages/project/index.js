@@ -3,7 +3,6 @@ import Link from "next/link";
 import Layout from "../../components/layout";
 import HeadingOne from "../../components/headingOne";
 import HeadingTwo from "../../components/headingTwo";
-import utilStyles from "../../styles/utils.module.css";
 import {
   Accordion,
   AccordionItem,
@@ -28,8 +27,8 @@ const Project = () => {
       <Head>
         <title>Tutorials From FullstackOpen</title>
       </Head>
-      <section className={utilStyles.headingMd}>
-        <HeadingOne>Project</HeadingOne>
+      <section>
+        <HeadingOne>Projects</HeadingOne>
         <Box my={6}>
           <HeadingTwo>Simple</HeadingTwo>
           <Accordion allowToggle>

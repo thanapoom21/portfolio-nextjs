@@ -1,11 +1,9 @@
 import { SplitText } from "../components/SplitText";
 import { AnimatePresence, motion } from "framer-motion";
 
-import utilStyles from "../styles/utils.module.css";
-
 const AnimatedText = ({ children, animateScale }) => {
   return (
-    <div className={utilStyles.superBoldText3rem}>
+    <>
       <AnimatePresence>
         <motion.div
           initial={{ opacity: 1 }}
@@ -29,7 +27,7 @@ const AnimatedText = ({ children, animateScale }) => {
           </SplitText>
         </motion.div>
       </AnimatePresence>
-    </div>
+    </>
   );
 };
 

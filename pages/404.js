@@ -4,7 +4,6 @@ import { Box } from "@chakra-ui/react";
 
 import AnimatedText from "../components/AnimatedText";
 
-import utilStyles from "../styles/utils.module.css";
 import { SITE_TITLE } from "../lib/constants";
 
 const Custom404 = () => {
@@ -16,7 +15,7 @@ const Custom404 = () => {
       <Head>
         <title>{SITE_TITLE}</title>
       </Head>
-      <section className={utilStyles.headingMd}>
+      <section>
         <Box
           flexDirection="column"
           display="flex"
