@@ -26,7 +26,12 @@
 
 .markdown mark {
   color: #f0f0f0;
-  background: linear-gradient(-100deg, hsla(220, 13%, 18%, 0.8), hsla(220, 13%, 18%, 0.7) 95%, hsla(220, 13%, 18%, 0.6));
+  background: linear-gradient(
+    -100deg,
+    hsla(220, 13%, 18%, 0.8),
+    hsla(220, 13%, 18%, 0.7) 95%,
+    hsla(220, 13%, 18%, 0.6)
+  );
   border-radius: 0.1em;
   padding: 0.1rem 0.3rem;
 }
