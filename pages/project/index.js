@@ -1,6 +1,8 @@
 import Head from "next/head";
+import Link from "next/link";
 import Layout from "../../components/layout";
 import HeadingOne from "../../components/headingOne";
+import HeadingTwo from "../../components/headingTwo";
 import utilStyles from "../../styles/utils.module.css";
 import {
   Accordion,
@@ -9,6 +11,7 @@ import {
   AccordionPanel,
   AccordionIcon,
   Box,
+  Button,
 } from "@chakra-ui/react";
 import GreatQuote from "../../components/fullstackopen-tutorial/GreatQuote";
 import SimpleButtons from "../../components/fullstackopen-tutorial/SimpleButtons";
@@ -26,8 +29,9 @@ const Project = () => {
         <title>Tutorials From FullstackOpen</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <HeadingOne>Simple Projects</HeadingOne>
+        <HeadingOne>Project</HeadingOne>
         <Box my={6}>
+          <HeadingTwo>Simple</HeadingTwo>
           <Accordion allowToggle>
             <AccordionItem>
               <h2>
@@ -141,6 +145,14 @@ const Project = () => {
               </AccordionPanel>
             </AccordionItem>
           </Accordion>
+        </Box>
+        <Box my={6}>
+          <HeadingTwo>Advance</HeadingTwo>
+          <Button>
+            <Link href="https://todo-or-not-todo.vercel.app/">
+              TodoOrNotTodo
+            </Link>
+          </Button>
         </Box>
       </section>
     </Layout>
