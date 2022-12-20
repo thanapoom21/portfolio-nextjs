@@ -4,7 +4,6 @@ import Layout from "../components/layout";
 import HeadingOne from "../components/headingOne";
 import { Box, Wrap, WrapItem } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
-import { SITE_TITLE } from "../lib/constants";
 
 const Photons = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -43,7 +42,7 @@ const Photons = () => {
   return (
     <Layout>
       <Head>
-        <title>{SITE_TITLE}</title>
+        <title>Thanapoom&apos;s Photos</title>
       </Head>
 
       <section>

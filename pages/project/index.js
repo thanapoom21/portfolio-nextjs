@@ -25,7 +25,7 @@ const Project = () => {
   return (
     <Layout>
       <Head>
-        <title>Tutorials From FullstackOpen</title>
+        <title>Thanapoom&apos;s Projects</title>
       </Head>
       <section>
         <HeadingOne>Projects</HeadingOne>

@@ -12,7 +12,7 @@ export default function Blog({ allPosts }) {
   return (
     <Layout>
       <Head>
-        <title>Next.js Blog Posts with Markdown</title>
+        <title>Thanapoom&apos;s Blog Posts</title>
       </Head>
       <section>
         <HeadingOne>Blog</HeadingOne>

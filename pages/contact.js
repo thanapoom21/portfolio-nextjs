@@ -4,14 +4,13 @@ import HeadingOne from "../components/headingOne";
 import { Box, Button } from "@chakra-ui/react";
 import { EmailIcon } from "@chakra-ui/icons";
 import AnimatedText from "../components/AnimatedText";
-import { SITE_TITLE } from "../lib/constants";
 
 const Contact = () => {
   const textToAnimate = `I am available for freelance work. Drop me a line if you would like to chat. 😄`;
   return (
     <Layout>
       <Head>
-        <title>{SITE_TITLE}</title>
+        <title>Thanapoom&apos;s Contact</title>
       </Head>
       <section>
         <HeadingOne>Contact</HeadingOne>

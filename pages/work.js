@@ -6,7 +6,6 @@ import { Box } from "@chakra-ui/react";
 import RandomMachine from "../components/fcc-tutorial/random-quote-machine";
 import TodoApp from "../components/fcc-tutorial/todo-app";
 import Link from "next/link";
-import { SITE_TITLE } from "../lib/constants";
 import imageSources from "../public/data/works.json";
 
 const ImageSection = ({ project, width, height }) => {
@@ -34,7 +33,7 @@ const Work = () => {
   return (
     <Layout>
       <Head>
-        <title>{SITE_TITLE}</title>
+        <title>Thanapoom&apos;s Works</title>
       </Head>
       <section>
         <HeadingOne>Work</HeadingOne>
