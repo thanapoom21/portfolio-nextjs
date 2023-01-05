@@ -1,6 +1,6 @@
 ---
 title: 'DSA'
-excerpt: 'In an early stage of being a software engineer, DSA or data structure & algorithm is one of the most important concepts to study. If you understand the fundamentals, you can dive deeper into the field without hesitation.'
+excerpt: 'In an early stage of being a software engineer, DSA or data structure & algorithm are some of the most important concepts to study. If you understand the fundamentals, you can dive deeper into the field without hesitation.'
 coverImage: '/assets/blog/dsa/cover.png'
 date: '2021-01-30T11:45:01.322Z'
 author:
@@ -25,3 +25,13 @@ Here are some common JavaScript data structures:
 - Tree
 - Trie
 - Set
+
+### Stack
+### Queue
+### Array
+### Linked List
+### Hash Table
+### Graph
+### Tree
+### Trie
+### Set
