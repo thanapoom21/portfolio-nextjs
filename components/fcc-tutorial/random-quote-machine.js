@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 
 const appStyle = {
   border: "solid 1px #777",
@@ -187,7 +188,7 @@ const Twitter = props => {
         title="Tweet this quote!"
         href={formatted}
       >
-        <FontAwesomeIcon icon={["fab", "twitter"]} />
+        <FontAwesomeIcon icon={faTwitter} />
       </a>
     </div>
   );
