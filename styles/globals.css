@@ -108,7 +108,7 @@
   padding-inline-start: 40px;
 }
 
-#info-site-container .main--facts>li::marker {
+#info-site-container .main--facts > li::marker {
   font-size: 1.2rem;
   color: #61dafb;
 }

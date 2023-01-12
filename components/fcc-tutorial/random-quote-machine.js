@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 const appStyle = {
   border: "solid 1px #777",

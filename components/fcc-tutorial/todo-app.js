@@ -33,7 +33,7 @@ function TodoForm({ addTodo }) {
       <div className="input-button-area">
         <Input
           size="sm"
-          width={'80%'}
+          width={"80%"}
           type="text"
           className="text-white"
           placeholder="Add an item here"

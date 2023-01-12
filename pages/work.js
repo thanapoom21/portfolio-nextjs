@@ -37,7 +37,7 @@ const Work = () => {
       <section>
         <HeadingOne>Work</HeadingOne>
 
-        <Tabs isLazy size='sm' variant='enclosed' my={2}>
+        <Tabs isLazy size="sm" variant="enclosed" my={2}>
           <TabList overflowX="scroll">
             <Tab>drstile</Tab>
             <Tab>doublemoon</Tab>
@@ -131,7 +131,9 @@ const Work = () => {
                       <div id="movies-of-all-time" className="mb-5 text-center">
                         <div className="todo-app">
                           <Link href="/movie">
-                            <a className="hover:underline text-white">A Sample Movies Collection</a>
+                            <a className="hover:underline text-white">
+                              A Sample Movies Collection
+                            </a>
                           </Link>
                         </div>
                       </div>
@@ -142,7 +144,6 @@ const Work = () => {
             </TabPanel>
           </TabPanels>
         </Tabs>
-
       </section>
     </Layout>
   );
