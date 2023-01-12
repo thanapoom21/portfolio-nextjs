@@ -20,6 +20,7 @@ import Phonebook from "../../components/fullstackopen-tutorial/Phonebook";
 import Cacaocafe from "../../components/fullstackopen-tutorial/Cacaocafe";
 import HackerNewsSearch from "../../components/fullstackopen-tutorial/HackerNewsSearch";
 import WordSearch from "../../components/fullstackopen-tutorial/WordSearch";
+import SimpleTodoApp from "../../components/fcc-tutorial/todo-app";
 
 const Project = () => {
   return (
@@ -141,6 +142,20 @@ const Project = () => {
               </h2>
               <AccordionPanel pb={4}>
                 <WordSearch />
+              </AccordionPanel>
+            </AccordionItem>
+
+            <AccordionItem>
+              <h2>
+                <AccordionButton>
+                  <Box flex="1" textAlign="left" fontSize="24px">
+                    Simple Todo App
+                  </Box>
+                  <AccordionIcon />
+                </AccordionButton>
+              </h2>
+              <AccordionPanel pb={4}>
+                <SimpleTodoApp />
               </AccordionPanel>
             </AccordionItem>
           </Accordion>

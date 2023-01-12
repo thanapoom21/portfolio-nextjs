@@ -23,7 +23,7 @@ export default function Post({ post, preview }) {
           <>
             <article className="mb-32">
               <Head>
-                <title>{post.title} | Thanapoom&apos;s Blog Posts</title>
+                <title>{`${post.title} | Thanapoom&apos;s Blog Posts`}</title>
                 <meta property="og:image" content={post.ogImage.url} />
               </Head>
               <PostHeader

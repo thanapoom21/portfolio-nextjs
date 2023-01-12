@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Button, Input } from "@chakra-ui/react";
 
 function Todo({ todo, index, completeTodo, removeTodo }) {
   return (
@@ -9,7 +10,7 @@ function Todo({ todo, index, completeTodo, removeTodo }) {
       <p>{todo.text}</p>
       <div>
         <button onClick={() => completeTodo(index)}>
-          {todo.isCompleted ? "Not Completed" : "Complete"}
+          {todo.isCompleted ? "Reset" : "Complete"}
         </button>
         <button onClick={() => removeTodo(index)}>x</button>
       </div>
@@ -29,35 +30,40 @@ function TodoForm({ addTodo }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label>
-        Type a todo list item down here:
-        <input
+      <div className="input-button-area">
+        <Input
+          size="sm"
+          width={'80%'}
           type="text"
-          className="todo-input"
+          className="text-white"
+          placeholder="Add an item here"
           value={value}
           onChange={e => setValue(e.target.value)}
         />
-      </label>
+        <Button onClick={handleSubmit} size="sm">
+          Add
+        </Button>
+      </div>
     </form>
   );
 }
 
 let initialObject = [
   {
-    text: "Learn about React",
+    text: "Learn React",
     isCompleted: false,
   },
   {
-    text: "Meet friend for lunch",
+    text: "Meet new friends",
     isCompleted: false,
   },
   {
-    text: "Build really cool todo app",
+    text: "Build cool apps",
     isCompleted: false,
   },
 ];
 
-function TodoApp() {
+function SimpleTodoApp() {
   const [todos, setTodos] = useState(initialObject);
 
   const addTodo = text => {
@@ -78,7 +84,7 @@ function TodoApp() {
   };
 
   return (
-    <div className="todo-app">
+    <div>
       <div className="todo-list m-auto">
         {todos.map((todo, index) => (
           <Todo
@@ -97,4 +103,4 @@ function TodoApp() {
   );
 }
 
-export default TodoApp;
+export default SimpleTodoApp;
