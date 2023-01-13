@@ -5,7 +5,7 @@ function Todo({ todo, index, completeTodo, removeTodo }) {
   return (
     <div
       className="todo"
-      style={{ textDecoration: todo.isCompleted ? "line-through" : "" }}
+      style={{ textDecoration: todo.isCompleted ? "line-through" : null }}
     >
       <p>{todo.text}</p>
       <div>
