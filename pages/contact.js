@@ -16,13 +16,7 @@ const Contact = () => {
         <HeadingOne>Contact</HeadingOne>
         <Box mt={4}>
           <AnimatedText>{textToAnimate}</AnimatedText>
-          <Button
-            mt={10}
-            leftIcon={<EmailIcon />}
-            colorScheme="blackAlpha"
-            variant="outline"
-            borderRadius="1px"
-          >
+          <Button mt={10} leftIcon={<EmailIcon />}>
             <a href="mailto:thanapoom.p.music@gmail.com?Subject=Web Development">
               Email me
             </a>
