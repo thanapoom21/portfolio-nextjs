@@ -1,10 +1,21 @@
 import Link from "next/link";
 import { Disclosure } from "@headlessui/react";
+import { Icon } from "@chakra-ui/react";
+import { FaTwitter, FaGithub } from "react-icons/fa";
 
 const navigation = [
-  { name: "Github", href: "https://github.com/thanapoom21", current: false },
-  { name: "Twitter", href: "https://twitter.com/music_ptjrk", current: false },
-  // { name: "Instagram", href: "https://www.instagram.com/musictp/", current: false },
+  {
+    name: "Github",
+    href: "https://github.com/thanapoom21",
+    current: false,
+    icon: FaGithub,
+  },
+  {
+    name: "Twitter",
+    href: "https://twitter.com/music_ptjrk",
+    current: false,
+    icon: FaTwitter,
+  },
 ];
 
 function classNames(...classes) {
@@ -13,7 +24,7 @@ function classNames(...classes) {
 
 export default function Footer() {
   return (
-    <Disclosure as="footer" className="max-w-6xl px-4 mx-auto">
+    <Disclosure as="footer" className="max-w-6xl px-4 my-4 mx-auto">
       {() => (
         <>
           {navigation.map(item => (
@@ -27,7 +38,7 @@ export default function Footer() {
                 )}
                 aria-current={item.current ? "page" : undefined}
               >
-                {item.name}
+                <Icon as={item.icon} boxSize={6} /> {item.name}
               </a>
             </Link>
           ))}
