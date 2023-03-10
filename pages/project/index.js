@@ -163,7 +163,7 @@ const Project = () => {
         </Box>
         <Box my={6}>
           <HeadingTwo>Advance</HeadingTwo>
-          <Stack direction={['column', 'row']} overflowX="scroll">
+          <Stack direction={["column", "row"]} overflowX="scroll">
             <Box>
               <Button>
                 <Link href="https://todo-or-not-todo.vercel.app/">
@@ -173,9 +173,7 @@ const Project = () => {
             </Box>
             <Box>
               <Button>
-                <Link href="https://sweetco-co.com/">
-                  Sweet Coco
-                </Link>
+                <Link href="https://sweetco-co.com/">Sweet Coco</Link>
               </Button>
             </Box>
           </Stack>
