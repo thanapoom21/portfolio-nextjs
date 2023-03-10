@@ -11,6 +11,7 @@ import {
   AccordionIcon,
   Box,
   Button,
+  Stack,
 } from "@chakra-ui/react";
 import GreatQuote from "../../components/fullstackopen-tutorial/GreatQuote";
 import SimpleButtons from "../../components/fullstackopen-tutorial/SimpleButtons";
@@ -162,11 +163,20 @@ const Project = () => {
         </Box>
         <Box my={6}>
           <HeadingTwo>Advance</HeadingTwo>
-          <Button>
-            <Link href="https://todo-or-not-todo.vercel.app/">
-              TodoOrNotTodo
-            </Link>
-          </Button>
+          <Stack direction={["column", "row"]} overflowX="scroll">
+            <Box>
+              <Button>
+                <Link href="https://todo-or-not-todo.vercel.app/">
+                  TodoOrNotTodo
+                </Link>
+              </Button>
+            </Box>
+            <Box>
+              <Button>
+                <Link href="https://sweetco-co.com/">Sweet Coco</Link>
+              </Button>
+            </Box>
+          </Stack>
         </Box>
       </section>
     </Layout>
