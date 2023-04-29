@@ -173,7 +173,16 @@ const Project = () => {
             </Box>
             <Box>
               <Button>
-                <Link href="https://sweetco-co.com/">Sweet Coco</Link>
+                <Link href="https://sweetco-co.com/">
+                  Sweet Coco
+                </Link>
+              </Button>
+            </Box>
+            <Box>
+              <Button>
+                <Link href="https://thanapoom21.github.io/afterparty-mockup/">
+                  After Party
+                </Link>
               </Button>
             </Box>
           </Stack>
