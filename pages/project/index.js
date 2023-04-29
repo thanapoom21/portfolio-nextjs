@@ -174,6 +174,11 @@ const Project = () => {
                 <Button>Sweet Coco</Button>
               </Link>
             </Box>
+            <Box>
+              <Link href="https://thanapoom21.github.io/afterparty-mockup/" passHref>
+                <Button>After Party</Button>
+              </Link>
+            </Box>
           </Stack>
         </Box>
       </section>
